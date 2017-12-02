@@ -1,0 +1,15 @@
+{
+    "name": "novel_datamation_editor",
+    "version": "0.1",
+    "description": "editor for novel datamation",
+    "author": "https://github.com/echoma/",
+    "main": "editor.html",
+    "license": "Apache License 2.0",
+    "window":{
+      "width":800,
+      "height":600
+    },
+    "dependencies": {
+    }
+  }
+  
