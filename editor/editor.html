@@ -20,19 +20,111 @@ table th,td {padding:5px; border:1px solid black;}
 </head>
 <body>
 <div style="display:inline;">
-    <label><input type="radio" name="input_type" value="relation" checked="1"/>录入关系</label>
-    <label><input type="radio" name="input_type" value="cognition"/>录入认知</label>
-    <label><input type="radio" name="input_type" value="entity"/>录入对象</label>
+    <label><input type="radio" name="pane_type" value="cognition"/>录入认知</label>
+    <label><input type="radio" name="pane_type" value="entity"/>录入对象</label>
+    <label><input type="radio" name="pane_type" value="relation" checked="1"/>录入关系</label>
     <button onClick="showDevTools()">调试工具</button>
 </div>
-<div id="pane_relation" class="pane">
+
+<div id="pane_cognition" class="pane" style="display:none">
     <div class="top">
         <div style="display:flex; flex-flow: row wrap">
-            <div>关系：<select name="relation"></select></div>
-            <div style="padding-left:20px;">主语：<select name="subject"></select></div>
-            <div style="padding-left:20px;">宾语：<select name="object"></select></div>
+            <div>认知类型：<select name="cognition"></select></div>
+            <div style="padding-left:20px;"><input type=text name=cogval placeholder="取值"/></div>
             <button name="add">添加</button>
             <button name="refresh">刷新表格</button>
+        </div>
+    </div>
+    <div class="con">
+        <table width="100%">
+            <tr>
+                <th>认知类型</th>
+                <th>取值</th>
+            </tr>
+            <tr name="sample" style="display:none">
+                <td name="cog"></td>
+                <td name="value_list">
+                    <span name="sample_value" style="display:none;margin-right:10px;">
+                        <span name="text"></span>
+                        <button name="del">X</button>
+                    </span>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div id="pane_entity" class="pane" style="display:none">
+    <div class="top">
+        <div style="display:flex; flex-flow: row wrap">
+            <div>对象类型：<select name="entity_type"></select></div>
+            <button name="filter">过滤</button>
+            <button name="refresh">刷新表格</button>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <button name="add">添加</button>
+        </div>
+    </div>
+    <div class="con">
+        <table width="100%">
+            <tr>
+                <th>对象类型</th>
+                <th>对象名</th>
+                <th>属性列表</th>
+                <th>操作</th>
+            </tr>
+            <tr name="sample" style="display:none">
+                <td name="type"></td>
+                <td name="name"></td>
+                <td name="prop_list"></td>
+                <td>
+                    <button name="mod">编辑</button>
+                    <button name="del">删除</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div id="entity_dlg" style="position:absolute; z-index:1; width:400px; height:400px; left:50px; top:50px; display:none; border:1px solid black; background-color:white; padding:10px; overflow:scroll;">
+    <div style="width:100%; height:20px;">
+        <button name="ensure">确认</button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button name="cancel">取消</button>
+    </div>
+    <div style="padding-top:10px; padding-bottom:10px;">
+        对象类型：<select name="entity_type"></select>
+    </div>
+    <div>
+        对象名称：<input type="text" name="name" placeholder="对象名称"/>
+    </div>
+    <div>
+        <button name="add_prop">添加属性</button>
+        <div name="prop_sample" style="display:none; border:1px solid black;">
+            <div><select name="cog_type"></select></div>
+            <div>
+                <select name="cog_val"></select>
+                <button name="del_prop">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pane_relation" class="pane">
+    <div class="top">
+        <div style="display:flex; flex-flow: column wrap">
+            <div style="display:inline">
+                <button name="refresh">刷新表格</button>
+                <button name="add">添加</button>
+                关系：<select name="relation"></select>
+            </div>
+            <div style="display:inline; padding-left:20px;">
+                主语：<select name="subject"></select>
+                <select name="subject_entity"></select>
+            </div>
+            <div style="display:inline; padding-left:20px;">
+                宾语：<select name="object"></select>
+                <select name="object_entity"></select>
+            </div>
         </div>
     </div>
     <div class="con">
@@ -52,6 +144,6 @@ table th,td {padding:5px; border:1px solid black;}
         </table>
     </div>
 </div>
-    
+
 </body>
 </html>
