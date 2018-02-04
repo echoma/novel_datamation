@@ -14,3 +14,9 @@ insert into `master` values
 insert into servant values
 ('袭人','贾家','大丫头','贾宝玉','2',
 '1000','第36回，原本从贾母领一两月例，王夫人改为从自己这里领二两银子一吊钱','0');
+
+insert into kinship values ('贾公','贾演','父母子女','亲生','');
+
+insert into social_position values
+('贾政','候','','父亲代善是国公，贾政降级袭爵','5',
+'工部员外郎','第3回，林如海向贾雨村介绍贾政时提到');
