@@ -1,0 +1,271 @@
+{
+  "贾": {
+    "level_list": [
+      {
+        "level_number": 0,
+        "person_list": [
+          "贾公"
+        ]
+      },
+      {
+        "level_number": 1,
+        "person_list": [
+          "贾演",
+          "贾源"
+        ]
+      },
+      {
+        "level_number": 2,
+        "person_list": [
+          "贾代化",
+          "贾代善",
+          "贾母"
+        ]
+      },
+      {
+        "level_number": 3,
+        "person_list": [
+          "贾敷",
+          "贾敬",
+          "贾赦",
+          "贾政",
+          "贾敏"
+        ]
+      },
+      {
+        "level_number": 4,
+        "person_list": [
+          "贾珍",
+          "贾惜春",
+          "贾琏",
+          "贾琮",
+          "贾珠",
+          "贾元春",
+          "贾宝玉",
+          "贾探春",
+          "贾环",
+          "林黛玉"
+        ]
+      }
+    ],
+    "person_map": {
+      "林黛玉": {
+        "child_list": [],
+        "husband": null,
+        "info": {},
+        "level": 4,
+        "name": "林黛玉",
+        "parent": "贾敏",
+        "wife_list": []
+      },
+      "贾代化": {
+        "child_list": [
+          "贾敷",
+          "贾敬"
+        ],
+        "husband": null,
+        "info": {},
+        "level": 2,
+        "name": "贾代化",
+        "parent": "贾演",
+        "wife_list": []
+      },
+      "贾代善": {
+        "child_list": [
+          "贾赦",
+          "贾政",
+          "贾敏"
+        ],
+        "husband": null,
+        "info": {},
+        "level": 2,
+        "name": "贾代善",
+        "parent": "贾源",
+        "wife_list": []
+      },
+      "贾元春": {
+        "child_list": [],
+        "husband": null,
+        "info": {},
+        "level": 4,
+        "name": "贾元春",
+        "parent": "贾政",
+        "wife_list": []
+      },
+      "贾公": {
+        "child_list": [
+          "贾演",
+          "贾源"
+        ],
+        "husband": null,
+        "info": {},
+        "level": 0,
+        "name": "贾公",
+        "parent": null,
+        "wife_list": []
+      },
+      "贾宝玉": {
+        "child_list": [],
+        "husband": null,
+        "info": {},
+        "level": 4,
+        "name": "贾宝玉",
+        "parent": "贾政",
+        "wife_list": []
+      },
+      "贾惜春": {
+        "child_list": [],
+        "husband": null,
+        "info": {},
+        "level": 4,
+        "name": "贾惜春",
+        "parent": "贾敬",
+        "wife_list": []
+      },
+      "贾探春": {
+        "child_list": [],
+        "husband": null,
+        "info": {},
+        "level": 4,
+        "name": "贾探春",
+        "parent": "贾政",
+        "wife_list": []
+      },
+      "贾政": {
+        "child_list": [
+          "贾珠",
+          "贾元春",
+          "贾宝玉",
+          "贾探春",
+          "贾环"
+        ],
+        "husband": null,
+        "info": {},
+        "level": 3,
+        "name": "贾政",
+        "parent": "贾代善",
+        "wife_list": []
+      },
+      "贾敏": {
+        "child_list": [
+          "林黛玉"
+        ],
+        "husband": null,
+        "info": {},
+        "level": 3,
+        "name": "贾敏",
+        "parent": "贾代善",
+        "wife_list": []
+      },
+      "贾敬": {
+        "child_list": [
+          "贾珍",
+          "贾惜春"
+        ],
+        "husband": null,
+        "info": {},
+        "level": 3,
+        "name": "贾敬",
+        "parent": "贾代化",
+        "wife_list": []
+      },
+      "贾敷": {
+        "child_list": [],
+        "husband": null,
+        "info": {},
+        "level": 3,
+        "name": "贾敷",
+        "parent": "贾代化",
+        "wife_list": []
+      },
+      "贾母": {
+        "child_list": [],
+        "husband": "贾代善",
+        "info": {},
+        "level": 2,
+        "name": "贾母",
+        "parent": null,
+        "wife_list": []
+      },
+      "贾源": {
+        "child_list": [
+          "贾代善"
+        ],
+        "husband": null,
+        "info": {},
+        "level": 1,
+        "name": "贾源",
+        "parent": "贾公",
+        "wife_list": []
+      },
+      "贾演": {
+        "child_list": [
+          "贾代化"
+        ],
+        "husband": null,
+        "info": {},
+        "level": 1,
+        "name": "贾演",
+        "parent": "贾公",
+        "wife_list": []
+      },
+      "贾环": {
+        "child_list": [],
+        "husband": null,
+        "info": {},
+        "level": 4,
+        "name": "贾环",
+        "parent": "贾政",
+        "wife_list": []
+      },
+      "贾珍": {
+        "child_list": [],
+        "husband": null,
+        "info": {},
+        "level": 4,
+        "name": "贾珍",
+        "parent": "贾敬",
+        "wife_list": []
+      },
+      "贾珠": {
+        "child_list": [],
+        "husband": null,
+        "info": {},
+        "level": 4,
+        "name": "贾珠",
+        "parent": "贾政",
+        "wife_list": []
+      },
+      "贾琏": {
+        "child_list": [],
+        "husband": null,
+        "info": {},
+        "level": 4,
+        "name": "贾琏",
+        "parent": "贾赦",
+        "wife_list": []
+      },
+      "贾琮": {
+        "child_list": [],
+        "husband": null,
+        "info": {},
+        "level": 4,
+        "name": "贾琮",
+        "parent": "贾赦",
+        "wife_list": []
+      },
+      "贾赦": {
+        "child_list": [
+          "贾琏",
+          "贾琮"
+        ],
+        "husband": null,
+        "info": {},
+        "level": 3,
+        "name": "贾赦",
+        "parent": "贾代善",
+        "wife_list": []
+      }
+    }
+  }
+}

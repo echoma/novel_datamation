@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/sass.js/0.10.8/sass.min.js"></script>
+<script>
+$(document).ready(function(){
+    $.ajax({
+        url:'graph.json', 
+        cache:false, 
+        dataType:'json', 
+        success:function(data){
+            //alert(data);
+        },
+        error:function(){
+            alert('加载图谱数据出错');
+        }
+    });
+});
+</script>
+</head>
+<body>
+    <div style="border:1px solid red; font-size:14px; width:32px; height:80px; writing-mode:vertical-rl; letter-spacing:5px;">马承珂<br/>换行</div>
+</body>
+</html>

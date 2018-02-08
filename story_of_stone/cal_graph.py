@@ -5,8 +5,11 @@ import pymysql
 
 DB = pymysql.connect(host='localhost', port=3306, user='nd', passwd='nd', db='story_of_stone', charset='utf8')
 
-# 关系图的数据结构
+"""
+以下是关系图里用到的各种数据结构
+"""
 
+# 读取数据库person表的数据结构，用来动态生成PersonInfo类
 PERSON_INFO_FIELDS = None
 with DB.cursor() as cursor:
     sql = 'select * from person limit 1'
@@ -15,11 +18,18 @@ with DB.cursor() as cursor:
     PERSON_INFO_FIELDS = [col[0] for col in cursor.description]
 
 class PersonInfo(namedtuple('PersonInfo', PERSON_INFO_FIELDS)):
-    """数据库里一个人的基本信息"""
+    """
+    数据库里一个人的基本信息
+    这个是根据上面的数据库表结构动态生成的类。
+    """
     pass
 
-class Tree:
-    """关系图"""
+class Graph:
+    """
+    关系图。
+    这个树从祖先开始一级级向子辈进行扩散。
+    当前实现下，关系图是树，而不是图。因为目前父亲和母亲节点不允许同时指向同一个孩子，只能由母亲指向。因此从树的结构看，分支数量是不能收敛的。
+    """
     def __init__(self, top_name):
         global DB
         self.db = DB
@@ -37,18 +47,23 @@ class Tree:
             return self.addLevel()
         raise ValueError('invalid level number '+str(current_level_number))
     def cal(self):
-        self.cal_lvl_idx = 0
-        self.cal_psn_idx = 0
         for lvl in self.level_list:
             lvl.complete()
             lvl.derive()
-        self.output()
     def output(self):
         for lvl in self.level_list:
             print('level '+str(lvl.level_number)+': '+ ' '.join([psn.name+'('+str(psn.info.sort_age)+')' for psn in lvl.person_list]))
+    def toDict(self):
+        o = {}
+        o['level_list'] = [lvl.toDict() for lvl in self.level_list]
+        o['person_map'] = {name : Person.find(name).toDict() for name in Person._name_dict}
+        return o
 
 class Level:
-    """关系图-代际"""
+    """
+    代际
+    从祖辈到子辈，一代人属于同一个level。
+    """
     def __init__(self, tree, lvl_number):
         global DB
         self.db = DB
@@ -111,42 +126,60 @@ class Level:
                         lvl = self.tree.ensureExistanceOfNextLevel(self.level_number)
                     for row in cursor.fetchall():
                         if not Person.exists(row[1]):
-                            lvl.addPerson(row[1])
+                            new_psn = lvl.addPerson(row[1])
+                            psn.child_list.append(new_psn)
+                            new_psn.parent = psn
+    def toDict(self):
+        o = {}
+        o['level_number'] = self.level_number
+        o['person_list'] = [psn.name for psn in self.person_list]
+        return o
+
 class Person:
-    """关系图-一个人"""
-    _name_dict = {}
+    """一个人"""
+    _name_dict = {} # 静态变量，按照名字映射了所有的人
     def __init__(self, lvl, name):
         global DB
         self.db = DB
         self.level = lvl
         self.name = name
-        self.parent = None
+        self.parent = None # 每个人只有一个父母，不能既有父亲又有母亲，具体原因见“Graph类的注释”
         self.child_list = []
         self.husband = None
-        self.wife_list = []
+        self.wife_list = [] # 按照地位顺序排列，正房大太太在前，偏房姨太太在后。
         with self.db.cursor() as cursor:
             sql = 'select * from person where name=%s'
             cursor.execute(sql, (self.name))
+            if cursor.rowcount==0:
+                raise ValueError(self.name + ' not found in table `person`')
             self.info = PersonInfo(*cursor.fetchone())
         Person._name_dict[self.name] = self
     @staticmethod
-    def findPerson(name):
-        if name in Person._name_dict.keys():
-            return Person._name_dict[name]
-        return None
+    def find(name):
+        return Person._name_dict[name]
     @staticmethod
     def exists(name):
         if name in Person._name_dict.keys():
             return True
         return False
-    def calChildList(self):
-        with self.db.cursor() as cursor:
-            if self.info.gender=='女':
-                sql = 'select a.name from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="父母子女" order by a.sort_age desc'
-                cursor.execute(sql, (self.name))
+    def toDict(self):
+        o = {}
+        o['level'] = self.level.level_number
+        o['name'] = self.name
+        o['parent'] = None if self.parent is None else self.parent.name
+        o['child_list'] = [psn.name for psn in self.child_list]
+        o['husband'] = None if self.husband is None else self.husband.name
+        o['wife_list'] = [psn.name for psn in self.wife_list]
+        o['info'] = self.info.__dict__
+        return o
 
 def main():
-    TREE_OF_JIA = Tree('贾公')
-    TREE_OF_JIA.cal()
+    GRAPH_OF_JIA = Graph('贾公')
+    GRAPH_OF_JIA.cal()
+    GRAPH_OF_JIA.output()
+    with open('./graph.json', mode='w') as file:
+        o = {}
+        o['贾'] = GRAPH_OF_JIA.toDict()
+        file.write(json.dumps(o, indent=2, sort_keys=True, ensure_ascii=False))
 
 main()
