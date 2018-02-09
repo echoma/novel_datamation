@@ -2,8 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8" />
+<link rel="stylesheet/less" type="text/css" href="graph.less">
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/sass.js/0.10.8/sass.min.js"></script>
+<script src="https://cdn.bootcss.com/less.js/2.7.3/less.min.js"></script>
 <script>
 $(document).ready(function(){
     $.ajax({
@@ -20,7 +21,15 @@ $(document).ready(function(){
 });
 </script>
 </head>
-<body>
-    <div style="border:1px solid red; font-size:14px; width:32px; height:80px; writing-mode:vertical-rl; letter-spacing:5px;">马承珂<br/>换行</div>
+<body lang="cn">
+    <div class=person>
+        <div class=container></div>
+        <div class=name>马承珂</div>
+        <div class=superscript>上标</div>
+        <div class=subscript>下标</div>
+    </div>
+    <p lang="cn" style="display:none; border:1px solid red; text-align:justify; text-align-last:justify; text-justify:inter-character;">马承珂</p>
+    <p style="display:none; border:1px solid red; font-size:14px; width:100px; height:64px; text-align:justify; text-align-last:justify; text-justify:distribute;">马承珂<br/>换行</p>
+    <p style="display:none; border:1px solid red; font-size:14px; width:32px; height:100px; writing-mode:vertical-rl; text-align:justify; text-align-last:justify; text-justify:distribute;">马承珂<br/>换行</p>
 </body>
 </html>

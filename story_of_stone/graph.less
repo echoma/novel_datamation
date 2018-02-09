@@ -1,0 +1,57 @@
+/*大范围区域的背景。例如网页背景*/
+@range-bg: linen;
+@px: 0.0625rem;
+@dark-color: maroon;
+
+* {margin: 0px; padding: 0px;}
+body {background: @range-bg;}
+
+.person {
+    @font-size: 20;
+    @width: @font-size;
+    @height: 5*@font-size;
+    @padding-v: 0.5*@font-size;
+    @padding-h: 0.3*@font-size;
+    margin: @font-size*@px;
+    outline: 3*@px solid @dark-color;
+    outline-offset:2*@px;
+    border: 1*@px solid @dark-color;
+    padding: @padding-v*@px @padding-h*@px;
+    width: @width*@px;
+    height: @height*@px;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    .name {
+        font-size: @font-size*@px;
+        font-weight: bold;
+        writing-mode: vertical-rl;
+        text-align: justify;
+        text-align-last: justify;
+        text-justify: inter-character;
+        position: relative;
+        width: 100%;
+        height: (@height + @padding-h - 4)*@px;
+        flex: 0 1 auto;
+    }
+
+    @script-font-size-factor: 0.6;
+    @script-offset-factor: 0.15;
+    .script {
+        flex: 0 1 auto;
+        font-size: @script-font-size-factor*@font-size*@px;
+        font-weight: normal;
+    }
+    .superscript {
+        .script;
+        top: @script-offset-factor*@font-size*@px;
+    }
+
+    .subscript {
+        .script;
+        display: none;
+        bottom: @script-offset-factor*@font-size*@px;
+    }
+}
