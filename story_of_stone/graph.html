@@ -7,31 +7,45 @@
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/less.js/2.7.3/less.min.js"></script>
 <script>
+let dom_graph = null;
+let dom_psn_tpl = null;
+let dom_cpl_tpl = null;
+let vl_tpl = null;
+let hl_tpl = null;
 $(document).ready(function(){
+    setTimeout("onload()",1000);
+});
+function onload() {
     $.ajax({
         url:'graph.json', 
         cache:false, 
         dataType:'json',
         async: true,
         success:function(data){
+            dom_graph = $('#graph');
+            dom_psn_tpl = $('#template > .person');
+            dom_psn_tpl.outlineOffset = parseInt(dom_psn_tpl.css('marginLeft'))-parseInt(dom_psn_tpl.css('outlineOffset'))-parseInt(dom_psn_tpl.css('outlineWidth'));
+            vl_tpl = $('#template > .vline');
+            hl_tpl = $('#template > .hline');
+            dom_cpl_tpl = $('#template > .couple-box');
             for (first_name in data) {
                 drawFamily(data[first_name])
             }
-            drawBranchLine([350,10],[[250,100],[350,100],[450,100]]);
         },
         error:function(){
             alert('加载图谱数据出错');
         }
     });
-});
+}
 function drawFamily(family) { // 绘制一个家族的图
     let level_list = family.level_list;
     let person_map = family.person_map;
     createPerson(level_list, person_map);
     adjustAllLevels(person_map);
+    drawLevelLines(person_map);
+    drawCoupleBoxes(person_map);
 }
 function createPerson(level_list, person_map) { // 将人物添加到页面
-    let dom_psn_tpl = $('#template > .person');
     for (let lvl of level_list) {
         let lvl_number = lvl.level_number;
         let dom_lvl = $('#level-'+lvl_number);
@@ -156,10 +170,9 @@ function calChildrenOrder(psn, person_map) { // 为这个人计算其长子次�
     }
 }
 function adjustAllLevels(person_map) { // 根据代际关系大致调整人物位置
-    let dom_psn_tpl = $('#template > .person');
     for (let n=0; n<100; ++n) { // 100是防止死循环
         let graph_has_adjusted = false;
-        for (let lvl_nbr=1; lvl_nbr<4; ++lvl_nbr) {
+        for (let lvl_nbr=1; lvl_nbr<5; ++lvl_nbr) {
             for (let i=0; i<100; ++i) { // 100是防止死循环
                 let lvl_has_adjusted = adjustNeighborLevels(lvl_nbr, person_map);
                 if (lvl_has_adjusted)
@@ -182,9 +195,9 @@ function adjustNeighborLevels(lvl_nbr, person_map) { // 大致调整相邻两个
         // 本层中每个人都检查下位置
         let dom_psn = dom_lvl_psns.eq(idx);
         let name = dom_psn.attr('person');
-        let psn = person_map[name];
-        if (typeof(psn)=='undefined') // 是空白(class=fake)
+        if (typeof(name)=='undefined') // 是空白(class=fake)
             continue;
+        let psn = person_map[name];
         let children_names = getChildrenNames(psn, person_map);
         if (children_names.length==0) // 没有孩子就不用调整了
             continue;
@@ -201,7 +214,7 @@ function adjustNeighborLevels(lvl_nbr, person_map) { // 大致调整相邻两个
             // 如果上层元素在所有下层孩子元素右侧，则下层元素前面要补充空白
             let fake_psn_cnt = idx - child_max_dom_idx;
             for (let i=0; i<fake_psn_cnt; ++i) {
-                let dom_fake = $('#template > .person').clone().addClass('fake');
+                let dom_fake = dom_psn_tpl.clone().addClass('fake');
                 dom_fake.insertBefore(dom_nlvl_psns.eq(child_min_dom_idx));
             }
             return 1;
@@ -209,7 +222,7 @@ function adjustNeighborLevels(lvl_nbr, person_map) { // 大致调整相邻两个
             // 如果上层元素在所有下层孩子元素左侧，则上层元素前面要补充空白
             let fake_psn_cnt = child_min_dom_idx - idx;
             for (let i=0; i<fake_psn_cnt; ++i) {
-                let dom_fake = $('#template > .person').clone().addClass('fake');
+                let dom_fake = dom_psn_tpl.clone().addClass('fake');
                 dom_fake.insertBefore(dom_lvl_psns.eq(idx));
             }
             return 1;
@@ -239,8 +252,87 @@ function getChildrenNames(psn, person_map) { // 找出此人的孩子
     }
     return children;
 }
+function drawLevelLines(person_map) { // 为代际之间的关联关系画线
+    let dom_psn_list = $(document).find('.person');
+    for (let i=0; i<dom_psn_list.length; ++i) {
+        let dom_psn = dom_psn_list.eq(i);
+        let name = dom_psn.attr('person');
+        if (typeof(name)=='undefined' || name=='贾公')
+            continue;
+        let psn_pos = dom_psn.position();
+        let psn_w = dom_psn.outerWidth(true);
+        let psn_h = dom_psn.outerHeight(true);
+        let start_point = [psn_pos.left+psn_w/2, psn_pos.top+psn_h-dom_psn_tpl.outlineOffset];
+        let psn = person_map[name];
+        let end_point_list = [];
+        for (let child_name of psn.child_list) {
+            let dom_cpsn = dom_psn_list.filter('[person='+child_name+']');
+            let cpsn_pos = dom_cpsn.position();
+            let cpsn_w = dom_cpsn.outerWidth(true);
+            let cpsn_h = dom_cpsn.outerHeight(true);
+            end_point_list.push([cpsn_pos.left+cpsn_w/2, cpsn_pos.top+dom_psn_tpl.outlineOffset]);
+        }
+        drawBranchLine(start_point, end_point_list);
+    }
+}
 function drawBranchLine(start, end_list) { // 画分叉线
-    ;
+    let min_end_x = 99999999;
+    let max_end_x = -1;
+    let min_end_y = 99999999; // 结束点里纵坐标最小值
+    for (let p of end_list) {
+        if (p[0] < min_end_x)
+            min_end_x = p[0];
+        if (p[0] > max_end_x)
+            max_end_x = p[0];
+        if (p[1] < min_end_y)
+            min_end_y = p[1];
+    }
+    if (start[0] < min_end_x)
+        min_end_x = start[0];
+    if (start[0] > max_end_x)
+        max_end_x = start[0];
+    let turn_y = (start[1]+min_end_y)/2; // 分叉点的纵坐标
+    drawVLine(start, [start[0],turn_y]);
+    drawHLine([min_end_x,turn_y], [max_end_x,turn_y]);
+    for (let p of end_list) {
+        drawVLine([p[0],turn_y], p);
+    }
+}
+function drawVLine(start, end) { // 画一根竖线
+    let l = vl_tpl.clone();
+    l.css('left', start[0]).css('top', start[1]);
+    l.css('height', end[1]-start[1]);
+    dom_graph.append(l);
+}
+function drawHLine(start, end) { // 画一根横线
+    let l = hl_tpl.clone();
+    l.css('left', start[0]).css('top', start[1]);
+    l.css('width', end[0]-start[0]);
+    dom_graph.append(l);
+}
+function drawCoupleBoxes(person_map) { // 画夫妻框
+    let dom_psn_list = $(document).find('.person');
+    for (let i=0; i<dom_psn_list.length; ++i) {
+        let dom_psn = dom_psn_list.eq(i);
+        let name = dom_psn.attr('person');
+        if (typeof(name)=='undefined' || name=='贾公')
+            continue;
+        let psn = person_map[name];
+        if (psn.info.gender!='男' || psn.wife_list.length==0)
+            continue;
+        let psn_pos = dom_psn.position();
+        let psn_w = dom_psn.outerWidth(true);
+        let psn_h = dom_psn.outerHeight(true);
+        let start_point = [psn_pos.left+psn_w/2, psn_pos.top+psn_h-dom_psn_tpl.outlineOffset];
+        let last_wife_name = psn.wife_list[psn.wife_list.length-1];
+        let last_wife = person_map[last_wife_name];
+        let dom_wife = dom_psn_list.filter('[person='+last_wife_name+']');
+        let wife_pos = dom_wife.position();
+        let dom_cpl_box = dom_cpl_tpl.clone();
+        dom_cpl_box.css('left', psn_pos.left).css('top', psn_pos.top);
+        dom_cpl_box.css('width', wife_pos.left-psn_pos.left+psn_w);
+        dom_graph.append(dom_cpl_box);
+    }
 }
 </script>
 </head>
@@ -253,6 +345,9 @@ function drawBranchLine(start, end_list) { // 画分叉线
                 <div class=sub-script>　</div>
             </div>
         </div>
+        <div class=couple-box></div>
+        <div class=hline></div>
+        <div class=vline></div>
     </div>
     <div class=graph id="graph">
         <div class=hide id=level-0></div>

@@ -13,6 +13,7 @@ body {background: @range-bg;}
     @padding-v: 0.3*@font-size;
     @padding-h: 0.2*@font-size;
     float: left;
+    background: @range-bg;
     flex: 0 1 auto;
     margin: 0.5*@font-size*@px;
     outline: 3*@px solid @dark-color;
@@ -117,4 +118,24 @@ body {background: @range-bg;}
         flex: 0 1 auto;
         height: 50*@px;
     }
+}
+
+.hline {
+    position: absolute;
+    height: 2*@px;
+    background-color: dimgray;
+}
+.vline {
+    position: absolute;
+    width: 2*@px;
+    background-color: dimgray;
+}
+
+.couple-box {
+    @font-size: 22;
+    position: absolute;
+    z-index: -1;
+    height: 5.6*@font-size*@px;
+    background-color: mistyrose;
+    border: @px solid lightgray;
 }

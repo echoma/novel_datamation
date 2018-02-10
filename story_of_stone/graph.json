@@ -51,6 +51,7 @@
         "level_number": 5,
         "person_list": [
           "贾蓉",
+          "秦可卿",
           "贾蔷",
           "贾巧姐",
           "贾兰"
@@ -113,6 +114,64 @@
         },
         "name": "林黛玉",
         "parent": "贾敏",
+        "social_position": null,
+        "wife_list": []
+      },
+      "秦可卿": {
+        "child_list": [],
+        "husband": "贾蓉",
+        "info": {
+          "age": 23,
+          "age_note": "纯猜测，年龄应该比其夫贾蓉小个一两岁",
+          "dead": 0,
+          "deduction": 0,
+          "die_chapter": 0,
+          "die_note": "",
+          "family_name": "秦",
+          "first_action_chapter": 5,
+          "first_action_note": "宝玉在宁国府倦怠，由贾蓉之妻侵氏安排休息。",
+          "first_name_chapter": 5,
+          "first_name_note": "宝玉梦中惊醒喊“可卿救我”",
+          "first_refer_chapter": 5,
+          "first_refer_note": "",
+          "gender": "女",
+          "given_name": "",
+          "name": "秦可卿",
+          "nick_1": "",
+          "nick_2": "",
+          "nick_3": "",
+          "nick_4": "",
+          "nick_note_1": "",
+          "nick_note_2": "",
+          "nick_note_3": "",
+          "nick_note_4": "",
+          "old_name": "",
+          "old_name_note": "",
+          "sort_age": 23.0,
+          "sort_position": 333.0,
+          "title_1": "",
+          "title_2": "",
+          "title_3": "",
+          "title_4": "",
+          "title_note_1": "",
+          "title_note_2": "",
+          "title_note_3": "",
+          "title_note_4": ""
+        },
+        "level": 5,
+        "master": {
+          "dwelling": "荣国府",
+          "family": "贾家",
+          "generation": 5,
+          "name": "秦可卿",
+          "original_family": "",
+          "pay_estimated": 0,
+          "pay_in_coin": 0.0,
+          "pay_in_silver": 0.0,
+          "pay_note": ""
+        },
+        "name": "秦可卿",
+        "parent": null,
         "social_position": null,
         "wife_list": []
       },
@@ -1494,7 +1553,9 @@
           "official_rank": 5,
           "official_title": "龙禁尉"
         },
-        "wife_list": []
+        "wife_list": [
+          "秦可卿"
+        ]
       },
       "贾蔷": {
         "child_list": [],
