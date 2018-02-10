@@ -1,28 +1,58 @@
 #!/usr/bin/env python3
 import json
 from collections import namedtuple
+import decimal
 import pymysql
 
 DB = pymysql.connect(host='localhost', port=3306, user='nd', passwd='nd', db='story_of_stone', charset='utf8')
+
+class DecimalEncoder(json.JSONEncoder):
+    """
+    目前默认的json不支持对Decimal类型的序列化，因此我们自己支持一下
+    """
+    def default(self, o):
+        if isinstance(o, decimal.Decimal):
+            return float(o)
+        return super(DecimalEncoder, self).default(o)
 
 """
 以下是关系图里用到的各种数据结构
 """
 
-# 读取数据库person表的数据结构，用来动态生成PersonInfo类
+"""
+数据库里一个人的基本信息
+读取数据库person表的数据结构，用来动态生成PersonInfo类
+"""
 PERSON_INFO_FIELDS = None
 with DB.cursor() as cursor:
     sql = 'select * from person limit 1'
     cursor.execute(sql)
     cursor.fetchone()
     PERSON_INFO_FIELDS = [col[0] for col in cursor.description]
+PersonInfo = namedtuple('PersonInfo', PERSON_INFO_FIELDS)
 
-class PersonInfo(namedtuple('PersonInfo', PERSON_INFO_FIELDS)):
-    """
-    数据库里一个人的基本信息
-    这个是根据上面的数据库表结构动态生成的类。
-    """
-    pass
+"""
+数据库里一个主子的信息
+"""
+MASTER_INFO_FIELDS = None
+with DB.cursor() as cursor:
+    sql = 'select * from master limit 1'
+    cursor.execute(sql)
+    cursor.fetchone()
+    MASTER_INFO_FIELDS = [col[0] for col in cursor.description]
+MasterInfo = namedtuple('MasterInfo', MASTER_INFO_FIELDS)
+
+"""
+数据库里一个人的社会地位信息
+"""
+SOCIAL_POSITION_INFO_FIELDS = None
+with DB.cursor() as cursor:
+    sql = 'select * from social_position limit 1'
+    cursor.execute(sql)
+    cursor.fetchone()
+    SOCIAL_POSITION_INFO_FIELDS = [col[0] for col in cursor.description]
+SocialPositionInfo = namedtuple('SocialPositionInfo', SOCIAL_POSITION_INFO_FIELDS)
+
 
 class Graph:
     """
@@ -107,9 +137,11 @@ class Level:
                         if psn.info.gender=='男':
                             new_psn = self.addPersonAfter(psn.name, row[0])
                             new_psn.husband = psn
+                            psn.wife_list.append(new_psn)
                         else:
                             new_psn = self.addPersonBefore(psn.name, row[0])
                             new_psn.wife_list.append(psn)
+                            psn.husband = new_psn
     def derive(self):
         """
         对于本层中的每个人人员找出其下一代。
@@ -148,11 +180,20 @@ class Person:
         self.husband = None
         self.wife_list = [] # 按照地位顺序排列，正房大太太在前，偏房姨太太在后。
         with self.db.cursor() as cursor:
+            # 获取基本信息
             sql = 'select * from person where name=%s'
             cursor.execute(sql, (self.name))
             if cursor.rowcount==0:
                 raise ValueError(self.name + ' not found in table `person`')
             self.info = PersonInfo(*cursor.fetchone())
+            # 获取主子信息
+            sql = 'select * from master where name=%s'
+            cursor.execute(sql, (self.name))
+            self.master = None if cursor.rowcount==0 else MasterInfo(*cursor.fetchone())
+            # 获取社会地位信息
+            sql = 'select * from social_position where name=%s'
+            cursor.execute(sql, (self.name))
+            self.social_position = None if cursor.rowcount==0 else SocialPositionInfo(*cursor.fetchone())
         Person._name_dict[self.name] = self
     @staticmethod
     def find(name):
@@ -170,7 +211,9 @@ class Person:
         o['child_list'] = [psn.name for psn in self.child_list]
         o['husband'] = None if self.husband is None else self.husband.name
         o['wife_list'] = [psn.name for psn in self.wife_list]
-        o['info'] = self.info.__dict__
+        o['info'] = self.info._asdict()
+        o['master'] = None if self.master is None else self.master._asdict()
+        o['social_position'] = None if self.social_position is None else self.social_position._asdict()
         return o
 
 def main():
@@ -180,6 +223,6 @@ def main():
     with open('./graph.json', mode='w') as file:
         o = {}
         o['贾'] = GRAPH_OF_JIA.toDict()
-        file.write(json.dumps(o, indent=2, sort_keys=True, ensure_ascii=False))
+        file.write(json.dumps(o, indent=2, sort_keys=True, ensure_ascii=False, cls=DecimalEncoder))
 
 main()

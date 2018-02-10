@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8" />
+<meta http-equiv="refresh" content="200">
 <link rel="stylesheet/less" type="text/css" href="graph.less">
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/less.js/2.7.3/less.min.js"></script>
@@ -10,26 +11,168 @@ $(document).ready(function(){
     $.ajax({
         url:'graph.json', 
         cache:false, 
-        dataType:'json', 
+        dataType:'json',
+        async: true,
         success:function(data){
-            //alert(data);
+            for (first_name in data) {
+                drawFamily(data[first_name])
+            }
         },
         error:function(){
             alert('加载图谱数据出错');
         }
     });
 });
+function drawFamily(family) { // 绘制一个家族的图
+    let dom_psn_tpl = $('#template > .person');
+    let level_list = family.level_list;
+    let person_map = family.person_map;
+    for (let lvl of level_list) {
+        let lvl_number = lvl.level_number;
+        let dom_lvl = $('#level-'+lvl_number);
+        for (let name of lvl.person_list) {
+            let psn = person_map[name];
+            let dom_psn = dom_psn_tpl.clone().attr('person', name);
+            dom_psn.find('.name').text(name);
+            fillPsnScript(dom_psn, psn);
+            calChildrenOrder(psn, person_map);
+            if (psn.info.dead)
+                dom_psn.addClass('dead');
+            // 将此人dom添加到页面
+            dom_lvl.append(dom_psn);
+        }
+    }
+}
+function fillPsnScript(dom_psn, psn) { // 填写某个人的上下标
+    let dom_psn_super_s = dom_psn.find('.super-script');
+    let psn_super_s_is_empty = false;
+    let dom_psn_sub_s = dom_psn.find('.sub-script');
+    let psn_sub_s_is_empty = false;
+    let avai_list = []; // 可用的名号
+    // 长子次子名号
+    if (psn.master && psn.master.generation>1) {
+        if (psn.children_idx) {
+            let idx_str = '';
+            if (psn.children_idx==1) idx_str = '长';
+            if (psn.children_idx==2) idx_str = '次';
+            if (psn.children_idx==3) idx_str = '三';
+            if (psn.children_idx==4) idx_str = '四';
+            let txt = idx_str+(psn.info.gender=='男'?'子':'女');
+            avai_list.push(txt);
+        }
+    }
+    if (psn.name=='贾蔷')
+        avai_list.push('养育')
+    // 爵位官位名号
+    let nobility = psn.social_position? psn.social_position.nobility_title : '';
+    let official = psn.social_position? psn.social_position.official_title : '';
+    if (nobility.length>0 && nobility.length<=3) {
+        avai_list.push(nobility);
+    } else if (official.length>0 && official.length<=3) {
+        avai_list.push(official);
+    }
+    // 妻妾排行名号
+    if (psn.wives_idx) {
+        let txt = psn.wives_idx==1?'大太太':'姨太太';
+        avai_list.push(txt);
+    }
+    // 尊称名号
+    for (let i=1; i<=4; ++i) {
+        let txt = psn.info['title_'+i];
+        if (txt.length>0 && txt.length<=3) {
+            avai_list.push(txt);
+        }
+    }
+    // 诨名
+    for (let i=1; i<=4; ++i) {
+        let txt = psn.info['nick_'+i];
+        if (txt.length>0 && txt.length<=3) {
+            avai_list.push(txt);
+        }
+    }
+    // 所有可用名号里前两位就是上标下标
+    if (avai_list.length>0) {
+        let txt = avai_list[0];
+        dom_psn_super_s.text(txt);
+        if (txt.length>2)
+            dom_psn_super_s.addClass('char'+txt.length);
+    }
+    if (avai_list.length>1) {
+        let txt = avai_list[1];
+        dom_psn_sub_s.text(txt);
+        if (txt.length>2)
+            dom_psn_sub_s.addClass('char'+txt.length);
+    } else {
+        dom_psn_sub_s.text('');
+    }
+    // 如果上标下标都是空的，则隐藏这块空间
+    if (avai_list.length==0)
+        dom_psn.find('.script-box').remove();
+}
+function calChildrenOrder(psn, person_map) { // 为这个人计算其长子次子长女次女这些信息
+    if (psn.info.gender=='女')
+        return;
+    // 找出此人跟所有妻妾的孩子
+    let children = [];
+    for (let name of psn.child_list) {
+        children.push(person_map[name]);
+    }
+    let wives_idx = 1;
+    for (let wife_name of psn.wife_list) {
+        let wife = person_map[wife_name];
+        for (name of wife.child_list) {
+            children.push(person_map[name]);
+        }
+        // 顺便把妻子的排行记录下
+        wife.wives_idx = wives_idx;
+        ++wives_idx;
+    }
+    // 按照年龄对孩子们排序
+    children.sort(function(a,b){
+        if (a.info.sort_age>b.info.sort_age)
+            return -1;
+        if (a.info.sort_age<b.info.sort_age)
+            return 1;
+        return 0;
+    });
+    // 分男女对孩子计算序号
+    let boy_idx = 1;
+    let girl_idx = 1;
+    for (let psn of children) {
+        if (psn.info.gender=='男') {
+            if (psn.info.name=='贾蔷')
+                continue;
+            psn.children_idx = boy_idx;
+            ++boy_idx;
+        } else {
+            psn.children_idx = girl_idx;
+            ++girl_idx;
+        }
+    }
+}
 </script>
 </head>
-<body lang="cn">
-    <div class=person>
-        <div class=container></div>
-        <div class=name>马承珂</div>
-        <div class=superscript>上标</div>
-        <div class=subscript>下标</div>
+<body lang=cn>
+    <div class=hide id=template>
+        <div class=person name=person>
+            <div class=name>人名字</div>
+            <div class=script-box>
+                <div class=super-script>上标</div>
+                <div class=sub-script>下标</div>
+            </div>
+        </div>
     </div>
-    <p lang="cn" style="display:none; border:1px solid red; text-align:justify; text-align-last:justify; text-justify:inter-character;">马承珂</p>
-    <p style="display:none; border:1px solid red; font-size:14px; width:100px; height:64px; text-align:justify; text-align-last:justify; text-justify:distribute;">马承珂<br/>换行</p>
-    <p style="display:none; border:1px solid red; font-size:14px; width:32px; height:100px; writing-mode:vertical-rl; text-align:justify; text-align-last:justify; text-justify:distribute;">马承珂<br/>换行</p>
+    <div class=graph id="graph">
+        <div class=hide id=level-0></div>
+        <div class=level id=level-1></div>
+        <div class=space-between-level></div>
+        <div class=level id=level-2></div>
+        <div class=space-between-level></div>
+        <div class=level id=level-3></div>
+        <div class=space-between-level></div>
+        <div class=level id=level-4></div>
+        <div class=space-between-level></div>
+        <div class=level id=level-5></div>
+    </div>
 </body>
 </html>
