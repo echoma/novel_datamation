@@ -3,13 +3,14 @@
 @px: 0.0625rem;
 @dark-color: maroon;
 @font-color: black;
+@shadow-color: gray;
 
 * {margin: 0px; padding: 0px;}
 body {background: @range-bg;}
 
 .hide {display:none;}
 .person {
-    @font-size: 22;
+    @font-size: 24;
     @padding-v: 0.3*@font-size;
     @padding-h: 0.2*@font-size;
     float: left;
@@ -25,6 +26,7 @@ body {background: @range-bg;}
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+    box-shadow: @padding-v*@px @padding-v*@px 0.4*@font-size*@px @shadow-color;
 
     .name {
         @unit: @font-size;
@@ -101,6 +103,7 @@ body {background: @range-bg;}
 .person.fake {
     border-color: @range-bg;
     outline-color: @range-bg;
+    box-shadow: none;
 }
 
 .graph {
@@ -116,7 +119,7 @@ body {background: @range-bg;}
     }
     .space-between-level {
         flex: 0 1 auto;
-        height: 50*@px;
+        height: 40*@px;
     }
 }
 
@@ -136,6 +139,7 @@ body {background: @range-bg;}
     position: absolute;
     z-index: -1;
     height: 5.6*@font-size*@px;
-    background-color: mistyrose;
+    background-color: antiquewhite;/*mistyrose*/
     border: @px solid lightgray;
+    box-shadow: 0.3*@font-size*@px 0.3*@font-size*@px 0.4*@font-size*@px lighten(@shadow-color,30%);
 }

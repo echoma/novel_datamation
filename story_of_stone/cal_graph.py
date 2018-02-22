@@ -144,23 +144,32 @@ class Level:
                             psn.husband = new_psn
     def derive(self):
         """
-        对于本层中的每个人人员找出其下一代。
-        对于有妻妾节点的男性，本身不需要找下一代，其妻妾找出下一代即可。
+        对于本层中的每个人找出其下一代。
+        根据Graph类里树的要求，对于每一个小家庭，我们先扫描妻妾的孩子，再扫描男性的孩子。
         """
         with self.db.cursor() as cursor:
             for psn in self.person_list:
-                male_with_wife_node = len(psn.wife_list)>0
-                if not male_with_wife_node:
-                    sql = 'select b.* from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="父母子女" order by a.sort_age desc'
-                    cursor.execute(sql, (psn.name))
-                    lvl = None
-                    if cursor.rowcount>0:
-                        lvl = self.tree.ensureExistanceOfNextLevel(self.level_number)
-                    for row in cursor.fetchall():
-                        if not Person.exists(row[1]):
-                            new_psn = lvl.addPerson(row[1])
-                            psn.child_list.append(new_psn)
-                            new_psn.parent = psn
+                if psn.info.gender=='女':
+                    self.deriveOfOne(psn, cursor)
+                else:
+                    for wife in psn.wife_list:
+                        self.deriveOfOne(wife, cursor)
+                    self.deriveOfOne(psn, cursor)
+                    
+    def deriveOfOne(self, psn, cursor):
+        """
+        被derive调用，查询指定人的下一代。
+        """
+        sql = 'select b.* from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="父母子女" order by a.sort_age desc'
+        cursor.execute(sql, (psn.name))
+        lvl = None
+        if cursor.rowcount>0:
+            lvl = self.tree.ensureExistanceOfNextLevel(self.level_number)
+        for row in cursor.fetchall():
+            if not Person.exists(row[1]):
+                new_psn = lvl.addPerson(row[1])
+                psn.child_list.append(new_psn)
+                new_psn.parent = psn
     def toDict(self):
         o = {}
         o['level_number'] = self.level_number

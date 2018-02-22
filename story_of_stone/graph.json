@@ -28,6 +28,7 @@
           "贾敷",
           "贾敬",
           "贾赦",
+          "邢夫人",
           "贾政",
           "贾敏"
         ]
@@ -862,8 +863,8 @@
           "age_note": "纯粹拍脑袋瞎猜",
           "dead": 0,
           "deduction": 0,
-          "die_chapter": 0,
-          "die_note": "",
+          "die_chapter": 63,
+          "die_note": "忽见东府中几个人慌慌张张跑来说：老爷宾天了。",
           "family_name": "贾",
           "first_action_chapter": 11,
           "first_action_note": "贾敬生日，贾蓉跟贾敬有些交流",
@@ -1227,7 +1228,7 @@
           "pay_estimated": 0,
           "pay_in_coin": 0.0,
           "pay_in_silver": 2.0,
-          "pay_note": "第36回，凤姐说赵姨娘有换兄弟的二两月例银子"
+          "pay_note": "第36回，凤姐说赵姨娘有环兄弟的二两月例银子"
         },
         "name": "贾环",
         "parent": "贾政",
@@ -1650,11 +1651,11 @@
           "old_name_note": "",
           "sort_age": 49.0,
           "sort_position": 780.0,
-          "title_1": "太爷",
+          "title_1": "",
           "title_2": "",
           "title_3": "",
           "title_4": "",
-          "title_note_1": "第11回，贾敬生日，各人口中都称他太爷",
+          "title_note_1": "",
           "title_note_2": "",
           "title_note_3": "",
           "title_note_4": ""
@@ -1682,6 +1683,66 @@
           "official_rank": 0,
           "official_title": ""
         },
+        "wife_list": [
+          "邢夫人"
+        ]
+      },
+      "邢夫人": {
+        "child_list": [],
+        "husband": "贾赦",
+        "info": {
+          "age": 33,
+          "age_note": "比较猜测，http://bbs.tianya.cn/post-106-544458-1.shtml",
+          "dead": 0,
+          "deduction": 0,
+          "die_chapter": 0,
+          "die_note": "",
+          "family_name": "邢",
+          "first_action_chapter": 3,
+          "first_action_note": "黛玉进贾府，邢夫人领着黛玉",
+          "first_name_chapter": 3,
+          "first_name_note": "",
+          "first_refer_chapter": 3,
+          "first_refer_note": "",
+          "gender": "女",
+          "given_name": "",
+          "name": "邢夫人",
+          "nick_1": "",
+          "nick_2": "",
+          "nick_3": "",
+          "nick_4": "",
+          "nick_note_1": "",
+          "nick_note_2": "",
+          "nick_note_3": "",
+          "nick_note_4": "",
+          "old_name": "",
+          "old_name_note": "",
+          "sort_age": 33.0,
+          "sort_position": 777.0,
+          "title_1": "",
+          "title_2": "",
+          "title_3": "",
+          "title_4": "",
+          "title_note_1": "",
+          "title_note_2": "",
+          "title_note_3": "",
+          "title_note_4": ""
+        },
+        "level": 3,
+        "master": {
+          "dwelling": "荣国府",
+          "family": "贾家",
+          "generation": 3,
+          "name": "邢夫人",
+          "original_family": "",
+          "pay_estimated": 0,
+          "pay_in_coin": 0.0,
+          "pay_in_silver": 20.0,
+          "pay_note": ""
+        },
+        "name": "邢夫人",
+        "parent": null,
+        "social_position": null,
         "wife_list": []
       }
     }

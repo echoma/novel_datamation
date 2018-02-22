@@ -91,7 +91,7 @@ function fillPsnScript(dom_psn, psn) { // 填写某个人的上下标
         avai_list.push(official);
     }
     // 妻妾排行名号
-    if (psn.wives_idx) {
+    if (psn.wives_idx && psn.master && psn.master.generation>2) {
         let txt = psn.wives_idx==1?'大太太':'姨太太';
         avai_list.push(txt);
     }
@@ -213,6 +213,7 @@ function adjustNeighborLevels(lvl_nbr, person_map) { // 大致调整相邻两个
         if (idx>child_max_dom_idx) {
             // 如果上层元素在所有下层孩子元素右侧，则下层元素前面要补充空白
             let fake_psn_cnt = idx - child_max_dom_idx;
+            //console.log(name, '在孩子右侧，补充空白数量为：',fake_psn_cnt, idx, child_max_dom_idx);
             for (let i=0; i<fake_psn_cnt; ++i) {
                 let dom_fake = dom_psn_tpl.clone().addClass('fake');
                 dom_fake.insertBefore(dom_nlvl_psns.eq(child_min_dom_idx));
@@ -221,6 +222,7 @@ function adjustNeighborLevels(lvl_nbr, person_map) { // 大致调整相邻两个
         } else if (idx<child_min_dom_idx) {
             // 如果上层元素在所有下层孩子元素左侧，则上层元素前面要补充空白
             let fake_psn_cnt = child_min_dom_idx - idx;
+            //console.log(name, '在孩子左侧，补充空白数量为：',fake_psn_cnt, idx, child_min_dom_idx);
             for (let i=0; i<fake_psn_cnt; ++i) {
                 let dom_fake = dom_psn_tpl.clone().addClass('fake');
                 dom_fake.insertBefore(dom_lvl_psns.eq(idx));
@@ -323,14 +325,16 @@ function drawCoupleBoxes(person_map) { // 画夫妻框
         let psn_pos = dom_psn.position();
         let psn_w = dom_psn.outerWidth(true);
         let psn_h = dom_psn.outerHeight(true);
-        let start_point = [psn_pos.left+psn_w/2, psn_pos.top+psn_h-dom_psn_tpl.outlineOffset];
         let last_wife_name = psn.wife_list[psn.wife_list.length-1];
         let last_wife = person_map[last_wife_name];
         let dom_wife = dom_psn_list.filter('[person='+last_wife_name+']');
         let wife_pos = dom_wife.position();
+        let outlineWidth = parseInt(dom_psn.css('outlineWidth'));
         let dom_cpl_box = dom_cpl_tpl.clone();
-        dom_cpl_box.css('left', psn_pos.left).css('top', psn_pos.top);
-        dom_cpl_box.css('width', wife_pos.left-psn_pos.left+psn_w);
+        dom_cpl_box.css('left', psn_pos.left+outlineWidth)
+            .css('top', psn_pos.top+outlineWidth);
+        dom_cpl_box.css('width', wife_pos.left-psn_pos.left+psn_w-outlineWidth*2)
+            .css('height',psn_h-outlineWidth*2);
         dom_graph.append(dom_cpl_box);
     }
 }
