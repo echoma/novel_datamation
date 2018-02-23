@@ -128,20 +128,23 @@ class Level:
             for psn in self.person_list:
                 sql = ''
                 if psn.info.gender=='男':
-                    sql = 'select a.name from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="夫妻" order by b.sub_type desc'
+                    sql = 'select a.name,b.sub_type from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="夫妻" order by b.sub_type asc, a.sort_position desc'
                 else:
-                    sql = 'select a.name from person a inner join kinship b on a.name=b.object where b.object=%s and b.type="夫妻" limit 1'
+                    sql = 'select b.subject,b.sub_type from person a inner join kinship b on a.name=b.object where b.object=%s and b.type="夫妻" limit 1'
                 cursor.execute(sql, (psn.name))
                 for row in cursor.fetchall():
                     if not Person.exists(row[0]):
                         if psn.info.gender=='男':
-                            new_psn = self.addPersonAfter(psn.name, row[0])
+                            add_after_name = psn.name if 0==len(psn.wife_list) else psn.wife_list[-1].name
+                            new_psn = self.addPersonAfter(add_after_name, row[0])
                             new_psn.husband = psn
+                            new_psn.as_wife_type = row[1]
                             psn.wife_list.append(new_psn)
                         else:
                             new_psn = self.addPersonBefore(psn.name, row[0])
                             new_psn.wife_list.append(psn)
                             psn.husband = new_psn
+                            psn.as_wife_type = row[1]
     def derive(self):
         """
         对于本层中的每个人找出其下一代。
@@ -168,6 +171,7 @@ class Level:
         for row in cursor.fetchall():
             if not Person.exists(row[1]):
                 new_psn = lvl.addPerson(row[1])
+                new_psn.as_child_type = row[3]
                 psn.child_list.append(new_psn)
                 new_psn.parent = psn
     def toDict(self):
@@ -185,8 +189,10 @@ class Person:
         self.level = lvl
         self.name = name
         self.parent = None # 每个人只有一个父母，不能既有父亲又有母亲，具体原因见“Graph类的注释”
+        self.as_child_type = ''
         self.child_list = []
         self.husband = None
+        self.as_wife_type = ''
         self.wife_list = [] # 按照地位顺序排列，正房大太太在前，偏房姨太太在后。
         with self.db.cursor() as cursor:
             # 获取基本信息
@@ -217,8 +223,10 @@ class Person:
         o['level'] = self.level.level_number
         o['name'] = self.name
         o['parent'] = None if self.parent is None else self.parent.name
+        o['as_child_type'] = self.as_child_type
         o['child_list'] = [psn.name for psn in self.child_list]
         o['husband'] = None if self.husband is None else self.husband.name
+        o['as_wife_type'] = self.as_wife_type
         o['wife_list'] = [psn.name for psn in self.wife_list]
         o['info'] = self.info._asdict()
         o['master'] = None if self.master is None else self.master._asdict()

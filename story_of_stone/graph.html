@@ -68,6 +68,8 @@ function fillPsnScript(dom_psn, psn) { // 填写某个人的上下标
     let dom_psn_sub_s = dom_psn.find('.sub-script');
     let psn_sub_s_is_empty = false;
     let avai_list = []; // 可用的名号
+    let default_scr_len = 3;
+    let max_scr_len = avai_list.length>0? 6-avai_list[0].length : default_scr_len;
     // 长子次子名号
     if (psn.master && psn.master.generation>1) {
         if (psn.children_idx) {
@@ -80,32 +82,37 @@ function fillPsnScript(dom_psn, psn) { // 填写某个人的上下标
             avai_list.push(txt);
         }
     }
-    if (psn.name=='贾蔷')
-        avai_list.push('养育')
-    // 爵位官位名号
-    let nobility = psn.social_position? psn.social_position.nobility_title : '';
-    let official = psn.social_position? psn.social_position.official_title : '';
-    if (nobility.length>0 && nobility.length<=3) {
-        avai_list.push(nobility);
-    } else if (official.length>0 && official.length<=3) {
-        avai_list.push(official);
-    }
+    if (psn.parent && psn.as_child_type!='亲生')
+        avai_list.push('非亲生');
     // 妻妾排行名号
     if (psn.wives_idx && psn.master && psn.master.generation>2) {
-        let txt = psn.wives_idx==1?'大太太':'姨太太';
+        let txt = psn.wives_idx==1?'正室':'偏房';
         avai_list.push(txt);
     }
+    /*if (psn.husband && psn.as_wife_type=='续弦')
+        avai_list.push('续弦');*/
     // 尊称名号
+    default_scr_len = 5;
+    max_scr_len = avai_list.length>0? 6-avai_list[0].length : default_scr_len;
     for (let i=1; i<=4; ++i) {
         let txt = psn.info['title_'+i];
-        if (txt.length>0 && txt.length<=3) {
+        if (txt.length>0 && txt.length<=max_scr_len) {
             avai_list.push(txt);
         }
     }
+    // 爵位官位名号
+    let nobility = psn.social_position? psn.social_position.nobility_title : '';
+    let official = psn.social_position? psn.social_position.official_title : '';
+    if (nobility.length>0 && nobility.length<=max_scr_len) {
+        avai_list.push(nobility);
+    } else if (official.length>0 && official.length<=max_scr_len) {
+        avai_list.push(official);
+    }
     // 诨名
+    max_scr_len = avai_list.length>0? 6-avai_list[0].length : default_scr_len;
     for (let i=1; i<=4; ++i) {
         let txt = psn.info['nick_'+i];
-        if (txt.length>0 && txt.length<=3) {
+        if (txt.length>0 && txt.length<=max_scr_len) {
             avai_list.push(txt);
         }
     }
@@ -158,9 +165,9 @@ function calChildrenOrder(psn, person_map) { // 为这个人计算其长子次�
     let boy_idx = 1;
     let girl_idx = 1;
     for (let psn of children) {
+        if (psn.as_child_type!='亲生')
+            continue;
         if (psn.info.gender=='男') {
-            if (psn.info.name=='贾蔷')
-                continue;
             psn.children_idx = boy_idx;
             ++boy_idx;
         } else {
@@ -173,7 +180,7 @@ function adjustAllLevels(person_map) { // 根据代际关系大致调整人物�
     for (let n=0; n<100; ++n) { // 100是防止死循环
         let graph_has_adjusted = false;
         for (let lvl_nbr=1; lvl_nbr<5; ++lvl_nbr) {
-            for (let i=0; i<100; ++i) { // 100是防止死循环
+            for (let i=0; i<50; ++i) { // 50是防止死循环
                 let lvl_has_adjusted = adjustNeighborLevels(lvl_nbr, person_map);
                 if (lvl_has_adjusted)
                     graph_has_adjusted = true;
@@ -201,7 +208,7 @@ function adjustNeighborLevels(lvl_nbr, person_map) { // 大致调整相邻两个
         let children_names = getChildrenNames(psn, person_map);
         if (children_names.length==0) // 没有孩子就不用调整了
             continue;
-        let child_min_dom_idx = 999;
+        let child_min_dom_idx = 200;
         let child_max_dom_idx = -1;
         for (let child_name of children_names) {
             let child_dom_idx = nlvl_psns_names.indexOf(child_name);
@@ -211,23 +218,31 @@ function adjustNeighborLevels(lvl_nbr, person_map) { // 大致调整相邻两个
                 child_max_dom_idx = child_dom_idx;
         }
         if (idx>child_max_dom_idx) {
-            // 如果上层元素在所有下层孩子元素右侧，则下层元素前面要补充空白
+            // 如果当前元素在所有下层孩子元素右侧，则下层孩子元素前面要补充空白
             let fake_psn_cnt = idx - child_max_dom_idx;
-            //console.log(name, '在孩子右侧，补充空白数量为：',fake_psn_cnt, idx, child_max_dom_idx);
+            //console.log(name, '在孩子右侧，孩子左边补充空白数量为：',fake_psn_cnt, idx, child_max_dom_idx);
             for (let i=0; i<fake_psn_cnt; ++i) {
                 let dom_fake = dom_psn_tpl.clone().addClass('fake');
                 dom_fake.insertBefore(dom_nlvl_psns.eq(child_min_dom_idx));
             }
             return 1;
         } else if (idx<child_min_dom_idx) {
-            // 如果上层元素在所有下层孩子元素左侧，则上层元素前面要补充空白
-            let fake_psn_cnt = child_min_dom_idx - idx;
-            //console.log(name, '在孩子左侧，补充空白数量为：',fake_psn_cnt, idx, child_min_dom_idx);
-            for (let i=0; i<fake_psn_cnt; ++i) {
-                let dom_fake = dom_psn_tpl.clone().addClass('fake');
-                dom_fake.insertBefore(dom_lvl_psns.eq(idx));
+            // 如果当前元素在所有下层孩子元素左侧，则上层元素前面要补充空白
+            let dont_need = 0; // 但如果当前元素正下方是空白，且孩子全由妻妾连线，且孩子不止一人，则不需要补充空白
+            if (typeof(nlvl_psns_names[idx])=='undefined'
+                && children_names.length<2
+                && psn.child_list.length<1
+                && psn.wife_list.length>0)
+                dont_need = 1;
+            if (!dont_need) {
+                let fake_psn_cnt = child_min_dom_idx - idx;
+                //console.log(name, '在孩子左侧，自己左边补充空白数量为：',fake_psn_cnt, idx, child_min_dom_idx);
+                for (let i=0; i<fake_psn_cnt; ++i) {
+                    let dom_fake = dom_psn_tpl.clone().addClass('fake');
+                    dom_fake.insertBefore(dom_lvl_psns.eq(idx));
+                }
+                return 1;
             }
-            return 1;
         }
     }
     return 0;
@@ -239,7 +254,6 @@ function getChildrenNames(psn, person_map) { // 找出此人的孩子
         for (let name of psn.child_list) {
             children.push(name);
         }
-        let wives_idx = 1;
         for (let wife_name of psn.wife_list) {
             let wife = person_map[wife_name];
             for (let name of wife.child_list) {
@@ -255,7 +269,7 @@ function getChildrenNames(psn, person_map) { // 找出此人的孩子
     return children;
 }
 function drawLevelLines(person_map) { // 为代际之间的关联关系画线
-    let dom_psn_list = $(document).find('.person');
+    let dom_psn_list = $(document).find('.person').filter('[person]');
     for (let i=0; i<dom_psn_list.length; ++i) {
         let dom_psn = dom_psn_list.eq(i);
         let name = dom_psn.attr('person');
@@ -274,13 +288,14 @@ function drawLevelLines(person_map) { // 为代际之间的关联关系画线
             let cpsn_h = dom_cpsn.outerHeight(true);
             end_point_list.push([cpsn_pos.left+cpsn_w/2, cpsn_pos.top+dom_psn_tpl.outlineOffset]);
         }
-        drawBranchLine(start_point, end_point_list);
+        if (end_point_list.length>0)
+            drawBranchLine(start_point, end_point_list);
     }
 }
 function drawBranchLine(start, end_list) { // 画分叉线
-    let min_end_x = 99999999;
+    let min_end_x = 999999;
     let max_end_x = -1;
-    let min_end_y = 99999999; // 结束点里纵坐标最小值
+    let min_end_y = 999999; // 结束点里纵坐标最小值
     for (let p of end_list) {
         if (p[0] < min_end_x)
             min_end_x = p[0];
@@ -329,18 +344,19 @@ function drawCoupleBoxes(person_map) { // 画夫妻框
         let last_wife = person_map[last_wife_name];
         let dom_wife = dom_psn_list.filter('[person='+last_wife_name+']');
         let wife_pos = dom_wife.position();
-        let outlineWidth = parseInt(dom_psn.css('outlineWidth'));
+        let border_w = parseInt(dom_psn.css('outlineWidth'))+parseInt(dom_psn.css('borderTopWidth'));
         let dom_cpl_box = dom_cpl_tpl.clone();
-        dom_cpl_box.css('left', psn_pos.left+outlineWidth)
-            .css('top', psn_pos.top+outlineWidth);
-        dom_cpl_box.css('width', wife_pos.left-psn_pos.left+psn_w-outlineWidth*2)
-            .css('height',psn_h-outlineWidth*2);
+        dom_cpl_box.css('left', psn_pos.left+border_w)
+            .css('top', psn_pos.top+border_w);
+        dom_cpl_box.css('width', wife_pos.left-psn_pos.left+psn_w-border_w*3)
+            .css('height',psn_h-border_w*3);
         dom_graph.append(dom_cpl_box);
     }
 }
 </script>
 </head>
 <body lang=cn>
+    <div class=gragh-brief>版本：20180223</div>
     <div class=hide id=template>
         <div class=person name=person>
             <div class=name>　</div>

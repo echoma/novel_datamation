@@ -1,6 +1,7 @@
 /*大范围区域的背景。例如网页背景*/
 @range-bg: linen;
 @px: 0.0625rem;
+@font-size: 24;
 @dark-color: maroon;
 @font-color: black;
 @shadow-color: gray;
@@ -8,9 +9,15 @@
 * {margin: 0px; padding: 0px;}
 body {background: @range-bg;}
 
+.gragh-brief {
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: lighten(@font-color, 50%);
+}
+
 .hide {display:none;}
 .person {
-    @font-size: 24;
     @padding-v: 0.3*@font-size;
     @padding-h: 0.2*@font-size;
     float: left;
@@ -36,6 +43,7 @@ body {background: @range-bg;}
         text-align: justify;
         text-align-last: justify;
         text-justify: inter-character;
+        text-shadow: 2*@px 2*@px 3*@px @shadow-color;
         position: relative;
         width: @unit*@px;
         height: 4*@unit*@px;
@@ -104,6 +112,7 @@ body {background: @range-bg;}
     border-color: @range-bg;
     outline-color: @range-bg;
     box-shadow: none;
+    opacity: 0;
 }
 
 .graph {
@@ -135,11 +144,10 @@ body {background: @range-bg;}
 }
 
 .couple-box {
-    @font-size: 22;
     position: absolute;
     z-index: -1;
     height: 5.6*@font-size*@px;
-    background-color: antiquewhite;/*mistyrose*/
-    border: @px solid lightgray;
+    background-color: lightpink;
+    border: 2*@px solid gray;
     box-shadow: 0.3*@font-size*@px 0.3*@font-size*@px 0.4*@font-size*@px lighten(@shadow-color,30%);
 }

@@ -30,6 +30,10 @@
           "贾赦",
           "邢夫人",
           "贾政",
+          "王夫人",
+          "赵姨娘",
+          "周姨娘",
+          "林如海",
           "贾敏"
         ]
       },
@@ -37,10 +41,15 @@
         "level_number": 4,
         "person_list": [
           "贾珍",
+          "尤氏",
           "贾惜春",
           "贾琏",
+          "王熙凤",
+          "尤二姐",
+          "贾迎春",
           "贾琮",
           "贾珠",
+          "李纨",
           "贾元春",
           "贾宝玉",
           "贾探春",
@@ -60,7 +69,321 @@
       }
     ],
     "person_map": {
+      "周姨娘": {
+        "as_child_type": "",
+        "as_wife_type": "偏房",
+        "child_list": [],
+        "husband": "贾政",
+        "info": {
+          "age": 30,
+          "age_note": "瞎猜",
+          "dead": 0,
+          "deduction": 0,
+          "die_chapter": 0,
+          "die_note": "",
+          "family_name": "周",
+          "first_action_chapter": 25,
+          "first_action_note": "赵姨娘找马道婆害宝玉后，周姨娘来看望宝玉",
+          "first_name_chapter": 25,
+          "first_name_note": "",
+          "first_refer_chapter": 25,
+          "first_refer_note": "",
+          "gender": "女",
+          "given_name": "",
+          "name": "周姨娘",
+          "nick_1": "",
+          "nick_2": "",
+          "nick_3": "",
+          "nick_4": "",
+          "nick_note_1": "",
+          "nick_note_2": "",
+          "nick_note_3": "",
+          "nick_note_4": "",
+          "old_name": "",
+          "old_name_note": "",
+          "sort_age": 30.0,
+          "sort_position": 200.0,
+          "title_1": "",
+          "title_2": "",
+          "title_3": "",
+          "title_4": "",
+          "title_note_1": "",
+          "title_note_2": "",
+          "title_note_3": "",
+          "title_note_4": ""
+        },
+        "level": 3,
+        "master": {
+          "dwelling": "",
+          "family": "贾家",
+          "generation": 3,
+          "name": "周姨娘",
+          "original_family": "",
+          "pay_estimated": 0,
+          "pay_in_coin": 0.0,
+          "pay_in_silver": 2.0,
+          "pay_note": ""
+        },
+        "name": "周姨娘",
+        "parent": null,
+        "social_position": null,
+        "wife_list": []
+      },
+      "尤二姐": {
+        "as_child_type": "",
+        "as_wife_type": "偏房",
+        "child_list": [],
+        "husband": "贾琏",
+        "info": {
+          "age": 23,
+          "age_note": "尤二姐比贾蓉小，推导：https://zh.wikipedia.org/wiki/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E5%B9%B4%E8%B0%B1#cite_note-38",
+          "dead": 0,
+          "deduction": 0,
+          "die_chapter": 0,
+          "die_note": "",
+          "family_name": "尤",
+          "first_action_chapter": 63,
+          "first_action_note": "尤氏找家里姐妹来贾府",
+          "first_name_chapter": 63,
+          "first_name_note": "",
+          "first_refer_chapter": 63,
+          "first_refer_note": "",
+          "gender": "女",
+          "given_name": "",
+          "name": "尤二姐",
+          "nick_1": "",
+          "nick_2": "",
+          "nick_3": "",
+          "nick_4": "",
+          "nick_note_1": "",
+          "nick_note_2": "",
+          "nick_note_3": "",
+          "nick_note_4": "",
+          "old_name": "",
+          "old_name_note": "",
+          "sort_age": 23.0,
+          "sort_position": 450.0,
+          "title_1": "",
+          "title_2": "",
+          "title_3": "",
+          "title_4": "",
+          "title_note_1": "",
+          "title_note_2": "",
+          "title_note_3": "",
+          "title_note_4": ""
+        },
+        "level": 4,
+        "master": {
+          "dwelling": "",
+          "family": "",
+          "generation": 4,
+          "name": "尤二姐",
+          "original_family": "",
+          "pay_estimated": 0,
+          "pay_in_coin": 0.0,
+          "pay_in_silver": 2.0,
+          "pay_note": ""
+        },
+        "name": "尤二姐",
+        "parent": null,
+        "social_position": null,
+        "wife_list": []
+      },
+      "尤氏": {
+        "as_child_type": "",
+        "as_wife_type": "续弦",
+        "child_list": [],
+        "husband": "贾珍",
+        "info": {
+          "age": 40,
+          "age_note": "第76回，尤氏40，推算：https://zh.wikipedia.org/wiki/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E5%B9%B4%E8%B0%B1#cite_note-38",
+          "dead": 0,
+          "deduction": 0,
+          "die_chapter": 0,
+          "die_note": "",
+          "family_name": "尤",
+          "first_action_chapter": 5,
+          "first_action_note": "尤氏在宁府治酒请大家赏梅花，才有了宝玉游幻境",
+          "first_name_chapter": 5,
+          "first_name_note": "",
+          "first_refer_chapter": 5,
+          "first_refer_note": "",
+          "gender": "女",
+          "given_name": "",
+          "name": "尤氏",
+          "nick_1": "",
+          "nick_2": "",
+          "nick_3": "",
+          "nick_4": "",
+          "nick_note_1": "",
+          "nick_note_2": "",
+          "nick_note_3": "",
+          "nick_note_4": "",
+          "old_name": "",
+          "old_name_note": "",
+          "sort_age": 40.0,
+          "sort_position": 700.0,
+          "title_1": "大奶奶",
+          "title_2": "",
+          "title_3": "",
+          "title_4": "",
+          "title_note_1": "",
+          "title_note_2": "",
+          "title_note_3": "",
+          "title_note_4": ""
+        },
+        "level": 4,
+        "master": {
+          "dwelling": "",
+          "family": "",
+          "generation": 4,
+          "name": "尤氏",
+          "original_family": "",
+          "pay_estimated": 1,
+          "pay_in_coin": 0.0,
+          "pay_in_silver": 10.0,
+          "pay_note": "正房太太都是10两一月，尤氏为续弦的正房，理论上是10两。"
+        },
+        "name": "尤氏",
+        "parent": null,
+        "social_position": null,
+        "wife_list": []
+      },
+      "李纨": {
+        "as_child_type": "",
+        "as_wife_type": "正房",
+        "child_list": [
+          "贾兰"
+        ],
+        "husband": "贾珠",
+        "info": {
+          "age": 27,
+          "age_note": "李纨年龄比王熙凤大，推导：https://zh.wikipedia.org/wiki/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E5%B9%B4%E8%B0%B1#cite_note-38",
+          "dead": 0,
+          "deduction": 0,
+          "die_chapter": 0,
+          "die_note": "",
+          "family_name": "李",
+          "first_action_chapter": 3,
+          "first_action_note": "黛玉进贾府，贾珠之妻李氏捧饭",
+          "first_name_chapter": 4,
+          "first_name_note": "黛玉到李纨房中时才详细介绍李纨姓名",
+          "first_refer_chapter": 3,
+          "first_refer_note": "",
+          "gender": "女",
+          "given_name": "",
+          "name": "李纨",
+          "nick_1": "稻香老农",
+          "nick_2": "",
+          "nick_3": "",
+          "nick_4": "",
+          "nick_note_1": "第37回，结诗社时取别号",
+          "nick_note_2": "",
+          "nick_note_3": "",
+          "nick_note_4": "",
+          "old_name": "",
+          "old_name_note": "",
+          "sort_age": 27.0,
+          "sort_position": 670.0,
+          "title_1": "大奶奶",
+          "title_2": "",
+          "title_3": "",
+          "title_4": "",
+          "title_note_1": "",
+          "title_note_2": "",
+          "title_note_3": "",
+          "title_note_4": ""
+        },
+        "level": 4,
+        "master": {
+          "dwelling": "",
+          "family": "",
+          "generation": 4,
+          "name": "李纨",
+          "original_family": "",
+          "pay_estimated": 0,
+          "pay_in_coin": 0.0,
+          "pay_in_silver": 20.0,
+          "pay_note": "正房太太10两，贾母又特别拨了10两"
+        },
+        "name": "李纨",
+        "parent": null,
+        "social_position": null,
+        "wife_list": []
+      },
+      "林如海": {
+        "as_child_type": "",
+        "as_wife_type": "",
+        "child_list": [],
+        "husband": null,
+        "info": {
+          "age": 48,
+          "age_note": "第2回时，林如海40岁，黛玉5岁。",
+          "dead": 0,
+          "deduction": 0,
+          "die_chapter": 0,
+          "die_note": "",
+          "family_name": "林",
+          "first_action_chapter": 2,
+          "first_action_note": "冷子兴演说荣国府提到",
+          "first_name_chapter": 2,
+          "first_name_note": "",
+          "first_refer_chapter": 3,
+          "first_refer_note": "贾雨村向林如海谋官",
+          "gender": "男",
+          "given_name": "如海",
+          "name": "林如海",
+          "nick_1": "",
+          "nick_2": "",
+          "nick_3": "",
+          "nick_4": "",
+          "nick_note_1": "",
+          "nick_note_2": "",
+          "nick_note_3": "",
+          "nick_note_4": "",
+          "old_name": "",
+          "old_name_note": "",
+          "sort_age": 48.0,
+          "sort_position": 777.0,
+          "title_1": "",
+          "title_2": "",
+          "title_3": "",
+          "title_4": "",
+          "title_note_1": "",
+          "title_note_2": "",
+          "title_note_3": "",
+          "title_note_4": ""
+        },
+        "level": 3,
+        "master": {
+          "dwelling": "",
+          "family": "",
+          "generation": 3,
+          "name": "林如海",
+          "original_family": "",
+          "pay_estimated": 0,
+          "pay_in_coin": 0.0,
+          "pay_in_silver": 0.0,
+          "pay_note": ""
+        },
+        "name": "林如海",
+        "parent": null,
+        "social_position": {
+          "name": "林如海",
+          "nobility_note": "",
+          "nobility_rank": "",
+          "nobility_title": "",
+          "official_note": "第2回，贾雨村听到的新闻，当时林如海同时还做了巡盐御史",
+          "official_rank": 2,
+          "official_title": "兰台寺大夫"
+        },
+        "wife_list": [
+          "贾敏"
+        ]
+      },
       "林黛玉": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -118,7 +441,135 @@
         "social_position": null,
         "wife_list": []
       },
+      "王夫人": {
+        "as_child_type": "",
+        "as_wife_type": "正房",
+        "child_list": [
+          "贾珠",
+          "贾元春",
+          "贾宝玉"
+        ],
+        "husband": "贾政",
+        "info": {
+          "age": 48,
+          "age_note": "http://blog.sina.com.cn/s/blog_6755590d0102va0e.html",
+          "dead": 0,
+          "deduction": 0,
+          "die_chapter": 0,
+          "die_note": "",
+          "family_name": "王",
+          "first_action_chapter": 2,
+          "first_action_note": "冷子兴演说贾府提到政老爹的夫人王氏",
+          "first_name_chapter": 2,
+          "first_name_note": "",
+          "first_refer_chapter": 3,
+          "first_refer_note": "黛玉进贾府时王夫人与王熙凤对话",
+          "gender": "女",
+          "given_name": "",
+          "name": "王夫人",
+          "nick_1": "",
+          "nick_2": "",
+          "nick_3": "",
+          "nick_4": "",
+          "nick_note_1": "",
+          "nick_note_2": "",
+          "nick_note_3": "",
+          "nick_note_4": "",
+          "old_name": "",
+          "old_name_note": "",
+          "sort_age": 48.0,
+          "sort_position": 775.0,
+          "title_1": "",
+          "title_2": "",
+          "title_3": "",
+          "title_4": "",
+          "title_note_1": "",
+          "title_note_2": "",
+          "title_note_3": "",
+          "title_note_4": ""
+        },
+        "level": 3,
+        "master": {
+          "dwelling": "",
+          "family": "贾家",
+          "generation": 3,
+          "name": "王夫人",
+          "original_family": "",
+          "pay_estimated": 0,
+          "pay_in_coin": 0.0,
+          "pay_in_silver": 20.0,
+          "pay_note": ""
+        },
+        "name": "王夫人",
+        "parent": null,
+        "social_position": null,
+        "wife_list": []
+      },
+      "王熙凤": {
+        "as_child_type": "",
+        "as_wife_type": "正房",
+        "child_list": [
+          "贾巧姐"
+        ],
+        "husband": "贾琏",
+        "info": {
+          "age": 26,
+          "age_note": "王熙凤死的时候30岁，倒推：https://zh.wikipedia.org/wiki/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E5%B9%B4%E8%B0%B1#cite_note-38",
+          "dead": 0,
+          "deduction": 0,
+          "die_chapter": 0,
+          "die_note": "",
+          "family_name": "王",
+          "first_action_chapter": 2,
+          "first_action_note": "冷子兴演说荣国府提到贾琏娶了王氏内侄女",
+          "first_name_chapter": 3,
+          "first_name_note": "",
+          "first_refer_chapter": 3,
+          "first_refer_note": "黛玉进贾府，王熙凤来迎接",
+          "gender": "女",
+          "given_name": "熙凤",
+          "name": "王熙凤",
+          "nick_1": "凤辣子",
+          "nick_2": "",
+          "nick_3": "",
+          "nick_4": "",
+          "nick_note_1": "第3回，黛玉进贾府，贾母介绍王熙凤",
+          "nick_note_2": "",
+          "nick_note_3": "",
+          "nick_note_4": "",
+          "old_name": "",
+          "old_name_note": "",
+          "sort_age": 26.0,
+          "sort_position": 710.0,
+          "title_1": "二奶奶",
+          "title_2": "",
+          "title_3": "",
+          "title_4": "",
+          "title_note_1": "",
+          "title_note_2": "",
+          "title_note_3": "",
+          "title_note_4": ""
+        },
+        "level": 4,
+        "master": {
+          "dwelling": "",
+          "family": "",
+          "generation": 4,
+          "name": "王熙凤",
+          "original_family": "",
+          "pay_estimated": 0,
+          "pay_in_coin": 0.0,
+          "pay_in_silver": 10.0,
+          "pay_note": "正房太太都是10两一月"
+        },
+        "name": "王熙凤",
+        "parent": null,
+        "social_position": null,
+        "wife_list": []
+      },
       "秦可卿": {
+        "as_child_type": "",
+        "as_wife_type": "正房",
         "child_list": [],
         "husband": "贾蓉",
         "info": {
@@ -177,6 +628,8 @@
         "wife_list": []
       },
       "贾代化": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [
           "贾敷",
           "贾敬"
@@ -246,6 +699,8 @@
         "wife_list": []
       },
       "贾代善": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -314,6 +769,8 @@
         ]
       },
       "贾元春": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -367,7 +824,7 @@
           "pay_note": ""
         },
         "name": "贾元春",
-        "parent": "贾政",
+        "parent": "王夫人",
         "social_position": {
           "name": "贾元春",
           "nobility_note": "",
@@ -380,6 +837,8 @@
         "wife_list": []
       },
       "贾公": {
+        "as_child_type": "",
+        "as_wife_type": "",
         "child_list": [
           "贾演",
           "贾源"
@@ -431,6 +890,8 @@
         "wife_list": []
       },
       "贾兰": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -450,7 +911,7 @@
           "gender": "男",
           "given_name": "兰",
           "name": "贾兰",
-          "nick_1": "",
+          "nick_1": "兰哥",
           "nick_2": "",
           "nick_3": "",
           "nick_4": "",
@@ -484,11 +945,13 @@
           "pay_note": ""
         },
         "name": "贾兰",
-        "parent": "贾珠",
+        "parent": "李纨",
         "social_position": null,
         "wife_list": []
       },
       "贾宝玉": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -542,11 +1005,13 @@
           "pay_note": "第51回，给晴雯看病抓了2两的银戥子，但宝玉每月花的钱远远不止这些"
         },
         "name": "贾宝玉",
-        "parent": "贾政",
+        "parent": "王夫人",
         "social_position": null,
         "wife_list": []
       },
       "贾巧姐": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -600,11 +1065,13 @@
           "pay_note": ""
         },
         "name": "贾巧姐",
-        "parent": "贾琏",
+        "parent": "王熙凤",
         "social_position": null,
         "wife_list": []
       },
       "贾惜春": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -636,11 +1103,11 @@
           "old_name_note": "",
           "sort_age": 12.0,
           "sort_position": 400.0,
-          "title_1": "四姑娘",
+          "title_1": "四小姐",
           "title_2": "",
           "title_3": "",
           "title_4": "",
-          "title_note_1": "",
+          "title_note_1": "冷子兴演说荣国府提到四小姐名探春",
           "title_note_2": "",
           "title_note_3": "",
           "title_note_4": ""
@@ -663,12 +1130,14 @@
         "wife_list": []
       },
       "贾探春": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
           "age": 13,
           "age_note": "跟黛玉、湘云差不多，难分清楚。讨论也很多。",
-          "dead": 1,
+          "dead": 0,
           "deduction": 0,
           "die_chapter": 0,
           "die_note": "",
@@ -683,22 +1152,22 @@
           "given_name": "探春",
           "name": "贾探春",
           "nick_1": "蕉下客",
-          "nick_2": "",
+          "nick_2": "玫瑰花",
           "nick_3": "",
           "nick_4": "",
           "nick_note_1": "第37回，诗社里新取的笔名",
-          "nick_note_2": "",
+          "nick_note_2": "第65回，兴儿向尤二姐提起姑娘们的诨名",
           "nick_note_3": "",
           "nick_note_4": "",
           "old_name": "",
           "old_name_note": "",
           "sort_age": 13.5,
           "sort_position": 555.0,
-          "title_1": "",
+          "title_1": "三小姐",
           "title_2": "",
           "title_3": "",
           "title_4": "",
-          "title_note_1": "",
+          "title_note_1": "冷子兴推演荣国府说三小姐名探春",
           "title_note_2": "",
           "title_note_3": "",
           "title_note_4": ""
@@ -716,18 +1185,14 @@
           "pay_note": ""
         },
         "name": "贾探春",
-        "parent": "贾政",
+        "parent": "赵姨娘",
         "social_position": null,
         "wife_list": []
       },
       "贾政": {
-        "child_list": [
-          "贾珠",
-          "贾元春",
-          "贾宝玉",
-          "贾探春",
-          "贾环"
-        ],
+        "as_child_type": "亲生",
+        "as_wife_type": "",
+        "child_list": [],
         "husband": null,
         "info": {
           "age": 48,
@@ -746,11 +1211,11 @@
           "gender": "男",
           "given_name": "政",
           "name": "贾政",
-          "nick_1": "政老爹",
+          "nick_1": "",
           "nick_2": "",
           "nick_3": "",
           "nick_4": "",
-          "nick_note_1": "第2回，冷子兴演说中称贾政为政老爹",
+          "nick_note_1": "",
           "nick_note_2": "",
           "nick_note_3": "",
           "nick_note_4": "",
@@ -790,13 +1255,19 @@
           "official_rank": 5,
           "official_title": "工部员外郎"
         },
-        "wife_list": []
+        "wife_list": [
+          "王夫人",
+          "赵姨娘",
+          "周姨娘"
+        ]
       },
       "贾敏": {
+        "as_child_type": "亲生",
+        "as_wife_type": "正房",
         "child_list": [
           "林黛玉"
         ],
-        "husband": null,
+        "husband": "林如海",
         "info": {
           "age": 47,
           "age_note": "年龄比贾政小。第2回，林如海40岁时，黛玉5岁。至大观园时，黛玉12、13岁。",
@@ -853,6 +1324,8 @@
         "wife_list": []
       },
       "贾敬": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [
           "贾珍",
           "贾惜春"
@@ -922,6 +1395,8 @@
         "wife_list": []
       },
       "贾敷": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -980,6 +1455,8 @@
         "wife_list": []
       },
       "贾母": {
+        "as_child_type": "",
+        "as_wife_type": "正房",
         "child_list": [
           "贾赦",
           "贾政",
@@ -1042,6 +1519,8 @@
         "wife_list": []
       },
       "贾源": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [
           "贾代善"
         ],
@@ -1110,6 +1589,8 @@
         "wife_list": []
       },
       "贾演": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [
           "贾代化"
         ],
@@ -1178,6 +1659,8 @@
         "wife_list": []
       },
       "贾环": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -1231,11 +1714,13 @@
           "pay_note": "第36回，凤姐说赵姨娘有环兄弟的二两月例银子"
         },
         "name": "贾环",
-        "parent": "贾政",
+        "parent": "赵姨娘",
         "social_position": null,
         "wife_list": []
       },
       "贾珍": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [
           "贾蓉",
           "贾蔷"
@@ -1302,12 +1787,14 @@
           "official_rank": 0,
           "official_title": ""
         },
-        "wife_list": []
+        "wife_list": [
+          "尤氏"
+        ]
       },
       "贾珠": {
-        "child_list": [
-          "贾兰"
-        ],
+        "as_child_type": "亲生",
+        "as_wife_type": "",
+        "child_list": [],
         "husband": null,
         "info": {
           "age": 28,
@@ -1360,14 +1847,16 @@
           "pay_note": ""
         },
         "name": "贾珠",
-        "parent": "贾政",
+        "parent": "王夫人",
         "social_position": null,
-        "wife_list": []
+        "wife_list": [
+          "李纨"
+        ]
       },
       "贾琏": {
-        "child_list": [
-          "贾巧姐"
-        ],
+        "as_child_type": "亲生",
+        "as_wife_type": "",
+        "child_list": [],
         "husband": null,
         "info": {
           "age": 29,
@@ -1430,9 +1919,14 @@
           "official_rank": 5,
           "official_title": "同知"
         },
-        "wife_list": []
+        "wife_list": [
+          "王熙凤",
+          "尤二姐"
+        ]
       },
       "贾琮": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -1491,6 +1985,8 @@
         "wife_list": []
       },
       "贾蓉": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -1559,6 +2055,8 @@
         ]
       },
       "贾蔷": {
+        "as_child_type": "收养",
+        "as_wife_type": "",
         "child_list": [],
         "husband": null,
         "info": {
@@ -1617,8 +2115,11 @@
         "wife_list": []
       },
       "贾赦": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
         "child_list": [
           "贾琏",
+          "贾迎春",
           "贾琮"
         ],
         "husband": null,
@@ -1687,7 +2188,132 @@
           "邢夫人"
         ]
       },
+      "贾迎春": {
+        "as_child_type": "亲生",
+        "as_wife_type": "",
+        "child_list": [],
+        "husband": null,
+        "info": {
+          "age": 15,
+          "age_note": "第73回，迎春称呼宝姐姐林妹妹，大致推算。",
+          "dead": 0,
+          "deduction": 0,
+          "die_chapter": 0,
+          "die_note": "",
+          "family_name": "贾",
+          "first_action_chapter": 2,
+          "first_action_note": "冷子兴演说荣国府提到二小姐乃赦老爹所出，名迎春",
+          "first_name_chapter": 3,
+          "first_name_note": "",
+          "first_refer_chapter": 3,
+          "first_refer_note": "黛玉进贾府，迎春姊妹三个迎接",
+          "gender": "女",
+          "given_name": "迎春",
+          "name": "贾迎春",
+          "nick_1": "二木头",
+          "nick_2": "",
+          "nick_3": "",
+          "nick_4": "",
+          "nick_note_1": "第65回，兴儿向尤二姐提起小姐们的诨名",
+          "nick_note_2": "",
+          "nick_note_3": "",
+          "nick_note_4": "",
+          "old_name": "",
+          "old_name_note": "",
+          "sort_age": 15.0,
+          "sort_position": 500.0,
+          "title_1": "二小姐",
+          "title_2": "",
+          "title_3": "",
+          "title_4": "",
+          "title_note_1": "冷子兴演说荣国府说二小姐名迎春",
+          "title_note_2": "",
+          "title_note_3": "",
+          "title_note_4": ""
+        },
+        "level": 4,
+        "master": {
+          "dwelling": "",
+          "family": "贾家",
+          "generation": 4,
+          "name": "贾迎春",
+          "original_family": "",
+          "pay_estimated": 0,
+          "pay_in_coin": 0.0,
+          "pay_in_silver": 2.0,
+          "pay_note": ""
+        },
+        "name": "贾迎春",
+        "parent": "贾赦",
+        "social_position": null,
+        "wife_list": []
+      },
+      "赵姨娘": {
+        "as_child_type": "",
+        "as_wife_type": "偏房",
+        "child_list": [
+          "贾探春",
+          "贾环"
+        ],
+        "husband": "贾政",
+        "info": {
+          "age": 30,
+          "age_note": "https://baike.baidu.com/item/%E8%B5%B5%E5%A7%A8%E5%A8%98",
+          "dead": 0,
+          "deduction": 0,
+          "die_chapter": 0,
+          "die_note": "",
+          "family_name": "赵",
+          "first_action_chapter": 20,
+          "first_action_note": "王熙凤正言弹妒意这回，赵姨娘骂贾环",
+          "first_name_chapter": 20,
+          "first_name_note": "",
+          "first_refer_chapter": 20,
+          "first_refer_note": "",
+          "gender": "女",
+          "given_name": "",
+          "name": "赵姨娘",
+          "nick_1": "",
+          "nick_2": "",
+          "nick_3": "",
+          "nick_4": "",
+          "nick_note_1": "",
+          "nick_note_2": "",
+          "nick_note_3": "",
+          "nick_note_4": "",
+          "old_name": "",
+          "old_name_note": "",
+          "sort_age": 30.0,
+          "sort_position": 333.0,
+          "title_1": "",
+          "title_2": "",
+          "title_3": "",
+          "title_4": "",
+          "title_note_1": "",
+          "title_note_2": "",
+          "title_note_3": "",
+          "title_note_4": ""
+        },
+        "level": 3,
+        "master": {
+          "dwelling": "",
+          "family": "贾家",
+          "generation": 3,
+          "name": "赵姨娘",
+          "original_family": "",
+          "pay_estimated": 0,
+          "pay_in_coin": 0.0,
+          "pay_in_silver": 2.0,
+          "pay_note": ""
+        },
+        "name": "赵姨娘",
+        "parent": null,
+        "social_position": null,
+        "wife_list": []
+      },
       "邢夫人": {
+        "as_child_type": "",
+        "as_wife_type": "续弦",
         "child_list": [],
         "husband": "贾赦",
         "info": {
@@ -1719,7 +2345,7 @@
           "old_name_note": "",
           "sort_age": 33.0,
           "sort_position": 777.0,
-          "title_1": "",
+          "title_1": "大太太",
           "title_2": "",
           "title_3": "",
           "title_4": "",
