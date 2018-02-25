@@ -8,6 +8,7 @@
 
 * {margin: 0px; padding: 0px;}
 body {background: @range-bg;}
+.hide {display:none;}
 
 .gragh-brief {
     position: fixed;
@@ -16,109 +17,139 @@ body {background: @range-bg;}
     color: lighten(@font-color, 50%);
 }
 
-.hide {display:none;}
 .person {
-    @padding-v: 0.3*@font-size;
-    @padding-h: 0.2*@font-size;
     float: left;
     background: @range-bg;
-    flex: 0 1 auto;
-    margin: 0.5*@font-size*@px;
-    outline: 3*@px solid @dark-color;
-    outline-offset:2*@px;
-    border: 1*@px solid @dark-color;
-    padding: @padding-v*@px @padding-h*@px;
-    color: @font-color;
-    position: relative;
+    flex: 0 0 auto;
+    margin: 0;
+    border: 3*@px solid @dark-color;
+    padding:2*@px;
+    box-shadow: 3*@px 3*@px 5*@px @shadow-color;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    box-shadow: @padding-v*@px @padding-v*@px 0.4*@font-size*@px @shadow-color;
+    height: 4.6*@font-size*@px;
+    
+    .human {
+        flex: initial;
+        border: 1*@px solid @dark-color;
+    }
+    .master {
+        .human;
+        color: @font-color;
+        padding: 0.3*@font-size*@px 0.2*@font-size*@px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
 
-    .name {
-        @unit: @font-size;
-        font-size: @unit*@px;
-        font-weight: bold;
-        writing-mode: vertical-rl;
-        text-align: justify;
-        text-align-last: justify;
-        text-justify: inter-character;
-        text-shadow: 2*@px 2*@px 3*@px @shadow-color;
-        position: relative;
-        width: @unit*@px;
-        height: 4*@unit*@px;
-        flex: 0 1 auto;
+        .name {
+            @unit: @font-size;
+            font-size: @unit*@px;
+            font-weight: bold;
+            writing-mode: vertical-rl;
+            text-align: justify;
+            text-align-last: justify;
+            text-justify: inter-character;
+            text-shadow: -2*@px 2*@px 3*@px @shadow-color;
+            position: relative;
+            width: @unit*@px;
+            height: 100%;
+            flex: 0 1 auto;
+        }
+    
+        @script-unit: 0.5*@font-size;
+        .script-box {
+            flex: 0 1 auto;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+        }
+    
+        .script {
+            @unit: @script-unit;
+            flex: 0 1 auto;
+            width: @unit*@px;
+            height: 2.5*@unit*@px;
+            margin-left: 0.5*@unit*@px;
+            font-size: @unit*@px;
+            font-weight: normal;
+            color: dimgray;
+            writing-mode: vertical-rl;
+            text-align: justify;
+            text-align-last: justify;
+            text-justify: inter-character;
+        }
+        .super-script {
+            .script;
+        }
+        .super-script.char3 {
+            @unit: @script-unit;
+            height: 3.5*@unit*@px;
+        }
+        .super-script.char4 {
+            @unit: @script-unit;
+            height: 4.5*@unit*@px;
+        }
+        .super-script.char5 {
+            @unit: @script-unit;
+            height: 5.5*@unit*@px;
+        }
+        .sub-script {
+            .script;
+        }
+        .sub-script.char3 {
+            @unit: @script-unit;
+            height: 3.5*@unit*@px;
+        }
+        .sub-script.char4 {
+            @unit: @script-unit;
+            height: 4.5*@unit*@px;
+        }
+        .sub-script.char5 {
+            @unit: @script-unit;
+            height: 5.5*@unit*@px;
+        }
     }
 
-    @script-unit: 0.5*@font-size;
-    .script-box {
-        flex: 0 1 auto;
+    .servant-list {
+        color: dimgray;
+        margin: -2*@px 0 0 0;
         display: flex;
         flex-flow: column nowrap;
-        justify-content: space-between;
-    }
+        justify-content: flex-start;
 
-    .script {
-        @unit: @script-unit;
-        flex: 0 1 auto;
-        width: @unit*@px;
-        height: 2.5*@unit*@px;
-        margin-left: 0.5*@unit*@px;
-        font-size: @unit*@px;
-        font-weight: normal;
-        color: dimgray;
-        writing-mode: vertical-rl;
-        text-align: justify;
-        text-align-last: justify;
-        text-justify: inter-character;
-    }
-    .super-script {
-        .script;
-    }
-    .super-script.char3 {
-        @unit: @script-unit;
-        height: 3.5*@unit*@px;
-    }
-    .super-script.char4 {
-        @unit: @script-unit;
-        height: 4.5*@unit*@px;
-    }
-    .super-script.char5 {
-        @unit: @script-unit;
-        height: 5.5*@unit*@px;
-    }
-    .sub-script {
-        .script;
-    }
-    .sub-script.char3 {
-        @unit: @script-unit;
-        height: 3.5*@unit*@px;
-    }
-    .sub-script.char4 {
-        @unit: @script-unit;
-        height: 4.5*@unit*@px;
-    }
-    .sub-script.char5 {
-        @unit: @script-unit;
-        height: 5.5*@unit*@px;
+        .servant {
+            .human;
+            margin: 2*@px 0 0 2*@px;
+            padding: 2*@px;
+            font-size: 0.75*@font-size*@px;
+            font-weight: bold;
+            text-align: justify;
+            text-align-last: justify;
+            text-justify: inter-character;
+            word-break: keep-all;
+        }
     }
 }
+
 .person.dead {
     border-color: dimgray;
     outline-color: dimgray;
     color: dimgray;
 }
-.person.fake {
-    border-color: @range-bg;
-    outline-color: @range-bg;
-    box-shadow: none;
+.space-between-person {
+    float: left;
     opacity: 0;
+    min-height: 10*@px;
+    width: 20*@px;
+    flex: 0 0 auto;
 }
 
 .graph {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
+    margin-top: 20*@px;
 
     .level {
         flex: 0 1 auto;
