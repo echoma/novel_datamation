@@ -53,6 +53,16 @@ with DB.cursor() as cursor:
     SOCIAL_POSITION_INFO_FIELDS = [col[0] for col in cursor.description]
 SocialPositionInfo = namedtuple('SocialPositionInfo', SOCIAL_POSITION_INFO_FIELDS)
 
+"""
+数据库里一个仆人的信息
+"""
+SERVANT_INFO_FIELDS = None
+with DB.cursor() as cursor:
+    sql = 'select * from servant limit 1'
+    cursor.execute(sql)
+    cursor.fetchone()
+    SERVANT_INFO_FIELDS = [col[0] for col in cursor.description]
+ServantInfo = namedtuple('ServantInfo', SERVANT_INFO_FIELDS)
 
 class Graph:
     """
@@ -80,6 +90,18 @@ class Graph:
         for lvl in self.level_list:
             lvl.complete()
             lvl.derive()
+        self.employ()
+    def employ(self):
+        """
+        找出丫头小厮仆人。
+        """
+        sql = 'select a.* from servant a inner join person b on a.name=b.name order by b.sort_position desc'
+        with self.db.cursor() as cursor:
+            cursor.execute(sql)
+            for row in cursor.fetchall():
+                if not Person.exists(row[0]):
+                    psn = Person(None, row[0])
+                    psn.asServant(ServantInfo(*row))
     def output(self):
         for lvl in self.level_list:
             print('level '+str(lvl.level_number)+': '+ ' '.join([psn.name+'('+str(psn.info.sort_age)+')' for psn in lvl.person_list]))
@@ -158,7 +180,6 @@ class Level:
                     for wife in psn.wife_list:
                         self.deriveOfOne(wife, cursor)
                     self.deriveOfOne(psn, cursor)
-                    
     def deriveOfOne(self, psn, cursor):
         """
         被derive调用，查询指定人的下一代。
@@ -194,6 +215,8 @@ class Person:
         self.husband = None
         self.as_wife_type = ''
         self.wife_list = [] # 按照地位顺序排列，正房大太太在前，偏房姨太太在后。
+        self.servant_list = []
+        self.as_servant = None
         with self.db.cursor() as cursor:
             # 获取基本信息
             sql = 'select * from person where name=%s'
@@ -218,9 +241,16 @@ class Person:
         if name in Person._name_dict.keys():
             return True
         return False
+    def asServant(self, info):
+        """
+        设置此人为仆人
+        """
+        self.as_servant = info
+        master = Person.find(info.serve)
+        master.servant_list.append(self)
     def toDict(self):
         o = {}
-        o['level'] = self.level.level_number
+        o['level'] = None if self.level is None else self.level.level_number
         o['name'] = self.name
         o['parent'] = None if self.parent is None else self.parent.name
         o['as_child_type'] = self.as_child_type
@@ -231,6 +261,8 @@ class Person:
         o['info'] = self.info._asdict()
         o['master'] = None if self.master is None else self.master._asdict()
         o['social_position'] = None if self.social_position is None else self.social_position._asdict()
+        o['as_servant'] = None if self.as_servant is None else self.as_servant._asdict()
+        o['servant_list'] = [psn.name for psn in self.servant_list]
         return o
 
 def main():
