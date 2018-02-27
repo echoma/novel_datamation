@@ -246,8 +246,9 @@ class Person:
         设置此人为仆人
         """
         self.as_servant = info
-        master = Person.find(info.serve)
-        master.servant_list.append(self)
+        if Person.exists(info.serve):
+            master = Person.find(info.serve)
+            master.servant_list.append(self)
     def toDict(self):
         o = {}
         o['level'] = None if self.level is None else self.level.level_number

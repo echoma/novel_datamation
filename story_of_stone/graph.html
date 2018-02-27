@@ -192,9 +192,10 @@ function fillMasterServant(dom_psn, psn, person_map) { // 填充这个主子名�
     if (psn.servant_list.length==0) {
         dom_psn.find('.servant-list').remove();
     } else {
+        const line_cnt = 6;
         let dom_svt_list = dom_psn.find('.servant-list').eq(0);
         let dom_svt_tpl = dom_svt_list.find('.servant').clone();
-        let should_list_cnt = Math.ceil(psn.servant_list.length/4);
+        let should_list_cnt = Math.ceil(psn.servant_list.length/line_cnt);
         for (let i=1; i<should_list_cnt; ++i) {
             dom_svt_list.clone().insertAfter(dom_svt_list);
         }
@@ -202,8 +203,11 @@ function fillMasterServant(dom_psn, psn, person_map) { // 填充这个主子名�
         dom_svt_list.find('.servant').remove();
         for (let i=0; i<psn.servant_list.length; ++i) {
             let dom_svt = dom_svt_tpl.clone();
-            dom_svt.text(psn.servant_list[i]);
-            let list_idx = Math.floor(i/4);
+            let svt = person_map[ psn.servant_list[i] ];
+            dom_svt.text(psn.servant_list[i]).attr('person',svt.name);
+            if (svt.info.gender=='男')
+                dom_svt.addClass('male');
+            let list_idx = Math.floor(i/line_cnt);
             dom_svt_list.eq(list_idx).append(dom_svt);
         }
     }
@@ -261,7 +265,7 @@ function adjustPositionForOneMaster(name, person_map) { // 检查该人物跟其
             return 0;
         } else {
             psn.dom_psn_space.width( psn.dom_psn_space.width()+(child_left_min-left) );
-            console.log(`${name} 在首个孩子 ${first_child.name} 左侧，为使左边线对齐，自己左边补充空白：${child_left_min-left}`);
+            //console.log(`${name} 在首个孩子 ${first_child.name} 左侧，为使左边线对齐，自己左边补充空白：${child_left_min-left}`);
             return 1;
         }
     } else if (right > child_right_max) {
@@ -272,11 +276,11 @@ function adjustPositionForOneMaster(name, person_map) { // 检查该人物跟其
             // 如果当前元素比孩子元素要宽，且只有一个孩子，则把孩子元素中线对齐当前元素即可
             let delta = left+width/2-child_width/2-child_left_min;
             last_child_dom_space.width( last_child_dom_space.width()+delta );
-            console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使中线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
+            //console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使中线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
         } else {
             // 否则，末尾孩子元素右边线对齐当前元素右边线
             last_child_dom_space.width( last_child_dom_space.width()+(right-child_right_max) );
-            console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使右边线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
+            //console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使右边线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
         }
         return 2;
     }

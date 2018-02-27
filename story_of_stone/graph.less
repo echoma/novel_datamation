@@ -19,6 +19,7 @@ body {background: @range-bg;}
 
 .person {
     float: left;
+    color: @font-color;
     background: @range-bg;
     flex: 0 0 auto;
     margin: 0;
@@ -28,7 +29,7 @@ body {background: @range-bg;}
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    height: 4.6*@font-size*@px;
+    height: 4.5*@font-size*@px;
     
     .human {
         flex: initial;
@@ -36,7 +37,6 @@ body {background: @range-bg;}
     }
     .master {
         .human;
-        color: @font-color;
         padding: 0.3*@font-size*@px 0.2*@font-size*@px;
         display: flex;
         flex-flow: row nowrap;
@@ -113,28 +113,30 @@ body {background: @range-bg;}
 
     .servant-list {
         color: dimgray;
-        margin: -2*@px 0 0 0;
+        margin: -1*@px 0 0 0;
         display: flex;
         flex-flow: column nowrap;
         justify-content: flex-start;
 
         .servant {
             .human;
-            margin: 2*@px 0 0 2*@px;
-            padding: 2*@px;
-            font-size: 0.75*@font-size*@px;
-            font-weight: bold;
+            margin: 1*@px 0 0 2*@px;
+            padding: 1*@px;
+            font-size: 0.5*@font-size*@px;
             text-align: justify;
             text-align-last: justify;
             text-justify: inter-character;
             word-break: keep-all;
+            color: deeppink;
+        }
+        .servant.male {
+            color: mediumblue;
         }
     }
 }
 
 .person.dead {
     border-color: dimgray;
-    outline-color: dimgray;
     color: dimgray;
 }
 .space-between-person {
