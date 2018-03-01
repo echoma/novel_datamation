@@ -47,6 +47,8 @@ body {
 
         .name {
             @unit: @font-size;
+            word-break: keep-all;
+            overflow: visible;
             font-size: @unit*@px;
             font-weight: bold;
             writing-mode: vertical-rl;
@@ -58,6 +60,12 @@ body {
             width: @unit*@px;
             height: 100%;
             flex: 0 1 auto;
+        }
+        .name.char5 {
+            font-size: 0.8*@font-size*@px;
+        }
+        .name.char6 {
+            font-size: 0.65*@font-size*@px;
         }
     
         @script-unit: 0.5*@font-size;

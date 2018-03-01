@@ -155,18 +155,21 @@ class Level:
                     sql = 'select b.subject,b.sub_type from person a inner join kinship b on a.name=b.object where b.object=%s and b.type="夫妻" limit 1'
                 cursor.execute(sql, (psn.name))
                 for row in cursor.fetchall():
+                    new_psn = None
                     if not Person.exists(row[0]):
                         if psn.info.gender=='男':
                             add_after_name = psn.name if 0==len(psn.wife_list) else psn.wife_list[-1].name
                             new_psn = self.addPersonAfter(add_after_name, row[0])
-                            new_psn.husband = psn
-                            new_psn.as_wife_type = row[1]
-                            psn.wife_list.append(new_psn)
                         else:
                             new_psn = self.addPersonBefore(psn.name, row[0])
-                            new_psn.wife_list.append(psn)
-                            psn.husband = new_psn
-                            psn.as_wife_type = row[1]
+                    else:
+                        new_psn = Person.find(row[0])
+                    if psn.info.gender=='男':
+                        new_psn.as_wife_type = row[1]
+                        psn.addWife(new_psn)
+                    else:
+                        new_psn.addWife(psn)
+                        psn.as_wife_type = row[1]
     def derive(self):
         """
         对于本层中的每个人找出其下一代。
@@ -190,11 +193,13 @@ class Level:
         if cursor.rowcount>0:
             lvl = self.tree.ensureExistanceOfNextLevel(self.level_number)
         for row in cursor.fetchall():
+            new_psn = None
             if not Person.exists(row[1]):
                 new_psn = lvl.addPerson(row[1])
-                new_psn.as_child_type = row[3]
-                psn.child_list.append(new_psn)
-                new_psn.parent = psn
+            else:
+                new_psn = Person.find(row[1])
+            new_psn.as_child_type = row[3]
+            psn.addChild(new_psn)
     def toDict(self):
         o = {}
         o['level_number'] = self.level_number
@@ -249,6 +254,20 @@ class Person:
         if Person.exists(info.serve):
             master = Person.find(info.serve)
             master.servant_list.append(self)
+    def addWife(self, wife):
+        """
+        添加妻子
+        """
+        if wife.husband is None and wife not in self.wife_list:
+            self.wife_list.append(wife)
+            wife.husband = self
+    def addChild(self, child):
+        """
+        添加孩子
+        """
+        if child.parent is None and child not in self.child_list:
+            self.child_list.append(child)
+            child.parent = self
     def toDict(self):
         o = {}
         o['level'] = None if self.level is None else self.level.level_number
@@ -267,12 +286,12 @@ class Person:
         return o
 
 def main():
-    GRAPH_OF_JIA = Graph('贾公')
-    GRAPH_OF_JIA.cal()
-    GRAPH_OF_JIA.output()
+    GRAPH = Graph('根')
+    GRAPH.cal()
+    GRAPH.output()
     with open('./graph.json', mode='w') as file:
         o = {}
-        o['贾'] = GRAPH_OF_JIA.toDict()
+        o['graph'] = GRAPH.toDict()
         file.write(json.dumps(o, indent=2, sort_keys=True, ensure_ascii=False, cls=DecimalEncoder))
 
 main()

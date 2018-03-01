@@ -26,24 +26,26 @@ function onload() {
             vl_tpl = $('#template > .vline');
             hl_tpl = $('#template > .hline');
             dom_cpl_tpl = $('#template > .couple-box');
-            for (first_name in data) {
-                drawFamily(data[first_name])
-            }
+            drawGraph(data['graph']);
         },
         error:function(){
             alert('加载图谱数据出错');
         }
     });
 }
-function drawFamily(family) { // 绘制一个家族的图
-    let level_list = family.level_list;
-    let person_map = family.person_map;
-    let master_name_list = createDomForAllMaster(level_list, person_map);
+function drawGraph(graph) {
+    let level_list = graph.level_list;
+    let person_map = graph.person_map;
+    drawOneFamily('贾家', level_list, person_map);
+    drawOneFamily('史家', level_list, person_map);
+}
+function drawOneFamily(family, level_list, person_map) { // 绘制一个家族
+    let master_name_list = createDomForAllMaster(family, level_list, person_map);
     adjustPositionForAllMaster(master_name_list, person_map);
     drawLevelLines(master_name_list, person_map);
     drawCoupleBoxes(master_name_list, person_map);
 }
-function createDomForAllMaster(level_list, person_map) { // 将主子类型的人物添加到页面，返回所有master的列表
+function createDomForAllMaster(family, level_list, person_map) { // 将主子类型的人物添加到页面，返回所有master的列表
     let master_name_list = [];
     for (let lvl of level_list) {
         let lvl_number = lvl.level_number;
@@ -51,10 +53,14 @@ function createDomForAllMaster(level_list, person_map) { // 将主子类型的�
             continue;
         let dom_lvl = dom_graph.find(`[name=level-${lvl_number}]`);
         for (let name of lvl.person_list) {
-            master_name_list.push(name);
             let psn = person_map[name];
+            if (psn.master.family!=family)
+                continue;
+            master_name_list.push(name);
             let dom_psn = dom_psn_tpl.clone().attr('person', name);
             dom_psn.find('.name').text(name);
+            if (name.length>=5)
+                dom_psn.find('.name').addClass(`char${name.length}`)
             fillMasterScript(dom_psn, psn);
             calChildrenOrder(psn, person_map);
             fillMasterServant(dom_psn, psn, person_map);
@@ -84,9 +90,10 @@ function fillMasterScript(dom_psn, psn) { // 填写某个人的上下标
         if (psn.children_idx) {
             let idx_str = '';
             if (psn.children_idx==1) idx_str = '长';
-            if (psn.children_idx==2) idx_str = '次';
-            if (psn.children_idx==3) idx_str = '三';
-            if (psn.children_idx==4) idx_str = '四';
+            else if (psn.children_idx==2) idx_str = '次';
+            else if (psn.children_idx==3) idx_str = '三';
+            else if (psn.children_idx==4) idx_str = '四';
+            else console.log(psn.info.name, psn.children_idx)
             let txt = idx_str+(psn.info.gender=='男'?'子':'女');
             avai_list.push(txt);
         }
@@ -231,12 +238,15 @@ function adjustPositionForOneMaster(name, person_map) { // 检查该人物跟其
     // 返回值： 0无任何调整，1调整了本人位置，2调整了孩子的位置
     if (g_adjust_stop)return 0;
     let psn = person_map[name];
+    let family_child_list = psn.all_child_list.filter(cname => person_map[cname].master.family==psn.master.family);
+    if (family_child_list.length==0)
+        return 0;
     let left = psn.dom_psn.position().left;
     let width = psn.dom_psn.width();
     let right = left+width;
-    let first_child = person_map[ psn.all_child_list[0] ];
+    let first_child = person_map[ family_child_list[0] ];
     let first_child_dom = first_child.dom_psn;
-    let last_child = person_map[ psn.all_child_list[psn.all_child_list.length-1] ];
+    let last_child = person_map[ family_child_list[family_child_list.length-1] ];
     let last_child_dom = last_child.dom_psn;
     let child_left_min = first_child_dom.position().left;
     let child_right_max = last_child_dom.position().left+last_child_dom.width();
@@ -245,7 +255,7 @@ function adjustPositionForOneMaster(name, person_map) { // 检查该人物跟其
         // 如果当前元素在首个孩子元素左侧，则自己前面要补充空白
         let dont_need = 0; // 但有种特殊情况是不需要调整位置的（比如：林如海和贾敏夫妇）
         if (psn.child_list.length==0 // 没有直接连线孩子
-            && psn.all_child_list.length==1 // 总共只有一个孩子
+            && family_child_list.length==1 // 总共只有一个孩子
             && left>first_child.dom_psn_space.position().left //当前元素处于首个孩子元素左侧的空白的上方
         ) {
             dont_need = 1;
@@ -253,7 +263,7 @@ function adjustPositionForOneMaster(name, person_map) { // 检查该人物跟其
         if (dont_need)
             return 0;
         if (width - child_width >= 0.1
-            && psn.all_child_list.length==1) {
+            && family_child_list.length==1) {
             // 先什么都不做吧！目前还没发现问题。
             // 如果当前元素比孩子元素要宽，且只有一个孩子，则把孩子元素中线对齐当前元素即可
             //let delta = left+width/2-child_width/2-child_left_min;
@@ -270,9 +280,9 @@ function adjustPositionForOneMaster(name, person_map) { // 检查该人物跟其
         }
     } else if (right > child_right_max) {
         // 如果当前元素在末尾孩子元素右侧，则末尾孩子元素前面要补充空白
-        let last_child_dom_space = person_map[ psn.all_child_list[psn.all_child_list.length-1] ].dom_psn_space;
+        let last_child_dom_space = person_map[ family_child_list[family_child_list.length-1] ].dom_psn_space;
         if (width - child_width >= 0.1
-            && psn.all_child_list.length==1) {
+            && family_child_list.length==1) {
             // 如果当前元素比孩子元素要宽，且只有一个孩子，则把孩子元素中线对齐当前元素即可
             let delta = left+width/2-child_width/2-child_left_min;
             last_child_dom_space.width( last_child_dom_space.width()+delta );
@@ -319,7 +329,8 @@ function drawLevelLines(master_name_list, person_map) { // 为代际之间的关
         let start_point = [psn_pos.left+psn_w/2, psn_pos.top+psn_h-dom_psn_tpl.outlineOffset];
         let end_point_list = [];
         for (let child_name of psn.child_list) {
-            let dom_cpsn = person_map[child_name].dom_psn;
+            let child = person_map[child_name];
+            let dom_cpsn = child.dom_psn;
             let cpsn_pos = dom_cpsn.position();
             let cpsn_w = dom_cpsn.outerWidth(true);
             let cpsn_h = dom_cpsn.outerHeight(true);
@@ -388,7 +399,7 @@ function drawCoupleBoxes(master_name_list, person_map) { // 画夫妻框
 </script>
 </head>
 <body lang=cn>
-    <div class=gragh-brief>版本：20180225</div>
+    <div class=gragh-brief>版本：20180301</div>
     <div class=hide id=template>
         <div class=person name=person>
             <div class=master>
