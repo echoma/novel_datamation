@@ -38,6 +38,7 @@ function drawGraph(graph) {
     let person_map = graph.person_map;
     drawOneFamily('贾家', level_list, person_map);
     drawOneFamily('史家', level_list, person_map);
+    drawOneFamily('王家', level_list, person_map);
 }
 function drawOneFamily(family, level_list, person_map) { // 绘制一个家族
     let master_name_list = createDomForAllMaster(family, level_list, person_map);
@@ -275,7 +276,7 @@ function adjustPositionForOneMaster(name, person_map) { // 检查该人物跟其
             return 0;
         } else {
             psn.dom_psn_space.width( psn.dom_psn_space.width()+(child_left_min-left) );
-            //console.log(`${name} 在首个孩子 ${first_child.name} 左侧，为使左边线对齐，自己左边补充空白：${child_left_min-left}`);
+            console.log(`${name} 在首个孩子 ${first_child.name} 左侧，为使左边线对齐，自己左边补充空白：${child_left_min-left}`);
             return 1;
         }
     } else if (right > child_right_max) {
@@ -286,11 +287,11 @@ function adjustPositionForOneMaster(name, person_map) { // 检查该人物跟其
             // 如果当前元素比孩子元素要宽，且只有一个孩子，则把孩子元素中线对齐当前元素即可
             let delta = left+width/2-child_width/2-child_left_min;
             last_child_dom_space.width( last_child_dom_space.width()+delta );
-            //console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使中线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
+            console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使中线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
         } else {
             // 否则，末尾孩子元素右边线对齐当前元素右边线
             last_child_dom_space.width( last_child_dom_space.width()+(right-child_right_max) );
-            //console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使右边线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
+            console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使右边线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
         }
         return 2;
     }

@@ -32,15 +32,72 @@ with DB.cursor() as cursor:
 PersonInfo = namedtuple('PersonInfo', PERSON_INFO_FIELDS)
 
 """
-数据库里一个主子的信息
+数据库里一个人的扩展信息
+读取数据库person_ext表的数据结构，用来动态生成PersonExt类
 """
-MASTER_INFO_FIELDS = None
+PERSON_EXT_FIELDS = None
 with DB.cursor() as cursor:
-    sql = 'select * from master limit 1'
+    sql = 'select * from person_ext limit 1'
     cursor.execute(sql)
     cursor.fetchone()
-    MASTER_INFO_FIELDS = [col[0] for col in cursor.description]
-MasterInfo = namedtuple('MasterInfo', MASTER_INFO_FIELDS)
+    PERSON_EXT_FIELDS = [col[0] for col in cursor.description]
+PersonExt = namedtuple('PersonExt', PERSON_EXT_FIELDS)
+
+"""
+数据库里一个人的出场信息
+读取数据库person_action表的数据结构，用来动态生成PersonAction类
+"""
+PERSON_ACTION_FIELDS = None
+with DB.cursor() as cursor:
+    sql = 'select * from person_action limit 1'
+    cursor.execute(sql)
+    cursor.fetchone()
+    PERSON_ACTION_FIELDS = [col[0] for col in cursor.description]
+PersonAction = namedtuple('PersonAction', PERSON_ACTION_FIELDS)
+
+"""
+数据库里月例银子类型的信息
+"""
+ALLOWANCE_TYPE_FIELDS = None
+with DB.cursor() as cursor:
+    sql = 'select * from allowance_type limit 1'
+    cursor.execute(sql)
+    cursor.fetchone()
+    ALLOWANCE_TYPE_FIELDS = [col[0] for col in cursor.description]
+AllowanceType = namedtuple('AllowanceType', ALLOWANCE_TYPE_FIELDS)
+
+"""
+数据库里一个人的月例银子的信息
+"""
+ALLOWANCE_FIELDS = None
+with DB.cursor() as cursor:
+    sql = 'select * from allowance limit 1'
+    cursor.execute(sql)
+    cursor.fetchone()
+    ALLOWANCE_FIELDS = [col[0] for col in cursor.description]
+Allowance = namedtuple('Allowance', ALLOWANCE_FIELDS)
+
+"""
+数据库里一个人的昵称
+"""
+NICK_FIELDS = None
+with DB.cursor() as cursor:
+    sql = 'select * from nick limit 1'
+    cursor.execute(sql)
+    cursor.fetchone()
+    NICK_FIELDS = [col[0] for col in cursor.description]
+Nick = namedtuple('Nick', NICK_FIELDS)
+
+"""
+数据库里一个人的尊称
+"""
+TITLE_FIELDS = None
+with DB.cursor() as cursor:
+    sql = 'select * from title limit 1'
+    cursor.execute(sql)
+    cursor.fetchone()
+    TITLE_FIELDS = [col[0] for col in cursor.description]
+Title = namedtuple('Title', TITLE_FIELDS)
 
 """
 数据库里一个人的社会地位信息
@@ -54,15 +111,15 @@ with DB.cursor() as cursor:
 SocialPositionInfo = namedtuple('SocialPositionInfo', SOCIAL_POSITION_INFO_FIELDS)
 
 """
-数据库里一个仆人的信息
+数据库里一条亲缘关系
 """
-SERVANT_INFO_FIELDS = None
+KINSHIP_FIELDS = None
 with DB.cursor() as cursor:
-    sql = 'select * from servant limit 1'
+    sql = 'select * from kinship limit 1'
     cursor.execute(sql)
     cursor.fetchone()
-    SERVANT_INFO_FIELDS = [col[0] for col in cursor.description]
-ServantInfo = namedtuple('ServantInfo', SERVANT_INFO_FIELDS)
+    KINSHIP_FIELDS = [col[0] for col in cursor.description]
+Kinship = namedtuple('Kinship', KINSHIP_FIELDS)
 
 class Graph:
     """
@@ -70,45 +127,40 @@ class Graph:
     这个树从祖先开始一级级向子辈进行扩散。
     当前实现下，关系图是树，而不是图。因为目前父亲和母亲节点不允许同时指向同一个孩子，只能由母亲指向。因此从树的结构看，分支数量是不能收敛的。
     """
-    def __init__(self, top_name):
+    def __init__(self, top_name, family, branch):
         global DB
         self.db = DB
+        self.family = family
+        self.branch = branch
         self.level_list = []
-        lvl = self.addLevel()
-        lvl.addPerson(top_name)
-    def addLevel(self):
-        lvl = Level(self, len(self.level_list))
-        self.level_list.append(lvl)
-        return lvl
-    def ensureExistanceOfNextLevel(self, current_level_number):
-        if current_level_number+1<len(self.level_list):
-            return self.level_list[current_level_number+1]
-        if current_level_number+1==len(self.level_list):
-            return self.addLevel()
-        raise ValueError('invalid level number '+str(current_level_number))
+        for n in range(6):
+            lvl = Level(self, n)
+            self.level_list.append(lvl)
+        lvl = self.getLevel(0).addPerson(top_name)
+    def getLevel(self, i):
+        return self.level_list[i]
     def cal(self):
         for lvl in self.level_list:
             lvl.complete()
             lvl.derive()
-        self.employ()
+        # self.employ()
     def employ(self):
         """
         找出丫头小厮仆人。
         """
-        sql = 'select a.* from servant a inner join person b on a.name=b.name order by b.sort_position desc'
+        sql = 'select a.* from serve a inner join person b on a.name=b.name order by b.sort_position desc'
         with self.db.cursor() as cursor:
             cursor.execute(sql)
             for row in cursor.fetchall():
                 if not Person.exists(row[0]):
-                    psn = Person(None, row[0])
-                    psn.asServant(ServantInfo(*row))
+                    servant = Person(None, row[0])
+                    Person.find(row[1]).addServant(servant)
     def output(self):
         for lvl in self.level_list:
             print('level '+str(lvl.level_number)+': '+ ' '.join([psn.name+'('+str(psn.info.sort_age)+')' for psn in lvl.person_list]))
     def toDict(self):
         o = {}
         o['level_list'] = [lvl.toDict() for lvl in self.level_list]
-        o['person_map'] = {name : Person.find(name).toDict() for name in Person._name_dict}
         return o
 
 class Level:
@@ -150,26 +202,25 @@ class Level:
             for psn in self.person_list:
                 sql = ''
                 if psn.info.gender=='男':
-                    sql = 'select a.name,b.sub_type from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="夫妻" order by b.sub_type asc, a.sort_position desc'
+                    sql = 'select b.* from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="夫妻" order by b.sub_type asc, a.sort_position desc'
                 else:
-                    sql = 'select b.subject,b.sub_type from person a inner join kinship b on a.name=b.object where b.object=%s and b.type="夫妻" limit 1'
+                    sql = 'select b.* from person a inner join kinship b on a.name=b.object where b.object=%s and b.type="夫妻" limit 1'
                 cursor.execute(sql, (psn.name))
                 for row in cursor.fetchall():
+                    kinship = Kinship(*row)
                     new_psn = None
-                    if not Person.exists(row[0]):
+                    if not Person.exists(kinship.object):
                         if psn.info.gender=='男':
-                            add_after_name = psn.name if 0==len(psn.wife_list) else psn.wife_list[-1].name
-                            new_psn = self.addPersonAfter(add_after_name, row[0])
+                            add_after_name = psn.name if 0==len(psn.wife_list) else psn.wife_list[-1]
+                            new_psn = self.addPersonAfter(add_after_name, kinship.object)
                         else:
-                            new_psn = self.addPersonBefore(psn.name, row[0])
+                            new_psn = self.addPersonBefore(psn.name, kinship.object)
                     else:
-                        new_psn = Person.find(row[0])
+                        new_psn = Person.find(kinship.object)
                     if psn.info.gender=='男':
-                        new_psn.as_wife_type = row[1]
-                        psn.addWife(new_psn)
+                        psn.addWife(new_psn, kinship)
                     else:
-                        new_psn.addWife(psn)
-                        psn.as_wife_type = row[1]
+                        new_psn.addWife(psn, kinship)
     def derive(self):
         """
         对于本层中的每个人找出其下一代。
@@ -180,26 +231,29 @@ class Level:
                 if psn.info.gender=='女':
                     self.deriveOfOne(psn, cursor)
                 else:
-                    for wife in psn.wife_list:
+                    for wife_name in psn.wife_list:
+                        wife = Person.find(wife_name)
                         self.deriveOfOne(wife, cursor)
                     self.deriveOfOne(psn, cursor)
     def deriveOfOne(self, psn, cursor):
         """
         被derive调用，查询指定人的下一代。
         """
-        sql = 'select b.* from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="父母子女" order by a.sort_age desc'
-        cursor.execute(sql, (psn.name))
-        lvl = None
-        if cursor.rowcount>0:
-            lvl = self.tree.ensureExistanceOfNextLevel(self.level_number)
+        if self.level_number==0:
+            sql = 'select b.subject, b.object, b.type, b.sub_type, b.note, a.level from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="亲子" and a.family=%s and a.branch=%s order by a.sort_age desc'
+            cursor.execute(sql, (psn.name, self.tree.family, self.tree.branch))
+        else:
+            sql = 'select b.subject, b.object, b.type, b.sub_type, b.note, a.level from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="亲子" order by a.sort_age desc'
+            cursor.execute(sql, (psn.name))
         for row in cursor.fetchall():
-            new_psn = None
-            if not Person.exists(row[1]):
-                new_psn = lvl.addPerson(row[1])
+            lvl = self.tree.getLevel(int(row[5]))
+            kinship = Kinship(row[0],row[1],row[2],row[3],row[4])
+            child = None
+            if not Person.exists(kinship.object):
+                child = lvl.addPerson(kinship.object)
             else:
-                new_psn = Person.find(row[1])
-            new_psn.as_child_type = row[3]
-            psn.addChild(new_psn)
+                child = Person.find(kinship.object)
+            psn.addChild(child, kinship)
     def toDict(self):
         o = {}
         o['level_number'] = self.level_number
@@ -209,19 +263,21 @@ class Level:
 class Person:
     """一个人"""
     _name_dict = {} # 静态变量，按照名字映射了所有的人
+    _kinship_dict = {} # 静态变量，按照主宾映射了所有的亲缘关系
     def __init__(self, lvl, name):
         global DB
         self.db = DB
         self.level = lvl
         self.name = name
-        self.parent = None # 每个人只有一个父母，不能既有父亲又有母亲，具体原因见“Graph类的注释”
-        self.as_child_type = ''
+        # 亲子关系
+        self.parent = None # Name # 每个人只有一个父母，不能既有父亲又有母亲，具体原因见“Graph类的注释”
         self.child_list = []
-        self.husband = None
-        self.as_wife_type = ''
+        # 夫妻关系
+        self.husband = None # Name
         self.wife_list = [] # 按照地位顺序排列，正房大太太在前，偏房姨太太在后。
+        # 主仆关系
+        self.master = None # Name
         self.servant_list = []
-        self.as_servant = None
         with self.db.cursor() as cursor:
             # 获取基本信息
             sql = 'select * from person where name=%s'
@@ -229,14 +285,32 @@ class Person:
             if cursor.rowcount==0:
                 raise ValueError(self.name + ' not found in table `person`')
             self.info = PersonInfo(*cursor.fetchone())
-            # 获取主子信息
-            sql = 'select * from master where name=%s'
+            # 获取扩展信息
+            sql = 'select * from person_ext where name=%s'
             cursor.execute(sql, (self.name))
-            self.master = None if cursor.rowcount==0 else MasterInfo(*cursor.fetchone())
+            self.ext = PersonExt(*cursor.fetchone()) if cursor.rowcount>0 else None
+            # 获取出场信息
+            sql = 'select * from person_action where name=%s'
+            cursor.execute(sql, (self.name))
+            self.action = PersonAction(*cursor.fetchone()) if cursor.rowcount>0 else None
+            # 获取昵称
+            self.nick_list = []
+            sql = 'select * from nick where name=%s'
+            for row in cursor.fetchall():
+                self.nick_list.append(Nick(*row))
+            # 获取尊称
+            self.title_list = []
+            sql = 'select * from title where name=%s'
+            for row in cursor.fetchall():
+                self.title_list.append(Title(*row))
+            # 获取月例银子信息
+            sql = 'select * from allowance where name=%s'
+            cursor.execute(sql, (self.name))
+            self.allowance = Allowance(*cursor.fetchone()) if cursor.rowcount>0 else None
             # 获取社会地位信息
             sql = 'select * from social_position where name=%s'
             cursor.execute(sql, (self.name))
-            self.social_position = None if cursor.rowcount==0 else SocialPositionInfo(*cursor.fetchone())
+            self.social_position = SocialPositionInfo(*cursor.fetchone()) if cursor.rowcount>0 else None
         Person._name_dict[self.name] = self
     @staticmethod
     def find(name):
@@ -246,52 +320,63 @@ class Person:
         if name in Person._name_dict.keys():
             return True
         return False
-    def asServant(self, info):
+    def addServant(self, servant):
         """
-        设置此人为仆人
+        添加仆人
         """
-        self.as_servant = info
-        if Person.exists(info.serve):
-            master = Person.find(info.serve)
-            master.servant_list.append(self)
-    def addWife(self, wife):
+        if servant.master is None and servant.name not in self.servant_list:
+            self.servant_list.append(servant.name)
+            servant.master = self.name
+    def addWife(self, wife, kinship):
         """
         添加妻子
         """
-        if wife.husband is None and wife not in self.wife_list:
-            self.wife_list.append(wife)
-            wife.husband = self
-    def addChild(self, child):
+        if wife.husband is None and wife.name not in self.wife_list:
+            self.wife_list.append(wife.name)
+            wife.husband = self.name
+            Person._kinship_dict[self.name+'@'+wife.name] = kinship
+    def addChild(self, child, kinship):
         """
         添加孩子
         """
-        if child.parent is None and child not in self.child_list:
-            self.child_list.append(child)
-            child.parent = self
+        if child.parent is None and child.name not in self.child_list:
+            self.child_list.append(child.name)
+            child.parent = self.name
+            Person._kinship_dict[self.name+'@'+child.name] = kinship
     def toDict(self):
         o = {}
-        o['level'] = None if self.level is None else self.level.level_number
+        o['level'] = self.level.level_number if self.level is not None else None
         o['name'] = self.name
-        o['parent'] = None if self.parent is None else self.parent.name
-        o['as_child_type'] = self.as_child_type
-        o['child_list'] = [psn.name for psn in self.child_list]
-        o['husband'] = None if self.husband is None else self.husband.name
-        o['as_wife_type'] = self.as_wife_type
-        o['wife_list'] = [psn.name for psn in self.wife_list]
         o['info'] = self.info._asdict()
-        o['master'] = None if self.master is None else self.master._asdict()
-        o['social_position'] = None if self.social_position is None else self.social_position._asdict()
-        o['as_servant'] = None if self.as_servant is None else self.as_servant._asdict()
-        o['servant_list'] = [psn.name for psn in self.servant_list]
+        o['ext'] = self.ext._asdict() if self.ext is not None else None
+        o['action'] = self.action._asdict() if self.action is not None else None
+        o['nick_list'] = [n._asdict() for n in self.nick_list]
+        o['title_list'] = [t._asdict() for t in self.title_list]
+        o['allowance'] = self.allowance._asdict() if self.allowance is not None else None
+        o['social_position'] = self.social_position._asdict() if self.social_position is not None else None
+        o['parent'] = self.parent
+        o['child_list'] = self.child_list
+        o['husband'] = self.husband
+        o['wife_list'] = self.wife_list
+        o['master'] = self.master
+        o['servant_list'] = self.servant_list
         return o
 
 def main():
-    GRAPH = Graph('根')
-    GRAPH.cal()
-    GRAPH.output()
+    family_list = [
+        ['贾家','正'], 
+        ['史家','正'], 
+        ['王家','正']
+    ]
+    ob = {}
+    for family in family_list:
+        graph = Graph('根',family[0],family[1])
+        graph.cal()
+        graph.output()
+        ob[family[0]+'@'+family[1]] = graph.toDict()
+        ob['person_map'] = {name : Person.find(name).toDict() for name in Person._name_dict}
+        ob['kinship_map'] = {k : Person._kinship_dict[k]._asdict() for k in Person._kinship_dict}
     with open('./graph.json', mode='w') as file:
-        o = {}
-        o['graph'] = GRAPH.toDict()
-        file.write(json.dumps(o, indent=2, sort_keys=True, ensure_ascii=False, cls=DecimalEncoder))
+        file.write(json.dumps(ob, indent=2, sort_keys=True, ensure_ascii=False, cls=DecimalEncoder))
 
 main()
