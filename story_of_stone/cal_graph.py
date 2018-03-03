@@ -121,6 +121,15 @@ with DB.cursor() as cursor:
     KINSHIP_FIELDS = [col[0] for col in cursor.description]
 Kinship = namedtuple('Kinship', KINSHIP_FIELDS)
 
+def clearDict(d):
+    if 'name' in d:
+        del d['name']
+    if 'subject' in d:
+        del d['subject']
+    if 'object' in d:
+        del d['object']
+    return d
+
 class Graph:
     """
     关系图。
@@ -137,29 +146,33 @@ class Graph:
             lvl = Level(self, n)
             self.level_list.append(lvl)
         lvl = self.getLevel(0).addPerson(top_name)
+        if not Person.exists(top_name):
+            Person(lvl, top_name)
     def getLevel(self, i):
         return self.level_list[i]
     def cal(self):
         for lvl in self.level_list:
             lvl.complete()
             lvl.derive()
-        # self.employ()
+        self.employ()
     def employ(self):
         """
         找出丫头小厮仆人。
         """
-        sql = 'select a.* from serve a inner join person b on a.name=b.name order by b.sort_position desc'
         with self.db.cursor() as cursor:
-            cursor.execute(sql)
+            sql = 'select a.name, a.serve from serve a inner join person b on a.serve=b.name where b.family=%s and b.branch=%s order by b.sort_position desc'
+            cursor.execute(sql, (self.family, self.branch))
             for row in cursor.fetchall():
                 if not Person.exists(row[0]):
                     servant = Person(None, row[0])
                     Person.find(row[1]).addServant(servant)
     def output(self):
         for lvl in self.level_list:
-            print('level '+str(lvl.level_number)+': '+ ' '.join([psn.name+'('+str(psn.info.sort_age)+')' for psn in lvl.person_list]))
+            print('level '+str(lvl.level_number)+': '+ ' '.join(lvl.person_list))
     def toDict(self):
         o = {}
+        o['family'] = self.family
+        o['branch'] = self.branch
         o['level_list'] = [lvl.toDict() for lvl in self.level_list]
         return o
 
@@ -175,48 +188,46 @@ class Level:
         self.level_number = lvl_number
         self.person_list = []
     def addPerson(self, name):
-        psn = Person(self, name)
-        self.person_list.append(psn)
-        return psn
+        if name not in self.person_list:
+            self.person_list.append(name)
     def addPersonAfter(self, after_name, new_name):
-        psn = Person(self, new_name)
-        idx = self.personIndex(after_name)
-        self.person_list.insert(idx+1, psn)
-        return psn
+        if new_name not in self.person_list:
+            idx = self.person_list.index(after_name)
+            self.person_list.insert(idx+1, new_name)
     def addPersonBefore(self, before_name, new_name):
-        psn = Person(self, new_name)
-        idx = self.personIndex(before_name)
-        self.person_list.insert(idx, psn)
-        return psn
-    def personIndex(self, name):
-        for idx, psn in enumerate(self.person_list):
-            if psn.name == name:
-                return idx
-        raise ValueError(name+' is not in the person list')
+        if new_name not in self.person_list:
+            idx = self.person_list.index(before_name)
+            self.person_list.insert(idx, new_name)
     def complete(self):
         """
         补全本层人员。
         方法：逐人扫描，如果是男的就查询妻妾，女的就查询丈夫。
         """
         with self.db.cursor() as cursor:
-            for psn in self.person_list:
+            for psn_name in self.person_list:
+                psn = Person.find(psn_name)
+                if psn.info.family!=self.tree.family or psn.info.branch!=self.tree.branch:
+                    continue
+                is_find_wife = True
                 sql = ''
                 if psn.info.gender=='男':
                     sql = 'select b.* from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="夫妻" order by b.sub_type asc, a.sort_position desc'
                 else:
                     sql = 'select b.* from person a inner join kinship b on a.name=b.object where b.object=%s and b.type="夫妻" limit 1'
-                cursor.execute(sql, (psn.name))
+                    is_find_wife = False
+                cursor.execute(sql, (psn_name))
                 for row in cursor.fetchall():
                     kinship = Kinship(*row)
-                    new_psn = None
-                    if not Person.exists(kinship.object):
-                        if psn.info.gender=='男':
-                            add_after_name = psn.name if 0==len(psn.wife_list) else psn.wife_list[-1]
-                            new_psn = self.addPersonAfter(add_after_name, kinship.object)
+                    new_psn_name = kinship.object if is_find_wife else kinship.subject
+                    if new_psn_name not in self.person_list:
+                        if not Person.exists(new_psn_name):
+                            Person(self, new_psn_name)
+                        if is_find_wife:
+                            add_after_name = psn_name if 0==len(psn.wife_list) else psn.wife_list[-1]
+                            self.addPersonAfter(add_after_name, new_psn_name)
                         else:
-                            new_psn = self.addPersonBefore(psn.name, kinship.object)
-                    else:
-                        new_psn = Person.find(kinship.object)
+                            self.addPersonBefore(psn_name, new_psn_name)
+                    new_psn = Person.find(new_psn_name)
                     if psn.info.gender=='男':
                         psn.addWife(new_psn, kinship)
                     else:
@@ -227,7 +238,11 @@ class Level:
         根据Graph类里树的要求，对于每一个小家庭，我们先扫描妻妾的孩子，再扫描男性的孩子。
         """
         with self.db.cursor() as cursor:
-            for psn in self.person_list:
+            for psn_name in self.person_list:
+                psn = Person.find(psn_name)
+                if psn.info.family!='' and psn.info.branch!='':
+                    if psn.info.family!=self.tree.family or psn.info.branch!=self.tree.branch:
+                        continue
                 if psn.info.gender=='女':
                     self.deriveOfOne(psn, cursor)
                 else:
@@ -248,16 +263,16 @@ class Level:
         for row in cursor.fetchall():
             lvl = self.tree.getLevel(int(row[5]))
             kinship = Kinship(row[0],row[1],row[2],row[3],row[4])
-            child = None
-            if not Person.exists(kinship.object):
-                child = lvl.addPerson(kinship.object)
-            else:
-                child = Person.find(kinship.object)
+            if kinship.object not in lvl.person_list:
+                if not Person.exists(kinship.object):
+                    Person(lvl, kinship.object)
+                lvl.addPerson(kinship.object)
+            child = Person.find(kinship.object)
             psn.addChild(child, kinship)
     def toDict(self):
         o = {}
         o['level_number'] = self.level_number
-        o['person_list'] = [psn.name for psn in self.person_list]
+        o['person_list'] = self.person_list
         return o
 
 class Person:
@@ -296,11 +311,13 @@ class Person:
             # 获取昵称
             self.nick_list = []
             sql = 'select * from nick where name=%s'
+            cursor.execute(sql, (self.name))
             for row in cursor.fetchall():
                 self.nick_list.append(Nick(*row))
             # 获取尊称
             self.title_list = []
             sql = 'select * from title where name=%s'
+            cursor.execute(sql, (self.name))
             for row in cursor.fetchall():
                 self.title_list.append(Title(*row))
             # 获取月例银子信息
@@ -340,6 +357,9 @@ class Person:
         添加孩子
         """
         if child.parent is None and child.name not in self.child_list:
+            if self.husband:
+                if child.name in Person.find(self.husband).child_list:
+                    return
             self.child_list.append(child.name)
             child.parent = self.name
             Person._kinship_dict[self.name+'@'+child.name] = kinship
@@ -347,13 +367,13 @@ class Person:
         o = {}
         o['level'] = self.level.level_number if self.level is not None else None
         o['name'] = self.name
-        o['info'] = self.info._asdict()
-        o['ext'] = self.ext._asdict() if self.ext is not None else None
-        o['action'] = self.action._asdict() if self.action is not None else None
-        o['nick_list'] = [n._asdict() for n in self.nick_list]
-        o['title_list'] = [t._asdict() for t in self.title_list]
-        o['allowance'] = self.allowance._asdict() if self.allowance is not None else None
-        o['social_position'] = self.social_position._asdict() if self.social_position is not None else None
+        o['info'] = clearDict(self.info._asdict())
+        o['ext'] = clearDict(self.ext._asdict()) if self.ext is not None else None
+        o['action'] = clearDict(self.action._asdict()) if self.action is not None else None
+        o['nick_list'] = [clearDict(n._asdict()) for n in self.nick_list]
+        o['title_list'] = [clearDict(t._asdict()) for t in self.title_list]
+        o['allowance'] = clearDict(self.allowance._asdict()) if self.allowance is not None else None
+        o['social_position'] = clearDict(self.social_position._asdict()) if self.social_position is not None else None
         o['parent'] = self.parent
         o['child_list'] = self.child_list
         o['husband'] = self.husband
@@ -369,14 +389,15 @@ def main():
         ['王家','正']
     ]
     ob = {}
+    ob['list'] = []
     for family in family_list:
         graph = Graph('根',family[0],family[1])
         graph.cal()
         graph.output()
-        ob[family[0]+'@'+family[1]] = graph.toDict()
+        ob['list'].append(graph.toDict())
         ob['person_map'] = {name : Person.find(name).toDict() for name in Person._name_dict}
-        ob['kinship_map'] = {k : Person._kinship_dict[k]._asdict() for k in Person._kinship_dict}
+        ob['kinship_map'] = {k : clearDict(Person._kinship_dict[k]._asdict()) for k in Person._kinship_dict}
     with open('./graph.json', mode='w') as file:
-        file.write(json.dumps(ob, indent=2, sort_keys=True, ensure_ascii=False, cls=DecimalEncoder))
+        file.write(json.dumps(ob, indent=1, sort_keys=True, ensure_ascii=False, cls=DecimalEncoder))
 
 main()

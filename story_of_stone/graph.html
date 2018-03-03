@@ -13,6 +13,8 @@ let dom_psn_tpl = null;
 let dom_cpl_tpl = null;
 let vl_tpl = null;
 let hl_tpl = null;
+let psn_map = null;
+let ks_map = null;
 function onload() {
     $.ajax({
         url:'graph.json', 
@@ -26,54 +28,58 @@ function onload() {
             vl_tpl = $('#template > .vline');
             hl_tpl = $('#template > .hline');
             dom_cpl_tpl = $('#template > .couple-box');
-            drawGraph(data['graph']);
+            drawGraph(data);
         },
         error:function(){
             alert('加载图谱数据出错');
         }
     });
 }
-function drawGraph(graph) {
-    let level_list = graph.level_list;
-    let person_map = graph.person_map;
-    drawOneFamily('贾家', level_list, person_map);
-    drawOneFamily('史家', level_list, person_map);
-    drawOneFamily('王家', level_list, person_map);
+function drawGraph(data) {
+    psn_map = data.person_map;
+    ks_map = data.kinship_map;
+    for(let family of data['list']) {
+        family['name'] = family['family']+'@'+family['branch']
+        drawOneFamily(family);
+    }
 }
-function drawOneFamily(family, level_list, person_map) { // 绘制一个家族
-    let master_name_list = createDomForAllMaster(family, level_list, person_map);
-    adjustPositionForAllMaster(master_name_list, person_map);
-    drawLevelLines(master_name_list, person_map);
-    drawCoupleBoxes(master_name_list, person_map);
+function drawOneFamily(family) { // 绘制一个家族
+    let master_name_list = createDomForAllMaster(family);
+    adjustPositionForAllMaster(family, master_name_list);
+    drawLevelLines(family, master_name_list);
+    drawCoupleBoxes(family, master_name_list);
 }
-function createDomForAllMaster(family, level_list, person_map) { // 将主子类型的人物添加到页面，返回所有master的列表
+function createDomForAllMaster(family) { // 将主子类型的人物添加到页面，返回所有master的列表
     let master_name_list = [];
-    for (let lvl of level_list) {
+    for (let lvl of family['level_list']) {
         let lvl_number = lvl.level_number;
         if (lvl_number<1)
             continue;
         let dom_lvl = dom_graph.find(`[name=level-${lvl_number}]`);
         for (let name of lvl.person_list) {
-            let psn = person_map[name];
-            if (psn.master.family!=family)
-                continue;
+            let psn = psn_map[name];
             master_name_list.push(name);
             let dom_psn = dom_psn_tpl.clone().attr('person', name);
             dom_psn.find('.name').text(name);
             if (name.length>=5)
                 dom_psn.find('.name').addClass(`char${name.length}`)
+            calChildrenOrder(psn);
             fillMasterScript(dom_psn, psn);
-            calChildrenOrder(psn, person_map);
-            fillMasterServant(dom_psn, psn, person_map);
+            fillMasterServant(dom_psn, psn);
             if (psn.info.dead)
                 dom_psn.addClass('dead');
             // 将此人dom添加到页面。同时为了将来可以调整位置，在其前面也加入个空白dom
             let dom_space = $('<div class=space-between-person></div>');
             dom_lvl.append(dom_space);
             dom_lvl.append(dom_psn);
-            // 将dom记录到person_map中
-            person_map[name].dom_psn = dom_psn;
-            person_map[name].dom_psn_space = dom_space;
+            // 将dom记录到psn_map中
+            if (family.name==psn.info.family+'@'+psn.info.branch) {
+                psn.dom_psn = dom_psn;
+                psn.dom_psn_space = dom_space;
+            } else if (family.name!=psn.info.family+'@'+psn.info.branch) {
+                psn.ori_dom_psn = dom_psn;
+                psn.ori_dom_psn_space = dom_space;
+            }
         }
     }
     return master_name_list;
@@ -99,10 +105,10 @@ function fillMasterScript(dom_psn, psn) { // 填写某个人的上下标
             avai_list.push(txt);
         }
     }
-    if (psn.parent && psn.as_child_type!='亲生')
+    if (psn.parent && ks_map[psn.parent+'@'+psn.name].sub_type!='亲生')
         avai_list.push('非亲生');
     // 妻妾排行名号
-    if (psn.wives_idx && psn.master && psn.master.generation>2) {
+    if (psn.wives_idx && psn.master && psn_map[psn.master].level>2) {
         let txt = psn.wives_idx==1?'正室':'偏房';
         avai_list.push(txt);
     }
@@ -111,27 +117,27 @@ function fillMasterScript(dom_psn, psn) { // 填写某个人的上下标
     // 尊称名号
     default_scr_len = 5;
     max_scr_len = avai_list.length>0? 6-avai_list[0].length : default_scr_len;
-    for (let i=1; i<=4; ++i) {
-        let txt = psn.info['title_'+i];
-        if (txt.length>0 && txt.length<=max_scr_len) {
+    for (let t of psn.title_list) {
+        let txt = t.title;
+        if (txt.length>0 && txt.length<=max_scr_len)
             avai_list.push(txt);
-        }
     }
     // 爵位官位名号
-    let nobility = psn.social_position? psn.social_position.nobility_title : '';
-    let official = psn.social_position? psn.social_position.official_title : '';
-    if (nobility.length>0 && nobility.length<=max_scr_len) {
-        avai_list.push(nobility);
-    } else if (official.length>0 && official.length<=max_scr_len) {
-        avai_list.push(official);
+    if (psn.social_position) {
+        let nobility = psn.social_position.nobility_title;
+        let official = psn.social_position.official_title;
+        if (nobility.length>0 && nobility.length<=max_scr_len) {
+            avai_list.push(nobility);
+        } else if (official.length>0 && official.length<=max_scr_len) {
+            avai_list.push(official);
+        }
     }
     // 诨名
     max_scr_len = avai_list.length>0? 6-avai_list[0].length : default_scr_len;
-    for (let i=1; i<=4; ++i) {
-        let txt = psn.info['nick_'+i];
-        if (txt.length>0 && txt.length<=max_scr_len) {
+    for (let n of psn.nick_list) {
+        let txt = n.nick;
+        if (txt.length>0 && txt.length<=max_scr_len)
             avai_list.push(txt);
-        }
     }
     // 所有可用名号里前两位就是上标下标
     if (avai_list.length>0) {
@@ -152,17 +158,17 @@ function fillMasterScript(dom_psn, psn) { // 填写某个人的上下标
     if (avai_list.length==0)
         dom_psn.find('.script-box').remove();
 }
-function calChildrenOrder(psn, person_map) { // 为这个人计算其长子次子长女次女这些信息
+function calChildrenOrder(psn) { // 为这个人计算其长子次子长女次女这些信息
     // 找出此人自己的直接连线孩子、其所有妻妾的连线孩子
     let children = [];
     for (let name of psn.child_list) {
-        children.push(person_map[name]);
+        children.push(psn_map[name]);
     }
     let wives_idx = 1;
     for (let wife_name of psn.wife_list) {
-        let wife = person_map[wife_name];
+        let wife = psn_map[wife_name];
         for (let name of wife.child_list) {
-            children.push(person_map[name]);
+            children.push(psn_map[name]);
         }
         // 顺便把妻子的排行记录下
         wife.wives_idx = wives_idx;
@@ -185,7 +191,9 @@ function calChildrenOrder(psn, person_map) { // 为这个人计算其长子次�
     let boy_idx = 1;
     let girl_idx = 1;
     for (let child of children) {
-        if (child.as_child_type!='亲生')
+        let ks = ks_map[child.parent+'@'+child.name];
+        console.log(ks);
+        if (ks.sub_type!='亲生')
             continue;
         if (child.info.gender=='男') {
             child.children_idx = boy_idx;
@@ -196,7 +204,7 @@ function calChildrenOrder(psn, person_map) { // 为这个人计算其长子次�
         }
     }
 }
-function fillMasterServant(dom_psn, psn, person_map) { // 填充这个主子名下的丫鬟小厮仆人
+function fillMasterServant(dom_psn, psn) { // 填充这个主子名下的丫鬟小厮仆人
     if (psn.servant_list.length==0) {
         dom_psn.find('.servant-list').remove();
     } else {
@@ -211,7 +219,7 @@ function fillMasterServant(dom_psn, psn, person_map) { // 填充这个主子名�
         dom_svt_list.find('.servant').remove();
         for (let i=0; i<psn.servant_list.length; ++i) {
             let dom_svt = dom_svt_tpl.clone();
-            let svt = person_map[ psn.servant_list[i] ];
+            let svt = psn_map[ psn.servant_list[i] ];
             dom_svt.text(psn.servant_list[i]).attr('person',svt.name);
             if (svt.info.gender=='男')
                 dom_svt.addClass('male');
@@ -220,35 +228,35 @@ function fillMasterServant(dom_psn, psn, person_map) { // 填充这个主子名�
         }
     }
 }
-function adjustPositionForAllMaster(master_name_list, person_map) { // 调整所有人物的位置（通过调整人物dom左侧的空白div的宽度）
+function adjustPositionForAllMaster(family, master_name_list) { // 调整所有人物的位置（通过调整人物dom左侧的空白div的宽度）
     for (let n=0; n<100; ++n) {
         // 100是防止死循环，即最多进行这么多次的调整
         // 每次都是遍历所有人物，对人物位置进行检查。
         // 如果需要调整，则调整。本次调整结束，并进行下一次调整。
         // 如果遍历所有人物过程中没有发生任何调整，则认为全部调整完毕，函数结束。
         for (let name of master_name_list) {
-            if (person_map[name].all_child_list.length==0)
+            if (psn_map[name].all_child_list.length==0)
                 continue;
-            if (adjustPositionForOneMaster(name, person_map)>0)
+            if (adjustPositionForOneMaster(family, name)>0)
                 break;
         }
     }
 }
 let g_adjust_stop = 0;
-function adjustPositionForOneMaster(name, person_map) { // 检查该人物跟其孩子的位置，并进行调整
+function adjustPositionForOneMaster(family, name) { // 检查该人物跟其孩子的位置，并进行调整
     // 返回值： 0无任何调整，1调整了本人位置，2调整了孩子的位置
     if (g_adjust_stop)return 0;
-    let psn = person_map[name];
-    let family_child_list = psn.all_child_list.filter(cname => person_map[cname].master.family==psn.master.family);
+    let psn = psn_map[name];
+    let family_child_list = psn.all_child_list.filter(cname => psn_map[cname].info.family+'@'+psn_map[cname].info.branch==family.name);
     if (family_child_list.length==0)
         return 0;
     let left = psn.dom_psn.position().left;
     let width = psn.dom_psn.width();
     let right = left+width;
-    let first_child = person_map[ family_child_list[0] ];
-    let first_child_dom = first_child.dom_psn;
-    let last_child = person_map[ family_child_list[family_child_list.length-1] ];
-    let last_child_dom = last_child.dom_psn;
+    let first_child = psn_map[ family_child_list[0] ];
+    let first_child_dom = family.name==first_child.info.family+'@'+first_child.info.branch? first_child.dom_psn : first_child.ori_dom_psn;
+    let last_child = psn_map[ family_child_list[family_child_list.length-1] ];
+    let last_child_dom = family.name==last_child.info.family+'@'+last_child.info.branch? last_child.dom_psn : last_child.ori_dom_psn;
     let child_left_min = first_child_dom.position().left;
     let child_right_max = last_child_dom.position().left+last_child_dom.width();
     let child_width = child_right_max - child_left_min;
@@ -276,52 +284,33 @@ function adjustPositionForOneMaster(name, person_map) { // 检查该人物跟其
             return 0;
         } else {
             psn.dom_psn_space.width( psn.dom_psn_space.width()+(child_left_min-left) );
-            console.log(`${name} 在首个孩子 ${first_child.name} 左侧，为使左边线对齐，自己左边补充空白：${child_left_min-left}`);
+            //console.log(`${name} 在首个孩子 ${first_child.name} 左侧，为使左边线对齐，自己左边补充空白：${child_left_min-left}`);
             return 1;
         }
     } else if (right > child_right_max) {
         // 如果当前元素在末尾孩子元素右侧，则末尾孩子元素前面要补充空白
-        let last_child_dom_space = person_map[ family_child_list[family_child_list.length-1] ].dom_psn_space;
+        let last_child_dom_space = psn_map[ family_child_list[family_child_list.length-1] ].dom_psn_space;
         if (width - child_width >= 0.1
             && family_child_list.length==1) {
             // 如果当前元素比孩子元素要宽，且只有一个孩子，则把孩子元素中线对齐当前元素即可
             let delta = left+width/2-child_width/2-child_left_min;
             last_child_dom_space.width( last_child_dom_space.width()+delta );
-            console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使中线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
+            //console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使中线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
         } else {
             // 否则，末尾孩子元素右边线对齐当前元素右边线
             last_child_dom_space.width( last_child_dom_space.width()+(right-child_right_max) );
-            console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使右边线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
+            //console.log(`${name} 在末尾孩子 ${last_child.name} 右侧，为使右边线对齐，末尾孩子左边补充空白：${right-child_right_max}`);
         }
         return 2;
     }
     return 0;
 }
-function getChildrenNames(psn, person_map) { // 找出此人的孩子
-    let children = [];
-    if (psn.info.gender=='男') {
-        // 如果是男人，就找出此人跟所有妻妾的孩子
-        for (let name of psn.child_list) {
-            children.push(name);
-        }
-        for (let wife_name of psn.wife_list) {
-            let wife = person_map[wife_name];
-            for (let name of wife.child_list) {
-                children.push(name);
-            }
-        }
-    } else {
-        // 如果是女人，就找亲生孩子就可以了
-        for (let name of psn.child_list) {
-           children.push(name);
-        }
-    }
-    return children;
-}
-function drawLevelLines(master_name_list, person_map) { // 为代际之间的关联关系画线
+function drawLevelLines(family, master_name_list) { // 为代际之间的关联关系画线
     for (let name of master_name_list) {
-        let psn = person_map[name];
+        let psn = psn_map[name];
         if (psn.child_list.length==0)
+            continue;
+        if (psn.info.family+'@'+psn.info.branch!=family.name)
             continue;
         let dom_psn = psn.dom_psn;
         let psn_pos = dom_psn.position();
@@ -330,8 +319,9 @@ function drawLevelLines(master_name_list, person_map) { // 为代际之间的关
         let start_point = [psn_pos.left+psn_w/2, psn_pos.top+psn_h-dom_psn_tpl.outlineOffset];
         let end_point_list = [];
         for (let child_name of psn.child_list) {
-            let child = person_map[child_name];
-            let dom_cpsn = child.dom_psn;
+            let child = psn_map[child_name];
+            let dom_cpsn = family.name==child.info.family+'@'+child.info.branch? child.dom_psn : child.ori_dom_psn;
+            if (typeof(dom_cpsn)=='undefined') console.log(name, child.name)
             let cpsn_pos = dom_cpsn.position();
             let cpsn_w = dom_cpsn.outerWidth(true);
             let cpsn_h = dom_cpsn.outerHeight(true);
@@ -375,9 +365,9 @@ function drawHLine(start, end) { // 画一根横线
     l.css('width', end[0]-start[0]);
     dom_graph.append(l);
 }
-function drawCoupleBoxes(master_name_list, person_map) { // 画夫妻框
+function drawCoupleBoxes(family, master_name_list) { // 画夫妻框
     for (let name of master_name_list) {
-        let psn = person_map[name];
+        let psn = psn_map[name];
         if (psn.info.gender!='男' || psn.wife_list.length==0)
             continue;
         let dom_psn = psn.dom_psn;
@@ -385,7 +375,7 @@ function drawCoupleBoxes(master_name_list, person_map) { // 画夫妻框
         //let psn_w = dom_psn.outerWidth(true);
         let psn_h = dom_psn.outerHeight(true);
         let last_wife_name = psn.wife_list[psn.wife_list.length-1];
-        let last_wife = person_map[last_wife_name];
+        let last_wife = psn_map[last_wife_name];
         let dom_wife = last_wife.dom_psn;
         let wife_pos = dom_wife.position();
         let border_w = parseInt(dom_psn.css('outlineWidth'))+parseInt(dom_psn.css('borderTopWidth'));
