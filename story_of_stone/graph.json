@@ -404,6 +404,38 @@
      "person_list": []
     }
    ]
+  },
+  {
+   "branch": "正",
+   "family": "薛家",
+   "level_list": [
+    {
+     "level_number": 0,
+     "person_list": [
+      "根"
+     ]
+    },
+    {
+     "level_number": 1,
+     "person_list": []
+    },
+    {
+     "level_number": 2,
+     "person_list": []
+    },
+    {
+     "level_number": 3,
+     "person_list": []
+    },
+    {
+     "level_number": 4,
+     "person_list": []
+    },
+    {
+     "level_number": 5,
+     "person_list": []
+    }
+   ]
   }
  ],
  "person_map": {
@@ -817,9 +849,9 @@
    ],
    "parent": "史湘云之父",
    "servant_list": [
-    "葵官",
     "缕儿",
-    "翠缕"
+    "翠缕",
+    "葵官"
    ],
    "social_position": null,
    "title_list": [],
@@ -1608,10 +1640,10 @@
    "nick_list": [],
    "parent": null,
    "servant_list": [
+    "茄官",
     "卍儿",
-    "银蝶",
     "炒豆",
-    "茄官"
+    "银蝶"
    ],
    "social_position": null,
    "title_list": [
@@ -2516,10 +2548,10 @@
    ],
    "parent": "贾敏",
    "servant_list": [
+    "藕官",
     "春纤",
     "雪雁",
-    "紫鹃",
-    "藕官"
+    "紫鹃"
    ],
    "social_position": null,
    "title_list": [],
@@ -2967,12 +2999,12 @@
    ],
    "parent": "王熙凤之父",
    "servant_list": [
+    "丰儿",
     "来旺",
     "王信",
     "小红",
     "平儿",
-    "庆儿",
-    "丰儿"
+    "庆儿"
    ],
    "social_position": null,
    "title_list": [
@@ -4522,34 +4554,34 @@
    ],
    "parent": "王夫人",
    "servant_list": [
-    "袭人",
-    "佳蕙",
-    "赵亦华",
-    "晴雯",
-    "钱启",
-    "双寿",
-    "檀云",
-    "双瑞",
-    "锄药",
-    "王荣",
-    "四儿",
-    "坠儿",
-    "墨雨",
-    "媚人",
-    "麝月",
-    "碧痕",
-    "秋纹",
-    "引泉",
-    "绮霰",
-    "张若锦",
-    "芳官",
     "茗烟",
     "扫红",
     "茜雪",
     "扫花",
     "挑云",
     "春燕",
-    "伴鹤"
+    "伴鹤",
+    "佳蕙",
+    "袭人",
+    "赵亦华",
+    "晴雯",
+    "钱启",
+    "檀云",
+    "双寿",
+    "双瑞",
+    "锄药",
+    "王荣",
+    "四儿",
+    "坠儿",
+    "墨雨",
+    "麝月",
+    "媚人",
+    "碧痕",
+    "秋纹",
+    "引泉",
+    "绮霰",
+    "张若锦",
+    "芳官"
    ],
    "social_position": null,
    "title_list": [
@@ -4699,10 +4731,10 @@
    ],
    "parent": "赵姨娘",
    "servant_list": [
-    "翠墨",
-    "艾官",
     "待书",
-    "蝉姐"
+    "蝉姐",
+    "翠墨",
+    "艾官"
    ],
    "social_position": null,
    "title_list": [
@@ -4953,14 +4985,14 @@
    "nick_list": [],
    "parent": "史候",
    "servant_list": [
+    "文官",
     "靛儿",
     "玻璃",
     "鸳鸯",
     "珍珠",
     "鹦鹉",
     "琥珀",
-    "翡翠",
-    "文官"
+    "翡翠"
    ],
    "social_position": null,
    "title_list": [
@@ -5529,9 +5561,9 @@
    ],
    "parent": "贾赦",
    "servant_list": [
+    "莲花儿",
     "司棋",
-    "绣桔",
-    "莲花儿"
+    "绣桔"
    ],
    "social_position": null,
    "title_list": [

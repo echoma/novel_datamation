@@ -28,6 +28,7 @@ function onload() {
             vl_tpl = $('#template > .vline');
             hl_tpl = $('#template > .hline');
             dom_cpl_tpl = $('#template > .couple-box');
+            $('#gragh-load').remove();
             drawGraph(data);
         },
         error:function(){
@@ -48,6 +49,7 @@ function drawOneFamily(family) { // 绘制一个家族
     adjustPositionForAllMaster(family, master_name_list);
     drawLevelLines(family, master_name_list);
     drawCoupleBoxes(family, master_name_list);
+    drawFamilyBorder(family);
 }
 function createDomForAllMaster(family) { // 将主子类型的人物添加到页面，返回所有master的列表
     let master_name_list = [];
@@ -93,7 +95,7 @@ function fillMasterScript(dom_psn, psn) { // 填写某个人的上下标
     let default_scr_len = 3;
     let max_scr_len = avai_list.length>0? 6-avai_list[0].length : default_scr_len;
     // 长子次子名号
-    if (psn.master && psn.master.generation>1) {
+    if (psn.info.type=='主子' && psn.info.level>1) {
         if (psn.children_idx) {
             let idx_str = '';
             if (psn.children_idx==1) idx_str = '长';
@@ -192,7 +194,6 @@ function calChildrenOrder(psn) { // 为这个人计算其长子次子长女次�
     let girl_idx = 1;
     for (let child of children) {
         let ks = ks_map[child.parent+'@'+child.name];
-        console.log(ks);
         if (ks.sub_type!='亲生')
             continue;
         if (child.info.gender=='男') {
@@ -387,6 +388,23 @@ function drawCoupleBoxes(family, master_name_list) { // 画夫妻框
         dom_graph.append(dom_cpl_box);
     }
 }
+function drawFamilyBorder(family) { // 一个家族绘制完毕后，绘制家族边界，防止其他家族的人物进入到本家族范围内
+    let dom_list = [];
+    let max_left = 0;
+    for (let i=1; i<=5; ++i) {
+        let dom_lvl = dom_graph.find(`[name=level-${i}]`);
+        let dom_spc = $('<div class=space-between-person></div>');
+        dom_spc.css('width','0px');
+        dom_lvl.append(dom_spc);
+        dom_list.push(dom_spc);
+        let left = parseInt(dom_spc.position().left);
+        if (left>max_left)
+            max_left = left;
+    }
+    for (let dom_spc of dom_list) {
+        dom_spc.css('width', max_left-parseInt(dom_spc.position().left));
+    }
+}
 </script>
 </head>
 <body lang=cn>
@@ -408,6 +426,7 @@ function drawCoupleBoxes(family, master_name_list) { // 画夫妻框
         <div class=hline></div>
         <div class=vline></div>
     </div>
+    <div class=gragh-load id=gragh-load>正在加载</div>
     <div class=graph id="graph">
         <div class=level name=level-1></div>
         <div class=space-between-level></div>
