@@ -1,11 +1,11 @@
 {
  "kinship_map": {
-  "史候@史湘云之祖父": {
+  "史公@史湘云之祖父": {
    "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
-  "史候@贾母": {
+  "史公@贾母": {
    "note": "",
    "sub_type": "亲生",
    "type": "亲子"
@@ -40,7 +40,7 @@
    "sub_type": "正房",
    "type": "夫妻"
   },
-  "根@史候": {
+  "根@史公": {
    "note": "",
    "sub_type": "虚拟",
    "type": "亲子"
@@ -48,6 +48,11 @@
   "根@王公": {
    "note": "",
    "sub_type": "亲生",
+   "type": "亲子"
+  },
+  "根@薛公": {
+   "note": "",
+   "sub_type": "虚拟",
    "type": "亲子"
   },
   "根@贾源": {
@@ -95,6 +100,11 @@
    "sub_type": "亲生",
    "type": "亲子"
   },
+  "王夫人之父@薛姨妈": {
+   "note": "",
+   "sub_type": "亲生",
+   "type": "亲子"
+  },
   "王熙凤@贾巧姐": {
    "note": "",
    "sub_type": "亲生",
@@ -106,6 +116,46 @@
    "type": "亲子"
   },
   "王熙凤之父@王熙凤": {
+   "note": "",
+   "sub_type": "亲生",
+   "type": "亲子"
+  },
+  "薛公@薛宝钗之祖父": {
+   "note": "",
+   "sub_type": "亲生",
+   "type": "亲子"
+  },
+  "薛姨妈@薛宝钗": {
+   "note": "",
+   "sub_type": "亲生",
+   "type": "亲子"
+  },
+  "薛姨妈@薛蟠": {
+   "note": "",
+   "sub_type": "亲生",
+   "type": "亲子"
+  },
+  "薛宝琴之父@薛宝琴": {
+   "note": "",
+   "sub_type": "亲生",
+   "type": "亲子"
+  },
+  "薛宝琴之父@薛蝌": {
+   "note": "",
+   "sub_type": "亲生",
+   "type": "亲子"
+  },
+  "薛宝钗之父@薛姨妈": {
+   "note": "",
+   "sub_type": "正房",
+   "type": "夫妻"
+  },
+  "薛宝钗之祖父@薛宝琴之父": {
+   "note": "",
+   "sub_type": "亲生",
+   "type": "亲子"
+  },
+  "薛宝钗之祖父@薛宝钗之父": {
    "note": "",
    "sub_type": "亲生",
    "type": "亲子"
@@ -281,8 +331,8 @@
       "邢夫人",
       "贾政",
       "王夫人",
-      "赵姨娘",
       "周姨娘",
+      "赵姨娘",
       "林如海",
       "贾敏"
      ]
@@ -332,7 +382,7 @@
     {
      "level_number": 1,
      "person_list": [
-      "史候"
+      "史公"
      ]
     },
     {
@@ -389,7 +439,8 @@
      "person_list": [
       "王熙凤之父",
       "王子腾",
-      "王夫人"
+      "王夫人",
+      "薛姨妈"
      ]
     },
     {
@@ -417,19 +468,32 @@
     },
     {
      "level_number": 1,
-     "person_list": []
+     "person_list": [
+      "薛公"
+     ]
     },
     {
      "level_number": 2,
-     "person_list": []
+     "person_list": [
+      "薛宝钗之祖父"
+     ]
     },
     {
      "level_number": 3,
-     "person_list": []
+     "person_list": [
+      "薛宝钗之父",
+      "薛姨妈",
+      "薛宝琴之父"
+     ]
     },
     {
      "level_number": 4,
-     "person_list": []
+     "person_list": [
+      "薛蟠",
+      "薛宝钗",
+      "薛蝌",
+      "薛宝琴"
+     ]
     },
     {
      "level_number": 5,
@@ -453,6 +517,7 @@
    "allowance": {
     "type": "二等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -481,6 +546,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "伴鹤": {
@@ -495,6 +561,7 @@
     "refer_note": "贾芸来见宝玉，看到引泉，扫花，挑云，伴鹤在房檐上掏小雀"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -523,6 +590,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "佳蕙": {
@@ -539,6 +607,7 @@
    "allowance": {
     "type": "二等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -567,6 +636,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "入画": {
@@ -583,6 +653,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -605,6 +676,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "兴儿": {
@@ -619,6 +691,7 @@
     "refer_note": "贾珍收礼，丫头传话里提到了兴儿"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -641,6 +714,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "卍儿": {
@@ -657,6 +731,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -679,6 +754,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "双寿": {
@@ -693,6 +769,7 @@
     "refer_note": "宝玉去见冯紫英，带了双瑞、双寿"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -721,6 +798,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "双瑞": {
@@ -735,6 +813,7 @@
     "refer_note": "宝玉去见冯紫英，带了双瑞、双寿"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -763,22 +842,18 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
-  "史候": {
+  "史公": {
    "action": null,
    "allowance": null,
+   "child_idx": null,
    "child_list": [
     "贾母",
     "史湘云之祖父"
    ],
-   "ext": {
-    "age": 85,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
-   },
+   "ext": null,
    "husband": null,
    "info": {
     "branch": "正",
@@ -793,19 +868,20 @@
    },
    "level": 1,
    "master": null,
-   "name": "史候",
+   "name": "史公",
    "nick_list": [],
    "parent": "根",
    "servant_list": [],
    "social_position": {
-    "nobility_note": "",
+    "nobility_note": "第4回，护官符批语",
     "nobility_rank": "候",
     "nobility_title": "保龄候",
-    "official_note": "",
+    "official_note": "第4回，护官符批语",
     "official_rank": 0,
     "official_title": "尚书令"
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "史湘云": {
@@ -820,6 +896,7 @@
     "refer_note": "宝玉正和宝钗顽笑，忽见人说：“史大姑娘来了。”"
    },
    "allowance": null,
+   "child_idx": "长女",
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -855,11 +932,13 @@
    ],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "史湘云之父": {
    "action": null,
    "allowance": null,
+   "child_idx": "长子",
    "child_list": [
     "史湘云"
    ],
@@ -890,11 +969,13 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "史湘云之祖父": {
    "action": null,
    "allowance": null,
+   "child_idx": null,
    "child_list": [
     "史湘云之父",
     "史鼐",
@@ -923,7 +1004,7 @@
    "master": null,
    "name": "史湘云之祖父",
    "nick_list": [],
-   "parent": "史候",
+   "parent": "史公",
    "servant_list": [],
    "social_position": {
     "nobility_note": "",
@@ -934,11 +1015,13 @@
     "official_title": ""
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "史鼎": {
    "action": null,
    "allowance": null,
+   "child_idx": "三子",
    "child_list": [],
    "ext": {
     "age": 48,
@@ -974,11 +1057,13 @@
     "official_title": ""
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "史鼐": {
    "action": null,
    "allowance": null,
+   "child_idx": "次子",
    "child_list": [],
    "ext": {
     "age": 48,
@@ -1014,6 +1099,7 @@
     "official_title": ""
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "司棋": {
@@ -1030,6 +1116,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -1058,6 +1145,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "周姨娘": {
@@ -1074,6 +1162,7 @@
    "allowance": {
     "type": "姨娘"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 30,
@@ -1102,6 +1191,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": "侧室",
    "wife_list": []
   },
   "善姐": {
@@ -1118,6 +1208,7 @@
    "allowance": {
     "type": "二等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -1146,6 +1237,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "喜儿": {
@@ -1160,6 +1252,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -1182,6 +1275,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "四儿": {
@@ -1198,6 +1292,7 @@
    "allowance": {
     "type": "二等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -1226,6 +1321,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "坠儿": {
@@ -1242,6 +1338,7 @@
    "allowance": {
     "type": "二等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -1270,6 +1367,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "墨雨": {
@@ -1284,6 +1382,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -1312,6 +1411,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "媚人": {
@@ -1328,6 +1428,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -1356,6 +1457,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "宝珠": {
@@ -1370,6 +1472,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -1398,6 +1501,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "寿儿": {
@@ -1412,6 +1516,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -1434,6 +1539,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "小吉祥": {
@@ -1450,6 +1556,7 @@
    "allowance": {
     "type": "二等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -1472,6 +1579,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "小红": {
@@ -1488,6 +1596,7 @@
    "allowance": {
     "type": "二等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 15,
@@ -1516,6 +1625,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "小鹊": {
@@ -1532,6 +1642,7 @@
    "allowance": {
     "type": "二等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -1554,6 +1665,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "尤二姐": {
@@ -1568,6 +1680,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 23,
@@ -1598,6 +1711,7 @@
    ],
    "social_position": null,
    "title_list": [],
+   "wife_idx": "侧室",
    "wife_list": []
   },
   "尤氏": {
@@ -1614,6 +1728,7 @@
    "allowance": {
     "type": "奶奶"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 40,
@@ -1652,6 +1767,7 @@
      "title": "大奶奶"
     }
    ],
+   "wife_idx": "正房",
    "wife_list": []
   },
   "平儿": {
@@ -1668,6 +1784,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 17,
@@ -1696,6 +1813,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "庆儿": {
@@ -1710,6 +1828,7 @@
     "refer_note": "凤姐差庆儿打听事"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -1732,6 +1851,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "引泉": {
@@ -1746,6 +1866,7 @@
     "refer_note": "贾芸来见宝玉，看到引泉，扫花，挑云，伴鹤在房檐上掏小雀"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -1774,6 +1895,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "张若锦": {
@@ -1788,6 +1910,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 19,
@@ -1816,6 +1939,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "彩云": {
@@ -1832,6 +1956,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -1854,6 +1979,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "彩屏": {
@@ -1870,6 +1996,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -1892,6 +2019,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "彩霞": {
@@ -1908,6 +2036,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -1930,6 +2059,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "彩鸾": {
@@ -1946,6 +2076,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -1968,6 +2099,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "待书": {
@@ -1984,6 +2116,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -2012,6 +2145,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "扫红": {
@@ -2026,6 +2160,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -2054,6 +2189,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "扫花": {
@@ -2068,6 +2204,7 @@
     "refer_note": "贾芸来见宝玉，看到引泉，扫花，挑云，伴鹤在房檐上掏小雀"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -2096,6 +2233,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "挑云": {
@@ -2110,6 +2248,7 @@
     "refer_note": "贾芸来见宝玉，看到引泉，扫花，挑云，伴鹤在房檐上掏小雀"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -2138,6 +2277,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "文官": {
@@ -2154,6 +2294,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -2176,6 +2317,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "春燕": {
@@ -2192,6 +2334,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -2220,6 +2363,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "春纤": {
@@ -2236,6 +2380,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -2264,6 +2409,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "昭儿": {
@@ -2278,6 +2424,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -2300,6 +2447,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "晴雯": {
@@ -2316,6 +2464,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -2344,6 +2493,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "李纨": {
@@ -2360,6 +2510,7 @@
    "allowance": {
     "type": "李纨"
    },
+   "child_idx": null,
    "child_list": [
     "贾兰"
    ],
@@ -2393,8 +2544,8 @@
    ],
    "parent": null,
    "servant_list": [
-    "碧月",
-    "素云"
+    "素云",
+    "碧月"
    ],
    "social_position": null,
    "title_list": [
@@ -2403,6 +2554,7 @@
      "title": "大奶奶"
     }
    ],
+   "wife_idx": "正房",
    "wife_list": []
   },
   "来旺": {
@@ -2417,6 +2569,7 @@
     "refer_note": "凤姐包揽诉讼，来往是负责跑腿的心腹"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -2444,6 +2597,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "林如海": {
@@ -2458,6 +2612,7 @@
     "refer_note": "贾雨村向林如海谋官"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 48,
@@ -2493,6 +2648,7 @@
     "official_title": "兰台寺大夫"
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": [
     "贾敏"
    ]
@@ -2509,6 +2665,7 @@
     "refer_note": "陈述贾雨村做林府西宾"
    },
    "allowance": null,
+   "child_idx": "长女",
    "child_list": [],
    "ext": {
     "age": 13,
@@ -2548,23 +2705,26 @@
    ],
    "parent": "贾敏",
    "servant_list": [
-    "藕官",
-    "春纤",
+    "紫鹃",
     "雪雁",
-    "紫鹃"
+    "春纤",
+    "藕官"
    ],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "根": {
    "action": null,
    "allowance": null,
+   "child_idx": null,
    "child_list": [
     "贾演",
     "贾源",
-    "史候",
-    "王公"
+    "史公",
+    "王公",
+    "薛公"
    ],
    "ext": {
     "age": 100,
@@ -2582,7 +2742,7 @@
     "gender": "男",
     "level": 0,
     "sort_age": 100.0,
-    "sort_position": 999.0,
+    "sort_position": 0.0,
     "type": "主子"
    },
    "level": null,
@@ -2593,6 +2753,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "檀云": {
@@ -2609,6 +2770,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -2637,6 +2799,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "炒豆": {
@@ -2653,6 +2816,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -2675,6 +2839,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "玉钏": {
@@ -2691,6 +2856,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -2713,11 +2879,13 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "王仁": {
    "action": null,
    "allowance": null,
+   "child_idx": "长子",
    "child_list": [],
    "ext": {
     "age": 27,
@@ -2746,6 +2914,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "王信": {
@@ -2760,6 +2929,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -2782,11 +2952,13 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "王公": {
    "action": null,
    "allowance": null,
+   "child_idx": null,
    "child_list": [
     "王夫人之父"
    ],
@@ -2815,8 +2987,16 @@
    "nick_list": [],
    "parent": "根",
    "servant_list": [],
-   "social_position": null,
+   "social_position": {
+    "nobility_note": "第4回，护官符侧批",
+    "nobility_rank": "",
+    "nobility_title": "都太尉统制",
+    "official_note": "第4回，护官符侧批",
+    "official_rank": 0,
+    "official_title": "县伯"
+   },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "王夫人": {
@@ -2833,6 +3013,7 @@
    "allowance": {
     "type": "太太"
    },
+   "child_idx": "长女",
    "child_list": [
     "贾珠",
     "贾元春",
@@ -2865,23 +3046,26 @@
    "servant_list": [
     "金钏",
     "玉钏",
-    "绣凤",
     "绣鸾",
+    "绣凤",
     "彩云",
     "彩霞",
     "彩鸾"
    ],
    "social_position": null,
    "title_list": [],
+   "wife_idx": "正房",
    "wife_list": []
   },
   "王夫人之父": {
    "action": null,
    "allowance": null,
+   "child_idx": null,
    "child_list": [
     "王熙凤之父",
     "王子腾",
-    "王夫人"
+    "王夫人",
+    "薛姨妈"
    ],
    "ext": {
     "age": 68,
@@ -2910,11 +3094,13 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "王子腾": {
    "action": null,
    "allowance": null,
+   "child_idx": "次子",
    "child_list": [],
    "ext": {
     "age": 49,
@@ -2950,6 +3136,7 @@
     "official_title": "九省都检点"
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "王熙凤": {
@@ -2966,6 +3153,7 @@
    "allowance": {
     "type": "奶奶"
    },
+   "child_idx": "长女",
    "child_list": [
     "贾巧姐"
    ],
@@ -2999,12 +3187,12 @@
    ],
    "parent": "王熙凤之父",
    "servant_list": [
-    "丰儿",
-    "来旺",
-    "王信",
-    "小红",
     "平儿",
-    "庆儿"
+    "丰儿",
+    "小红",
+    "来旺",
+    "庆儿",
+    "王信"
    ],
    "social_position": null,
    "title_list": [
@@ -3013,11 +3201,13 @@
      "title": "二奶奶"
     }
    ],
+   "wife_idx": "正房",
    "wife_list": []
   },
   "王熙凤之父": {
    "action": null,
    "allowance": null,
+   "child_idx": "长子",
    "child_list": [
     "王仁",
     "王熙凤"
@@ -3049,6 +3239,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "王荣": {
@@ -3063,6 +3254,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 19,
@@ -3091,6 +3283,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "玻璃": {
@@ -3107,6 +3300,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 18,
@@ -3135,6 +3329,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "珍珠": {
@@ -3151,6 +3346,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 18,
@@ -3179,6 +3375,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "琥珀": {
@@ -3195,6 +3392,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 19,
@@ -3223,6 +3421,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "瑞珠": {
@@ -3237,6 +3436,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -3265,6 +3465,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "碧月": {
@@ -3279,6 +3480,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -3307,6 +3509,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "碧痕": {
@@ -3323,6 +3526,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -3351,6 +3555,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "秋纹": {
@@ -3367,6 +3572,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -3395,6 +3601,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "秦可卿": {
@@ -3409,6 +3616,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 23,
@@ -3435,11 +3643,12 @@
    "nick_list": [],
    "parent": null,
    "servant_list": [
-    "瑞珠",
-    "宝珠"
+    "宝珠",
+    "瑞珠"
    ],
    "social_position": null,
    "title_list": [],
+   "wife_idx": "正房",
    "wife_list": []
   },
   "素云": {
@@ -3454,6 +3663,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -3482,6 +3692,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "紫鹃": {
@@ -3498,6 +3709,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -3526,6 +3738,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "绣凤": {
@@ -3542,6 +3755,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -3564,6 +3778,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "绣桔": {
@@ -3580,6 +3795,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -3608,6 +3824,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "绣鸾": {
@@ -3624,6 +3841,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -3646,6 +3864,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "绮霰": {
@@ -3662,6 +3881,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -3690,6 +3910,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "缕儿": {
@@ -3706,6 +3927,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -3728,6 +3950,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "翠墨": {
@@ -3744,6 +3967,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 15,
@@ -3772,6 +3996,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "翠缕": {
@@ -3788,6 +4013,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -3810,6 +4036,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "翡翠": {
@@ -3826,6 +4053,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 18,
@@ -3854,6 +4082,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "艾官": {
@@ -3870,6 +4099,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -3898,6 +4128,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "芳官": {
@@ -3914,6 +4145,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -3942,6 +4174,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "茄官": {
@@ -3958,6 +4191,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -3986,6 +4220,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "茗烟": {
@@ -4000,6 +4235,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -4033,6 +4269,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "茜雪": {
@@ -4049,6 +4286,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -4077,6 +4315,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "莲花儿": {
@@ -4093,6 +4332,7 @@
    "allowance": {
     "type": "二等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -4121,6 +4361,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "葵官": {
@@ -4137,6 +4378,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -4165,6 +4407,399 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "蕊官": {
+   "action": {
+    "chap": 58,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 58,
+    "name_note": "",
+    "note": "",
+    "refer_chap": 58,
+    "refer_note": "蕊官归了宝钗"
+   },
+   "allowance": null,
+   "child_idx": null,
+   "child_list": [],
+   "ext": {
+    "age": 16,
+    "age_note": "比较瞎猜",
+    "family_name": "",
+    "old_name": "",
+    "old_name_note": ""
+   },
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "贾家",
+    "gender": "女",
+    "level": 0,
+    "sort_age": 16.0,
+    "sort_position": 220.0,
+    "type": "仆人"
+   },
+   "level": null,
+   "master": "薛宝钗",
+   "name": "蕊官",
+   "nick_list": [],
+   "parent": null,
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "薛公": {
+   "action": null,
+   "allowance": null,
+   "child_idx": null,
+   "child_list": [
+    "薛宝钗之祖父"
+   ],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 1,
+    "deduction": 1,
+    "family": "薛家",
+    "gender": "男",
+    "level": 1,
+    "sort_age": 85.0,
+    "sort_position": 888.0,
+    "type": "主子"
+   },
+   "level": 1,
+   "master": null,
+   "name": "薛公",
+   "nick_list": [],
+   "parent": "根",
+   "servant_list": [],
+   "social_position": {
+    "nobility_note": "",
+    "nobility_rank": "",
+    "nobility_title": "",
+    "official_note": "第4回，护官符甲戌侧批",
+    "official_rank": 0,
+    "official_title": "紫微舍人"
+   },
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "薛姨妈": {
+   "action": {
+    "chap": 4,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 0,
+    "name_note": "",
+    "note": "薛蟠跟薛姨妈商量进京",
+    "refer_chap": 0,
+    "refer_note": ""
+   },
+   "allowance": null,
+   "child_idx": "次女",
+   "child_list": [
+    "薛蟠",
+    "薛宝钗"
+   ],
+   "ext": {
+    "age": 47,
+    "age_note": "第46回，贾母对薛姨妈说“你这个姐姐”，更多推导见http://blog.sina.com.cn/s/blog_4913fd3d0102xkzu.html",
+    "family_name": "王",
+    "old_name": "",
+    "old_name_note": ""
+   },
+   "husband": "薛宝钗之父",
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "薛家",
+    "gender": "女",
+    "level": 3,
+    "sort_age": 47.0,
+    "sort_position": 555.0,
+    "type": "主子"
+   },
+   "level": 3,
+   "master": null,
+   "name": "薛姨妈",
+   "nick_list": [],
+   "parent": "王夫人之父",
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": "正房",
+   "wife_list": []
+  },
+  "薛宝琴": {
+   "action": {
+    "chap": 49,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 49,
+    "name_note": "",
+    "note": "薛宝琴入住荣府",
+    "refer_chap": 49,
+    "refer_note": "宝钗猜薛蝌和他妹妹来了"
+   },
+   "allowance": null,
+   "child_idx": "长女",
+   "child_list": [],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "薛家",
+    "gender": "女",
+    "level": 4,
+    "sort_age": 15.0,
+    "sort_position": 555.0,
+    "type": "主子"
+   },
+   "level": 4,
+   "master": null,
+   "name": "薛宝琴",
+   "nick_list": [],
+   "parent": "薛宝琴之父",
+   "servant_list": [
+    "豆官"
+   ],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "薛宝琴之父": {
+   "action": null,
+   "allowance": null,
+   "child_idx": "次子",
+   "child_list": [
+    "薛蝌",
+    "薛宝琴"
+   ],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 1,
+    "deduction": 1,
+    "family": "薛家",
+    "gender": "男",
+    "level": 3,
+    "sort_age": 47.0,
+    "sort_position": 555.0,
+    "type": "主子"
+   },
+   "level": 3,
+   "master": null,
+   "name": "薛宝琴之父",
+   "nick_list": [],
+   "parent": "薛宝钗之祖父",
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "薛宝钗": {
+   "action": {
+    "chap": 49,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 49,
+    "name_note": "",
+    "note": "薛宝琴入住荣府",
+    "refer_chap": 49,
+    "refer_note": "宝钗猜薛蝌和他妹妹来了"
+   },
+   "allowance": null,
+   "child_idx": "长女",
+   "child_list": [],
+   "ext": {
+    "age": 16,
+    "age_note": "推导：https://baijiahao.baidu.com/s?id=1568506289620419&wfr=spider&for=pc",
+    "family_name": "",
+    "old_name": "",
+    "old_name_note": ""
+   },
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "薛家",
+    "gender": "女",
+    "level": 4,
+    "sort_age": 16.0,
+    "sort_position": 555.0,
+    "type": "主子"
+   },
+   "level": 4,
+   "master": null,
+   "name": "薛宝钗",
+   "nick_list": [],
+   "parent": "薛姨妈",
+   "servant_list": [
+    "蕊官"
+   ],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "薛宝钗之父": {
+   "action": null,
+   "allowance": null,
+   "child_idx": "长子",
+   "child_list": [],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 1,
+    "deduction": 1,
+    "family": "薛家",
+    "gender": "男",
+    "level": 3,
+    "sort_age": 48.0,
+    "sort_position": 555.0,
+    "type": "主子"
+   },
+   "level": 3,
+   "master": null,
+   "name": "薛宝钗之父",
+   "nick_list": [],
+   "parent": "薛宝钗之祖父",
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": [
+    "薛姨妈"
+   ]
+  },
+  "薛宝钗之祖父": {
+   "action": null,
+   "allowance": null,
+   "child_idx": null,
+   "child_list": [
+    "薛宝钗之父",
+    "薛宝琴之父"
+   ],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 1,
+    "deduction": 1,
+    "family": "薛家",
+    "gender": "男",
+    "level": 2,
+    "sort_age": 68.0,
+    "sort_position": 555.0,
+    "type": "主子"
+   },
+   "level": 2,
+   "master": null,
+   "name": "薛宝钗之祖父",
+   "nick_list": [],
+   "parent": "薛公",
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "薛蝌": {
+   "action": {
+    "chap": 49,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 49,
+    "name_note": "",
+    "note": "薛蝌入住荣府",
+    "refer_chap": 49,
+    "refer_note": "宝钗猜薛蝌来了"
+   },
+   "allowance": null,
+   "child_idx": "长子",
+   "child_list": [],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "薛家",
+    "gender": "男",
+    "level": 4,
+    "sort_age": 17.0,
+    "sort_position": 555.0,
+    "type": "主子"
+   },
+   "level": 4,
+   "master": null,
+   "name": "薛蝌",
+   "nick_list": [],
+   "parent": "薛宝琴之父",
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "薛蟠": {
+   "action": {
+    "chap": 4,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 4,
+    "name_note": "",
+    "note": "薛蟠跟薛姨妈商量进京",
+    "refer_chap": 4,
+    "refer_note": "门子跟贾雨村讲薛蟠跟冯渊的案子"
+   },
+   "allowance": null,
+   "child_idx": "长子",
+   "child_list": [],
+   "ext": {
+    "age": 18,
+    "age_note": "比较瞎猜，比宝钗大",
+    "family_name": "",
+    "old_name": "",
+    "old_name_note": ""
+   },
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "薛家",
+    "gender": "男",
+    "level": 4,
+    "sort_age": 17.0,
+    "sort_position": 555.0,
+    "type": "主子"
+   },
+   "level": 4,
+   "master": null,
+   "name": "薛蟠",
+   "nick_list": [],
+   "parent": "薛姨妈",
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "藕官": {
@@ -4181,6 +4816,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -4209,6 +4845,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "蝉姐": {
@@ -4225,6 +4862,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 19,
@@ -4253,6 +4891,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "袭人": {
@@ -4269,6 +4908,7 @@
    "allowance": {
     "type": "袭人"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -4302,6 +4942,51 @@
      "title": "花大姑娘"
     }
    ],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "豆官": {
+   "action": {
+    "chap": 58,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 58,
+    "name_note": "",
+    "note": "",
+    "refer_chap": 58,
+    "refer_note": "蕊官归了薛宝琴"
+   },
+   "allowance": null,
+   "child_idx": null,
+   "child_list": [],
+   "ext": {
+    "age": 16,
+    "age_note": "比较瞎猜",
+    "family_name": "",
+    "old_name": "",
+    "old_name_note": ""
+   },
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "贾家",
+    "gender": "女",
+    "level": 0,
+    "sort_age": 16.0,
+    "sort_position": 220.0,
+    "type": "仆人"
+   },
+   "level": null,
+   "master": "薛宝琴",
+   "name": "豆官",
+   "nick_list": [],
+   "parent": null,
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾代化": {
@@ -4316,6 +5001,7 @@
     "refer_note": "冷子兴演说荣国府时提到"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [
     "贾敷",
     "贾敬"
@@ -4354,6 +5040,7 @@
     "official_title": "京营节度使"
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾代善": {
@@ -4368,6 +5055,7 @@
     "refer_note": "冷子兴演说荣国府时提到"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 68,
@@ -4403,6 +5091,7 @@
     "official_title": ""
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": [
     "贾母"
    ]
@@ -4419,6 +5108,7 @@
     "refer_note": "冷子兴演说荣国府时提到贾珠是王夫人第二胎"
    },
    "allowance": null,
+   "child_idx": "长女",
    "child_list": [],
    "ext": {
     "age": 25,
@@ -4454,6 +5144,7 @@
     "official_title": "凤藻宫尚书"
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾兰": {
@@ -4468,6 +5159,7 @@
     "refer_note": "介绍李纨时，说贾珠有一子，取名贾兰。"
    },
    "allowance": null,
+   "child_idx": "长子",
    "child_list": [],
    "ext": {
     "age": 11,
@@ -4501,6 +5193,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾宝玉": {
@@ -4515,6 +5208,7 @@
     "refer_note": "冷子兴演说荣国府时提到"
    },
    "allowance": null,
+   "child_idx": "次子",
    "child_list": [],
    "ext": {
     "age": 14,
@@ -4554,34 +5248,34 @@
    ],
    "parent": "王夫人",
    "servant_list": [
-    "茗烟",
-    "扫红",
-    "茜雪",
-    "扫花",
-    "挑云",
-    "春燕",
-    "伴鹤",
-    "佳蕙",
     "袭人",
-    "赵亦华",
-    "晴雯",
-    "钱启",
-    "檀云",
-    "双寿",
-    "双瑞",
-    "锄药",
-    "王荣",
-    "四儿",
-    "坠儿",
-    "墨雨",
-    "麝月",
     "媚人",
+    "晴雯",
+    "绮霰",
+    "麝月",
     "碧痕",
     "秋纹",
+    "檀云",
+    "茜雪",
+    "春燕",
+    "茗烟",
+    "墨雨",
+    "扫红",
+    "锄药",
+    "伴鹤",
+    "双寿",
+    "双瑞",
     "引泉",
-    "绮霰",
+    "扫花",
+    "挑云",
+    "坠儿",
+    "四儿",
+    "佳蕙",
+    "芳官",
+    "王荣",
     "张若锦",
-    "芳官"
+    "赵亦华",
+    "钱启"
    ],
    "social_position": null,
    "title_list": [
@@ -4590,6 +5284,7 @@
      "title": "宝二爷"
     }
    ],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾巧姐": {
@@ -4604,6 +5299,7 @@
     "refer_note": "刘姥姥一进荣国府，来到贾琏的女儿大姐的睡觉之所。"
    },
    "allowance": null,
+   "child_idx": "长女",
    "child_list": [],
    "ext": {
     "age": 2,
@@ -4632,6 +5328,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾惜春": {
@@ -4646,6 +5343,7 @@
     "refer_note": "冷子兴说道四小姐惜春是珍爷胞妹"
    },
    "allowance": null,
+   "child_idx": "长女",
    "child_list": [],
    "ext": {
     "age": 12,
@@ -4682,6 +5380,7 @@
      "title": "四小姐"
     }
    ],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾探春": {
@@ -4696,6 +5395,7 @@
     "refer_note": "冷子兴演说荣国府时提到贾珠是王夫人第二胎"
    },
    "allowance": null,
+   "child_idx": "次女",
    "child_list": [],
    "ext": {
     "age": 13,
@@ -4732,8 +5432,8 @@
    "parent": "赵姨娘",
    "servant_list": [
     "待书",
-    "蝉姐",
     "翠墨",
+    "蝉姐",
     "艾官"
    ],
    "social_position": null,
@@ -4743,6 +5443,7 @@
      "title": "三小姐"
     }
    ],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾政": {
@@ -4757,6 +5458,7 @@
     "refer_note": "冷子兴演说荣国府时提到代善次子是贾政"
    },
    "allowance": null,
+   "child_idx": "次子",
    "child_list": [],
    "ext": {
     "age": 48,
@@ -4792,10 +5494,11 @@
     "official_title": "工部员外郎"
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": [
     "王夫人",
-    "赵姨娘",
-    "周姨娘"
+    "周姨娘",
+    "赵姨娘"
    ]
   },
   "贾敏": {
@@ -4810,6 +5513,7 @@
     "refer_note": "冷子兴说道贾敏"
    },
    "allowance": null,
+   "child_idx": "长女",
    "child_list": [
     "林黛玉"
    ],
@@ -4840,6 +5544,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": "正房",
    "wife_list": []
   },
   "贾敬": {
@@ -4854,6 +5559,7 @@
     "refer_note": "冷子兴演说荣国府时提到贾代化次子贾敬袭了官，但一味好道"
    },
    "allowance": null,
+   "child_idx": "次子",
    "child_list": [
     "贾珍",
     "贾惜春"
@@ -4897,6 +5603,7 @@
      "title": "太爷"
     }
    ],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾敷": {
@@ -4911,6 +5618,7 @@
     "refer_note": "冷子兴演说荣国府时提到贾代化长子贾敷七八岁就死了"
    },
    "allowance": null,
+   "child_idx": "长子",
    "child_list": [],
    "ext": {
     "age": 55,
@@ -4939,6 +5647,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾母": {
@@ -4955,6 +5664,7 @@
    "allowance": {
     "type": "太太"
    },
+   "child_idx": null,
    "child_list": [
     "贾赦",
     "贾政",
@@ -4983,16 +5693,16 @@
    "master": null,
    "name": "贾母",
    "nick_list": [],
-   "parent": "史候",
+   "parent": "史公",
    "servant_list": [
-    "文官",
-    "靛儿",
-    "玻璃",
     "鸳鸯",
-    "珍珠",
-    "鹦鹉",
     "琥珀",
-    "翡翠"
+    "玻璃",
+    "珍珠",
+    "翡翠",
+    "靛儿",
+    "鹦鹉",
+    "文官"
    ],
    "social_position": null,
    "title_list": [
@@ -5009,6 +5719,7 @@
      "title": "老祖宗"
     }
    ],
+   "wife_idx": "正房",
    "wife_list": []
   },
   "贾源": {
@@ -5023,6 +5734,7 @@
     "refer_note": "冷子兴演说荣国府时提到"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [
     "贾代善"
    ],
@@ -5060,6 +5772,7 @@
     "official_title": ""
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾演": {
@@ -5074,6 +5787,7 @@
     "refer_note": "冷子兴演说荣国府时提到"
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [
     "贾代化"
    ],
@@ -5111,6 +5825,7 @@
     "official_title": ""
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾环": {
@@ -5125,6 +5840,7 @@
     "refer_note": "元妃省亲，贾环染病未痊"
    },
    "allowance": null,
+   "child_idx": "三子",
    "child_list": [],
    "ext": {
     "age": 13,
@@ -5155,6 +5871,7 @@
    ],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾珍": {
@@ -5169,6 +5886,7 @@
     "refer_note": "冷子兴说道贾敬早年留下一子贾珍"
    },
    "allowance": null,
+   "child_idx": "长子",
    "child_list": [
     "贾蓉",
     "贾蔷"
@@ -5220,6 +5938,7 @@
      "title": "族长"
     }
    ],
+   "wife_idx": null,
    "wife_list": [
     "尤氏"
    ]
@@ -5236,6 +5955,7 @@
     "refer_note": "冷子兴演说荣国府时提到贾珠是王夫人头胎"
    },
    "allowance": null,
+   "child_idx": "长子",
    "child_list": [],
    "ext": {
     "age": 28,
@@ -5264,6 +5984,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": [
     "李纨"
    ]
@@ -5280,6 +6001,7 @@
     "refer_note": "冷子兴说贾琏是贾政长子"
    },
    "allowance": null,
+   "child_idx": "长子",
    "child_list": [],
    "ext": {
     "age": 29,
@@ -5306,8 +6028,8 @@
    "nick_list": [],
    "parent": "贾赦",
    "servant_list": [
-    "昭儿",
-    "隆儿"
+    "隆儿",
+    "昭儿"
    ],
    "social_position": {
     "nobility_note": "降级袭爵",
@@ -5323,6 +6045,7 @@
      "title": "琏二爷"
     }
    ],
+   "wife_idx": null,
    "wife_list": [
     "王熙凤",
     "尤二姐"
@@ -5340,6 +6063,7 @@
     "refer_note": "冷子兴说贾琏是贾政长子"
    },
    "allowance": null,
+   "child_idx": "次子",
    "child_list": [],
    "ext": {
     "age": 13,
@@ -5368,6 +6092,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾蓉": {
@@ -5382,6 +6107,7 @@
     "refer_note": "冷子兴说贾琏是贾政长子"
    },
    "allowance": null,
+   "child_idx": "长子",
    "child_list": [],
    "ext": {
     "age": 25,
@@ -5417,6 +6143,7 @@
     "official_title": "龙禁尉"
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": [
     "秦可卿"
    ]
@@ -5433,6 +6160,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": "非亲生",
    "child_list": [],
    "ext": {
     "age": 19,
@@ -5461,6 +6189,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "贾赦": {
@@ -5475,6 +6204,7 @@
     "refer_note": "冷子兴演说荣国府时提到贾代化次子贾敬袭了官，但一味好道"
    },
    "allowance": null,
+   "child_idx": "长子",
    "child_list": [
     "贾琏",
     "贾迎春",
@@ -5514,6 +6244,7 @@
     "official_title": ""
    },
    "title_list": [],
+   "wife_idx": null,
    "wife_list": [
     "邢夫人"
    ]
@@ -5530,6 +6261,7 @@
     "refer_note": "黛玉进贾府，迎春姊妹三个迎接"
    },
    "allowance": null,
+   "child_idx": "长女",
    "child_list": [],
    "ext": {
     "age": 15,
@@ -5561,9 +6293,9 @@
    ],
    "parent": "贾赦",
    "servant_list": [
-    "莲花儿",
     "司棋",
-    "绣桔"
+    "绣桔",
+    "莲花儿"
    ],
    "social_position": null,
    "title_list": [
@@ -5572,6 +6304,7 @@
      "title": "二小姐"
     }
    ],
+   "wife_idx": null,
    "wife_list": []
   },
   "赵亦华": {
@@ -5586,6 +6319,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 19,
@@ -5614,6 +6348,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "赵姨娘": {
@@ -5630,6 +6365,7 @@
    "allowance": {
     "type": "姨娘"
    },
+   "child_idx": null,
    "child_list": [
     "贾探春",
     "贾环"
@@ -5664,6 +6400,7 @@
    ],
    "social_position": null,
    "title_list": [],
+   "wife_idx": "侧室",
    "wife_list": []
   },
   "邢夫人": {
@@ -5680,6 +6417,7 @@
    "allowance": {
     "type": "太太"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 33,
@@ -5713,6 +6451,7 @@
      "title": "大太太"
     }
    ],
+   "wife_idx": "正房",
    "wife_list": []
   },
   "金钏": {
@@ -5729,6 +6468,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -5751,6 +6491,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "钱启": {
@@ -5765,6 +6506,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 19,
@@ -5793,6 +6535,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "钱槐": {
@@ -5807,6 +6550,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -5835,6 +6579,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "银蝶": {
@@ -5851,6 +6596,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -5873,6 +6619,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "锄药": {
@@ -5887,6 +6634,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 14,
@@ -5915,6 +6663,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "隆儿": {
@@ -5929,6 +6678,7 @@
     "refer_note": ""
    },
    "allowance": null,
+   "child_idx": null,
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -5951,6 +6701,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "雪雁": {
@@ -5967,6 +6718,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -5995,6 +6747,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "靛儿": {
@@ -6011,6 +6764,7 @@
    "allowance": {
     "type": "二等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 15,
@@ -6039,6 +6793,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "鸳鸯": {
@@ -6055,6 +6810,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 19,
@@ -6083,6 +6839,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "鹦鹉": {
@@ -6099,6 +6856,7 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 18,
@@ -6127,6 +6885,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   },
   "麝月": {
@@ -6143,6 +6902,7 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
+   "child_idx": null,
    "child_list": [],
    "ext": {
     "age": 16,
@@ -6171,6 +6931,7 @@
    "servant_list": [],
    "social_position": null,
    "title_list": [],
+   "wife_idx": null,
    "wife_list": []
   }
  }

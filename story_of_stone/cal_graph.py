@@ -154,13 +154,13 @@ class Graph:
         for lvl in self.level_list:
             lvl.complete()
             lvl.derive()
-        self.employ()
+            lvl.calWifeChildIdx()
     def employ(self):
         """
         找出丫头小厮仆人。
         """
         with self.db.cursor() as cursor:
-            sql = 'select a.name, a.serve from serve a inner join person b on a.serve=b.name where b.family=%s and b.branch=%s order by b.sort_position desc'
+            sql = 'select a.name, a.serve from serve a inner join person b on a.name=b.name where b.family=%s and b.branch=%s order by b.sort_position desc'
             cursor.execute(sql, (self.family, self.branch))
             for row in cursor.fetchall():
                 if not Person.exists(row[0]):
@@ -211,7 +211,7 @@ class Level:
                 is_find_wife = True
                 sql = ''
                 if psn.info.gender=='男':
-                    sql = 'select b.* from person a inner join kinship b on a.name=b.object where b.subject=%s and b.type="夫妻" order by b.sub_type asc, a.sort_position desc'
+                    sql = 'select b.* from person a inner join kinship b on a.name=b.subject where b.subject=%s and b.type="夫妻" order by b.sub_type asc, a.sort_position desc'
                 else:
                     sql = 'select b.* from person a inner join kinship b on a.name=b.object where b.object=%s and b.type="夫妻" limit 1'
                     is_find_wife = False
@@ -269,6 +269,41 @@ class Level:
                 lvl.addPerson(kinship.object)
             child = Person.find(kinship.object)
             psn.addChild(child, kinship)
+    def calWifeChildIdx(self):
+        """
+        计算子女、妻妾排序
+        """
+        if self.level_number<=1:
+            return
+        for psn_name in self.person_list:
+            psn = Person.find(psn_name)
+            if psn.info.gender=='男':
+                if len(psn.wife_list)>0 or len(psn.child_list)>0:
+                    self.calWifeChildIdxOfOne(psn)
+    def calWifeChildIdxOfOne(self, psn):
+        boy_idx = 0
+        girl_idx = 0
+        for child_name in psn.child_list:
+            child = Person.find(child_name)
+            if child.info.gender=='男':
+                child.setChildIdx(boy_idx)
+                boy_idx = boy_idx+1
+            else:
+                child.setChildIdx(girl_idx)
+                girl_idx = girl_idx+1
+        wife_idx = 0
+        for wife_name in psn.wife_list:
+            wife = Person.find(wife_name)
+            wife.setWifeIdx(wife_idx)
+            wife_idx = wife_idx+1
+            for child_name in wife.child_list:
+                child = Person.find(child_name)
+                if child.info.gender=='男':
+                    child.setChildIdx(boy_idx)
+                    boy_idx = boy_idx+1
+                else:
+                    child.setChildIdx(girl_idx)
+                    girl_idx = girl_idx+1
     def toDict(self):
         o = {}
         o['level_number'] = self.level_number
@@ -286,9 +321,11 @@ class Person:
         self.name = name
         # 亲子关系
         self.parent = None # Name # 每个人只有一个父母，不能既有父亲又有母亲，具体原因见“Graph类的注释”
+        self.child_idx = None # 子女排序
         self.child_list = []
         # 夫妻关系
         self.husband = None # Name
+        self.wife_idx = None # 妻子排序
         self.wife_list = [] # 按照地位顺序排列，正房大太太在前，偏房姨太太在后。
         # 主仆关系
         self.master = None # Name
@@ -363,6 +400,23 @@ class Person:
             self.child_list.append(child.name)
             child.parent = self.name
             Person._kinship_dict[self.name+'@'+child.name] = kinship
+    def setChildIdx(self, idx):
+        ks = Person._kinship_dict[self.parent+'@'+self.name]
+        if ks.sub_type!='亲生':
+            self.child_idx = '非亲生'
+            return
+        s = ''
+        if idx==0:
+            s = '长'
+        elif idx==1:
+            s = '次'
+        elif idx==2:
+            s = '三'
+        elif idx==3:
+            s = '四'
+        self.child_idx = s+'子' if self.info.gender=='男' else s+'女'
+    def setWifeIdx(self, idx):
+        self.wife_idx = '正房' if idx==0 else '侧室'
     def toDict(self):
         o = {}
         o['level'] = self.level.level_number if self.level is not None else None
@@ -375,8 +429,10 @@ class Person:
         o['allowance'] = clearDict(self.allowance._asdict()) if self.allowance is not None else None
         o['social_position'] = clearDict(self.social_position._asdict()) if self.social_position is not None else None
         o['parent'] = self.parent
+        o['child_idx'] = self.child_idx
         o['child_list'] = self.child_list
         o['husband'] = self.husband
+        o['wife_idx'] = self.wife_idx
         o['wife_list'] = self.wife_list
         o['master'] = self.master
         o['servant_list'] = self.servant_list
@@ -389,11 +445,15 @@ def main():
         ['王家','正'],
         ['薛家','正'],
     ]
-    ob = {}
-    ob['list'] = []
+    graph_list = []
     for family in family_list:
         graph = Graph('根',family[0],family[1])
         graph.cal()
+        graph_list.append(graph)
+    ob = {}
+    ob['list'] = []
+    for graph in graph_list:
+        graph.employ()
         graph.output()
         ob['list'].append(graph.toDict())
         ob['person_map'] = {name : Person.find(name).toDict() for name in Person._name_dict}

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta http-equiv="refresh" content="2000">
+<title>红楼梦人物关系图</title>
 <link rel="stylesheet/less" type="text/css" href="graph.less">
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/less.js/2.7.3/less.min.js"></script>
@@ -95,27 +96,11 @@ function fillMasterScript(dom_psn, psn) { // 填写某个人的上下标
     let default_scr_len = 3;
     let max_scr_len = avai_list.length>0? 6-avai_list[0].length : default_scr_len;
     // 长子次子名号
-    if (psn.info.type=='主子' && psn.info.level>1) {
-        if (psn.children_idx) {
-            let idx_str = '';
-            if (psn.children_idx==1) idx_str = '长';
-            else if (psn.children_idx==2) idx_str = '次';
-            else if (psn.children_idx==3) idx_str = '三';
-            else if (psn.children_idx==4) idx_str = '四';
-            else console.log(psn.info.name, psn.children_idx)
-            let txt = idx_str+(psn.info.gender=='男'?'子':'女');
-            avai_list.push(txt);
-        }
-    }
-    if (psn.parent && ks_map[psn.parent+'@'+psn.name].sub_type!='亲生')
-        avai_list.push('非亲生');
+    if (psn.child_idx)
+        avai_list.push(psn.child_idx);
     // 妻妾排行名号
-    if (psn.wives_idx && psn.master && psn_map[psn.master].level>2) {
-        let txt = psn.wives_idx==1?'正室':'偏房';
-        avai_list.push(txt);
-    }
-    /*if (psn.husband && psn.as_wife_type=='续弦')
-        avai_list.push('续弦');*/
+    if (psn.wife_idx)
+        avai_list.push(psn.wife_idx);
     // 尊称名号
     default_scr_len = 5;
     max_scr_len = avai_list.length>0? 6-avai_list[0].length : default_scr_len;
@@ -161,48 +146,13 @@ function fillMasterScript(dom_psn, psn) { // 填写某个人的上下标
         dom_psn.find('.script-box').remove();
 }
 function calChildrenOrder(psn) { // 为这个人计算其长子次子长女次女这些信息
-    // 找出此人自己的直接连线孩子、其所有妻妾的连线孩子
-    let children = [];
-    for (let name of psn.child_list) {
-        children.push(psn_map[name]);
-    }
-    let wives_idx = 1;
+    psn.all_child_list = [];
+    for (let name of psn.child_list)
+        psn.all_child_list.push(name);
     for (let wife_name of psn.wife_list) {
         let wife = psn_map[wife_name];
-        for (let name of wife.child_list) {
-            children.push(psn_map[name]);
-        }
-        // 顺便把妻子的排行记录下
-        wife.wives_idx = wives_idx;
-        ++wives_idx;
-    }
-    // 将孩子保存一份到psn里
-    psn.all_child_list = children.map(x => x.name);
-    // 女人就不需要对孩子们计算长子次子了，这是男人所有妻妾子女的事情
-    if (psn.info.gender=='女')
-        return;
-    // 按照年龄对孩子们排序
-    children.sort(function(a,b){
-        if (a.info.sort_age>b.info.sort_age)
-            return -1;
-        if (a.info.sort_age<b.info.sort_age)
-            return 1;
-        return 0;
-    });
-    // 分男女对孩子计算序号
-    let boy_idx = 1;
-    let girl_idx = 1;
-    for (let child of children) {
-        let ks = ks_map[child.parent+'@'+child.name];
-        if (ks.sub_type!='亲生')
-            continue;
-        if (child.info.gender=='男') {
-            child.children_idx = boy_idx;
-            ++boy_idx;
-        } else {
-            child.children_idx = girl_idx;
-            ++girl_idx;
-        }
+        for (let name of wife.child_list)
+            psn.all_child_list.push(name);
     }
 }
 function fillMasterServant(dom_psn, psn) { // 填充这个主子名下的丫鬟小厮仆人
@@ -377,7 +327,7 @@ function drawCoupleBoxes(family, master_name_list) { // 画夫妻框
         let psn_h = dom_psn.outerHeight(true);
         let last_wife_name = psn.wife_list[psn.wife_list.length-1];
         let last_wife = psn_map[last_wife_name];
-        let dom_wife = last_wife.dom_psn;
+        let dom_wife = family.name==last_wife.info.family+'@'+last_wife.info.branch? last_wife.dom_psn : last_wife.ori_dom_psn;
         let wife_pos = dom_wife.position();
         let border_w = parseInt(dom_psn.css('outlineWidth'))+parseInt(dom_psn.css('borderTopWidth'));
         let dom_cpl_box = dom_cpl_tpl.clone();
@@ -385,6 +335,7 @@ function drawCoupleBoxes(family, master_name_list) { // 画夫妻框
             .css('top', psn_pos.top-border_w);
         dom_cpl_box.css('width', wife_pos.left-psn_pos.left+dom_wife.outerWidth()+border_w)
             .css('height',psn_h+border_w);
+        dom_cpl_box.attr('husband', name).attr('wife', last_wife_name);
         dom_graph.append(dom_cpl_box);
     }
 }
@@ -405,13 +356,101 @@ function drawFamilyBorder(family) { // 一个家族绘制完毕后，绘制家�
         dom_spc.css('width', max_left-parseInt(dom_spc.position().left));
     }
 }
+
+function onClickPerson(o) {
+    let name = $(o).parents('[name=person]').attr('person');
+    showPopper(name);
+}
+function onClickServant(o) {
+    let name = $(o).text();
+    showPopper(name);
+}
+function closePopper() {
+    $('#popper').hide();
+}
+function empty(o) {
+    return o==null || o==undefined || o==0 || o.length==0;
+}
+function showPopper(name) {
+    let psn = psn_map[name];
+    let popper = $('#popper').show();
+    popper.find('tr[name=more]').remove();
+    let tr_list = popper.find('tr').hide();
+    tr_list.filter('.name').show().find('td').text(name);
+    if (!empty(psn.ext)) {
+        if (!empty(psn.ext.family_name)) {
+            tr_list.filter('.family_name').show().find('td:nth-child(2)').text(psn.ext.family_name);
+        }
+        if (!empty(psn.ext.old_name)) {
+            tr_list.filter('.old_name').show().find('td:nth-child(2)').text(psn.ext.old_name);
+        }
+        if (!empty(psn.ext.age) && !empty(psn.ext.age_note)) {
+            tr_list.filter('.age').show().find('td:nth-child(2)').text(psn.ext.age+'岁 '+psn.ext.age_note);
+        }
+    }
+    if (!empty(psn.action)) {
+        let t = '';
+        if (!empty(psn.action.ref_chap) && !empty(psn.action.ref_note)) {
+            if (psn.action.ref_chap!=psn.action.chap) {
+                t = '第'+psn.action.ref_chap+'回 '+psn.action.ref_note;
+            }
+        }
+        if (empty(t)) {
+            if (!empty(psn.action.chap) && !empty(psn.action.note)) {
+                t = '第'+psn.action.ref_chap+'回 '+psn.action.ref_note;
+                t = '第'+psn.action.chap+'回 '+psn.action.note;
+            }
+        }
+        if (!empty(t))
+            tr_list.filter('.action').show().find('td:nth-child(2)').text(t);
+    }
+    if (!empty(psn.title_list)) {
+        let dom_title = tr_list.filter('.title').show();
+        for (let i=0; i<psn.title_list.length; ++i) {
+            let title = psn.title_list[i];
+            if (i==0) {
+                dom_title.find('td:nth-child(2)').text(title.title+' '+title.note);
+            } else {
+                let dn = dom_title.clone().attr('name', 'more');
+                dn.find('td:nth-child(1)').text('');
+                dn.find('td:nth-child(2)').text(title.title+' '+title.note);
+                dom_title.after(dn);
+            }
+        }
+    }
+    if (!empty(psn.nick_list)) {
+        let dom_nick = tr_list.filter('.nick').show();
+        for (let i=0; i<psn.nick_list.length; ++i) {
+            let nick = psn.nick_list[i];
+            if (i==0) {
+                dom_nick.find('td:nth-child(2)').text(nick.nick+' '+nick.note);
+            } else {
+                let dn = dom_nick.clone().attr('name', 'more');
+                dn.find('td:nth-child(1)').text('');
+                dn.find('td:nth-child(2)').text(nick.nick+' '+nick.note);
+                dom_nick.after(dn);
+            }
+        }
+    }
+    if (!empty(psn.social_position)) {
+        if (!empty(psn.social_position.nobility_title)) {
+            tr_list.filter('.nobility').show().find('td:nth-child(2)').text(psn.social_position.nobility_title+' '+psn.social_position.nobility_note);
+        }
+        if (!empty(psn.social_position.official_title)) {
+            tr_list.filter('.official').show().find('td:nth-child(2)').text(psn.social_position.official_title+' '+psn.social_position.official_note);
+        }
+    }
+}
+function txt2html(t) {
+    ;
+}
 </script>
 </head>
 <body lang=cn>
-    <div class=gragh-brief>版本：20180301</div>
+    <div class=gragh-brief>版本：20180304</div>
     <div class=hide id=template>
         <div class=person name=person>
-            <div class=master>
+            <div class=master onClick="onClickPerson(this)">
                 <div class=name>贾宝玉</div>
                 <div class=script-box>
                     <div class=super-script>上标</div>
@@ -419,7 +458,7 @@ function drawFamilyBorder(family) { // 一个家族绘制完毕后，绘制家�
                 </div>
             </div>
             <div class=servant-list>
-                <div class=servant>袭人</div>
+                <div class=servant onClick="onClickServant(this)">袭人</div>
             </div>
         </div>
         <div class=couple-box></div>
@@ -437,6 +476,20 @@ function drawFamilyBorder(family) { // 一个家族绘制完毕后，绘制家�
         <div class=level name=level-4></div>
         <div class=space-between-level></div>
         <div class=level name=level-5></div>
+    </div>
+    <div class=popper id=popper>
+        <div class=close onClick="closePopper()">关闭</div>
+        <table>
+            <tr class=name><td colspan=2>名称</td></tr>
+            <tr class=family_name><td>姓氏</td><td></td></tr>
+            <tr class=old_name><td>原名</td><td></td></tr>
+            <tr class=age><td>年龄</td><td></td></tr>
+            <tr class=action><td>出场</td><td></td></tr>
+            <tr class=title><td>尊称</td><td></td></tr>
+            <tr class=nick><td>昵称</td><td></td></tr>
+            <tr class=nobility><td>爵位</td><td></td></tr>
+            <tr class=official><td>官职</td><td></td></tr>
+        </table>
     </div>
 </body>
 </html>

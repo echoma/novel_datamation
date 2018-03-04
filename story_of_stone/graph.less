@@ -44,6 +44,7 @@ body {
     .human {
         flex: initial;
         border: 1*@px solid @dark-color;
+        cursor: pointer;
     }
     .master {
         .human;
@@ -128,6 +129,10 @@ body {
             height: 5.5*@unit*@px;
         }
     }
+    .master:hover {
+        .master;
+        text-decoration:underline;
+    }
 
     .servant-list {
         color: dimgray;
@@ -146,6 +151,10 @@ body {
             text-justify: inter-character;
             word-break: keep-all;
             color: deeppink;
+        }
+        .servant:hover {
+            .servant;
+            text-decoration:underline;
         }
         .servant.male {
             color: mediumblue;
@@ -201,4 +210,49 @@ body {
     background-color: lightpink;
     border: 2*@px solid gray;
     box-shadow: 0.3*@font-size*@px 0.3*@font-size*@px 0.4*@font-size*@px lighten(@shadow-color,30%);
+}
+
+.popper {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 300*@px;
+    min-height: 100*@px;
+    max-height: 200*@px;
+    overflow-y: auto;
+    background-color: white;// khaki;
+    border: @px solid lightblue;
+    box-shadow: 3*@px 3*@px 5*@px gray;
+    padding: 3*@px;
+    font-size:14*@px;
+    line-height: 20*@px;
+    table {
+        width: 100%;
+        tr.name {
+            text-align: center;
+            font-size:16*@px;
+            font-weight: bold;
+            td {
+                border-top: none;
+            }
+        }
+        td {
+            border-top: @px dotted gray;
+            padding: 5*@px;
+        }
+        td:first-child {
+            font-weight: bold;
+            color: gray;
+            width: 40*@px;
+        }
+    }
+    .close {
+        border: @px solid gray;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 11*@px;
+        cursor: pointer;
+    }
 }
