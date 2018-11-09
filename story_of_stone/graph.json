@@ -1,11 +1,11 @@
 {
  "kinship_map": {
-  "史公@史湘云之祖父": {
+  "史候@史湘云之祖父": {
    "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
-  "史公@贾母": {
+  "史候@贾母": {
    "note": "",
    "sub_type": "亲生",
    "type": "亲子"
@@ -40,7 +40,7 @@
    "sub_type": "正房",
    "type": "夫妻"
   },
-  "根@史公": {
+  "根@史候": {
    "note": "",
    "sub_type": "虚拟",
    "type": "亲子"
@@ -382,7 +382,7 @@
     {
      "level_number": 1,
      "person_list": [
-      "史公"
+      "史候"
      ]
     },
     {
@@ -481,18 +481,18 @@
     {
      "level_number": 3,
      "person_list": [
+      "薛宝琴之父",
       "薛宝钗之父",
-      "薛姨妈",
-      "薛宝琴之父"
+      "薛姨妈"
      ]
     },
     {
      "level_number": 4,
      "person_list": [
-      "薛蟠",
-      "薛宝钗",
       "薛蝌",
-      "薛宝琴"
+      "薛宝琴",
+      "薛蟠",
+      "薛宝钗"
      ]
     },
     {
@@ -845,7 +845,7 @@
    "wife_idx": null,
    "wife_list": []
   },
-  "史公": {
+  "史候": {
    "action": null,
    "allowance": null,
    "child_idx": null,
@@ -853,7 +853,13 @@
     "贾母",
     "史湘云之祖父"
    ],
-   "ext": null,
+   "ext": {
+    "age": 85,
+    "age_note": "瞎猜",
+    "family_name": "",
+    "old_name": "",
+    "old_name_note": ""
+   },
    "husband": null,
    "info": {
     "branch": "正",
@@ -868,15 +874,15 @@
    },
    "level": 1,
    "master": null,
-   "name": "史公",
+   "name": "史候",
    "nick_list": [],
    "parent": "根",
    "servant_list": [],
    "social_position": {
-    "nobility_note": "第4回，护官符批语",
+    "nobility_note": "",
     "nobility_rank": "候",
     "nobility_title": "保龄候",
-    "official_note": "第4回，护官符批语",
+    "official_note": "",
     "official_rank": 0,
     "official_title": "尚书令"
    },
@@ -1004,7 +1010,7 @@
    "master": null,
    "name": "史湘云之祖父",
    "nick_list": [],
-   "parent": "史公",
+   "parent": "史候",
    "servant_list": [],
    "social_position": {
     "nobility_note": "",
@@ -1140,6 +1146,82 @@
    "level": null,
    "master": "贾迎春",
    "name": "司棋",
+   "nick_list": [],
+   "parent": null,
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "同喜": {
+   "action": {
+    "chap": 29,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 29,
+    "name_note": "",
+    "note": "贾府打平安醮，同喜、同贵陪同薛姨妈",
+    "refer_chap": 29,
+    "refer_note": ""
+   },
+   "allowance": null,
+   "child_idx": null,
+   "child_list": [],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "薛家",
+    "gender": "女",
+    "level": 3,
+    "sort_age": 15.0,
+    "sort_position": 200.0,
+    "type": "仆人"
+   },
+   "level": null,
+   "master": "薛姨妈",
+   "name": "同喜",
+   "nick_list": [],
+   "parent": null,
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "同贵": {
+   "action": {
+    "chap": 29,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 29,
+    "name_note": "",
+    "note": "贾府打平安醮，同喜、同贵陪同薛姨妈",
+    "refer_chap": 29,
+    "refer_note": ""
+   },
+   "allowance": null,
+   "child_idx": null,
+   "child_list": [],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "薛家",
+    "gender": "女",
+    "level": 3,
+    "sort_age": 15.0,
+    "sort_position": 199.0,
+    "type": "仆人"
+   },
+   "level": null,
+   "master": "薛姨妈",
+   "name": "同贵",
    "nick_list": [],
    "parent": null,
    "servant_list": [],
@@ -2320,6 +2402,44 @@
    "wife_idx": null,
    "wife_list": []
   },
+  "文杏": {
+   "action": {
+    "chap": 29,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 29,
+    "name_note": "",
+    "note": "贾府打平安醮，莺儿、文杏陪同宝钗",
+    "refer_chap": 29,
+    "refer_note": ""
+   },
+   "allowance": null,
+   "child_idx": null,
+   "child_list": [],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "薛家",
+    "gender": "女",
+    "level": 3,
+    "sort_age": 15.0,
+    "sort_position": 199.0,
+    "type": "仆人"
+   },
+   "level": null,
+   "master": "薛宝钗",
+   "name": "文杏",
+   "nick_list": [],
+   "parent": null,
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
   "春燕": {
    "action": {
     "chap": 59,
@@ -2722,7 +2842,7 @@
    "child_list": [
     "贾演",
     "贾源",
-    "史公",
+    "史候",
     "王公",
     "薛公"
    ],
@@ -2742,7 +2862,7 @@
     "gender": "男",
     "level": 0,
     "sort_age": 100.0,
-    "sort_position": 0.0,
+    "sort_position": 999.0,
     "type": "主子"
    },
    "level": null,
@@ -4364,6 +4484,44 @@
    "wife_idx": null,
    "wife_list": []
   },
+  "莺儿": {
+   "action": {
+    "chap": 8,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 8,
+    "name_note": "",
+    "note": "金玉姻缘的诗文首次通过莺儿之口读了出来",
+    "refer_chap": 8,
+    "refer_note": ""
+   },
+   "allowance": null,
+   "child_idx": null,
+   "child_list": [],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "薛家",
+    "gender": "女",
+    "level": 3,
+    "sort_age": 15.0,
+    "sort_position": 200.0,
+    "type": "仆人"
+   },
+   "level": null,
+   "master": "薛宝钗",
+   "name": "莺儿",
+   "nick_list": [],
+   "parent": null,
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
   "葵官": {
    "action": {
     "chap": 58,
@@ -4533,7 +4691,10 @@
    "name": "薛姨妈",
    "nick_list": [],
    "parent": "王夫人之父",
-   "servant_list": [],
+   "servant_list": [
+    "同喜",
+    "同贵"
+   ],
    "social_position": null,
    "title_list": [],
    "wife_idx": "正房",
@@ -4546,7 +4707,7 @@
     "die_note": "",
     "name_chap": 49,
     "name_note": "",
-    "note": "薛宝琴入住荣府",
+    "note": "薛宝琴入驻荣府",
     "refer_chap": 49,
     "refer_note": "宝钗猜薛蝌和他妹妹来了"
    },
@@ -4582,7 +4743,7 @@
   "薛宝琴之父": {
    "action": null,
    "allowance": null,
-   "child_idx": "次子",
+   "child_idx": "长子",
    "child_list": [
     "薛蝌",
     "薛宝琴"
@@ -4596,7 +4757,7 @@
     "family": "薛家",
     "gender": "男",
     "level": 3,
-    "sort_age": 47.0,
+    "sort_age": 48.0,
     "sort_position": 555.0,
     "type": "主子"
    },
@@ -4613,14 +4774,14 @@
   },
   "薛宝钗": {
    "action": {
-    "chap": 49,
+    "chap": 4,
     "die_chap": 0,
     "die_note": "",
-    "name_chap": 49,
+    "name_chap": 4,
     "name_note": "",
-    "note": "薛宝琴入住荣府",
-    "refer_chap": 49,
-    "refer_note": "宝钗猜薛蝌和他妹妹来了"
+    "note": "宝钗入住贾府，与黛玉众姐妹相处",
+    "refer_chap": 4,
+    "refer_note": "葫芦案一章介绍薛家提到了薛蟠的妹妹宝钗"
    },
    "allowance": null,
    "child_idx": "长女",
@@ -4650,7 +4811,9 @@
    "nick_list": [],
    "parent": "薛姨妈",
    "servant_list": [
-    "蕊官"
+    "蕊官",
+    "莺儿",
+    "文杏"
    ],
    "social_position": null,
    "title_list": [],
@@ -4660,7 +4823,7 @@
   "薛宝钗之父": {
    "action": null,
    "allowance": null,
-   "child_idx": "长子",
+   "child_idx": "次子",
    "child_list": [],
    "ext": null,
    "husband": null,
@@ -4693,8 +4856,8 @@
    "allowance": null,
    "child_idx": null,
    "child_list": [
-    "薛宝钗之父",
-    "薛宝琴之父"
+    "薛宝琴之父",
+    "薛宝钗之父"
    ],
    "ext": null,
    "husband": null,
@@ -4954,7 +5117,7 @@
     "name_note": "",
     "note": "",
     "refer_chap": 58,
-    "refer_note": "蕊官归了薛宝琴"
+    "refer_note": "小花面豆官送了宝琴"
    },
    "allowance": null,
    "child_idx": null,
@@ -5693,7 +5856,7 @@
    "master": null,
    "name": "贾母",
    "nick_list": [],
-   "parent": "史公",
+   "parent": "史候",
    "servant_list": [
     "鸳鸯",
     "琥珀",
@@ -6053,14 +6216,14 @@
   },
   "贾琮": {
    "action": {
-    "chap": 6,
+    "chap": 13,
     "die_chap": 0,
     "die_note": "",
-    "name_chap": 2,
+    "name_chap": 13,
     "name_note": "",
-    "note": "薛蟠进荣国府，贾琏引着拜见贾赦",
-    "refer_chap": 2,
-    "refer_note": "冷子兴说贾琏是贾政长子"
+    "note": "秦可卿丧事贾琮也来了",
+    "refer_chap": 13,
+    "refer_note": ""
    },
    "allowance": null,
    "child_idx": "次子",

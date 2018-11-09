@@ -3,7 +3,9 @@ import json
 from collections import namedtuple
 import decimal
 import pymysql
+import logging
 
+logging.basicConfig(level=logging.DEBUG, format='L%(lineno)d: %(message)s')
 DB = pymysql.connect(host='localhost', port=3306, user='nd', passwd='nd', db='story_of_stone', charset='utf8')
 
 class DecimalEncoder(json.JSONEncoder):
@@ -152,6 +154,7 @@ class Graph:
         return self.level_list[i]
     def cal(self):
         for lvl in self.level_list:
+            logging.debug('Graph.cal(level=%d), Graph(family=%s branch=%s)', lvl.level_number, self.family, self.branch)
             lvl.complete()
             lvl.derive()
             lvl.calWifeChildIdx()
@@ -159,12 +162,14 @@ class Graph:
         """
         找出丫头小厮仆人。
         """
+        logging.debug('Graph.employ(), Graph(family=%s branch=%s)', self.family, self.branch)
         with self.db.cursor() as cursor:
             sql = 'select a.name, a.serve from serve a inner join person b on a.name=b.name where b.family=%s and b.branch=%s order by b.sort_position desc'
             cursor.execute(sql, (self.family, self.branch))
             for row in cursor.fetchall():
                 if not Person.exists(row[0]):
                     servant = Person(None, row[0])
+                    #logging.debug('servant name=%s, master=%s', row[0], row[1])
                     Person.find(row[1]).addServant(servant)
     def output(self):
         for lvl in self.level_list:
@@ -203,6 +208,7 @@ class Level:
         补全本层人员。
         方法：逐人扫描，如果是男的就查询妻妾，女的就查询丈夫。
         """
+        logging.debug('\tLevel.complete(), Level(family=%s, level_number=%d)', self.tree.family, self.level_number)
         with self.db.cursor() as cursor:
             for psn_name in self.person_list:
                 psn = Person.find(psn_name)
@@ -237,6 +243,7 @@ class Level:
         对于本层中的每个人找出其下一代。
         根据Graph类里树的要求，对于每一个小家庭，我们先扫描妻妾的孩子，再扫描男性的孩子。
         """
+        logging.debug('\tLevel.derive(), Level(family=%s, level_number=%d)', self.tree.family, self.level_number)
         with self.db.cursor() as cursor:
             for psn_name in self.person_list:
                 psn = Person.find(psn_name)
@@ -319,6 +326,7 @@ class Person:
         self.db = DB
         self.level = lvl
         self.name = name
+        logging.debug('\t\tPerson(name=%s)', self.name)
         # 亲子关系
         self.parent = None # Name # 每个人只有一个父母，不能既有父亲又有母亲，具体原因见“Graph类的注释”
         self.child_idx = None # 子女排序
@@ -445,6 +453,7 @@ def main():
         ['王家','正'],
         ['薛家','正'],
     ]
+    logging.info('######\tBuild Graph Basic\t######')
     graph_list = []
     for family in family_list:
         graph = Graph('根',family[0],family[1])
@@ -452,6 +461,7 @@ def main():
         graph_list.append(graph)
     ob = {}
     ob['list'] = []
+    logging.info('######\tBuild Graph Employee\t######')
     for graph in graph_list:
         graph.employ()
         graph.output()
