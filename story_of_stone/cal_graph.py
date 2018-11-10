@@ -4,6 +4,7 @@ from collections import namedtuple
 import decimal
 import pymysql
 import logging
+import collections
 
 logging.basicConfig(level=logging.DEBUG, format='L%(lineno)d: %(message)s')
 DB = pymysql.connect(host='localhost', port=3306, user='nd', passwd='nd', db='story_of_stone', charset='utf8')
@@ -123,7 +124,7 @@ with DB.cursor() as cursor:
     KINSHIP_FIELDS = [col[0] for col in cursor.description]
 Kinship = namedtuple('Kinship', KINSHIP_FIELDS)
 
-def clearDict(d):
+def removeUselessAttr(d):
     if 'name' in d:
         del d['name']
     if 'subject' in d:
@@ -429,13 +430,13 @@ class Person:
         o = {}
         o['level'] = self.level.level_number if self.level is not None else None
         o['name'] = self.name
-        o['info'] = clearDict(self.info._asdict())
-        o['ext'] = clearDict(self.ext._asdict()) if self.ext is not None else None
-        o['action'] = clearDict(self.action._asdict()) if self.action is not None else None
-        o['nick_list'] = [clearDict(n._asdict()) for n in self.nick_list]
-        o['title_list'] = [clearDict(t._asdict()) for t in self.title_list]
-        o['allowance'] = clearDict(self.allowance._asdict()) if self.allowance is not None else None
-        o['social_position'] = clearDict(self.social_position._asdict()) if self.social_position is not None else None
+        o['info'] = removeUselessAttr(self.info._asdict())
+        o['ext'] = removeUselessAttr(self.ext._asdict()) if self.ext is not None else None
+        o['action'] = removeUselessAttr(self.action._asdict()) if self.action is not None else None
+        o['nick_list'] = [removeUselessAttr(n._asdict()) for n in self.nick_list]
+        o['title_list'] = [removeUselessAttr(t._asdict()) for t in self.title_list]
+        o['allowance'] = removeUselessAttr(self.allowance._asdict()) if self.allowance is not None else None
+        o['social_position'] = removeUselessAttr(self.social_position._asdict()) if self.social_position is not None else None
         o['parent'] = self.parent
         o['child_idx'] = self.child_idx
         o['child_list'] = self.child_list
@@ -445,7 +446,45 @@ class Person:
         o['master'] = self.master
         o['servant_list'] = self.servant_list
         return o
-
+def isSequence(o):
+    if isinstance(o, list) or isinstance(o, set):
+        return True
+    return isinstance(o, collections.Sequence)
+def empty(o):
+    if o is None:
+        return True
+    elif isSequence(o):
+        return len(o)==0
+    return False
+def clearList(o):
+    while True:
+        del_happened = 0
+        for i,v in enumerate(o):
+            if empty(v):
+                del o[i]
+                del_happened = 1
+                break
+        if del_happened==0:
+            break
+def clearDict(o):
+    while True:
+        del_happened = 0
+        for k,v in o.items():
+            if empty(v):
+                del o[k]
+                del_happened = 1
+                break
+        if del_happened==0:
+            break
+def clearEmptyAttribute(o):
+    #if isinstance(o, list):
+    #    clearList(o)
+    #    for v in o:
+    #        clearEmptyAttribute(v)
+    if isinstance(o, dict):
+        clearDict(o)
+        for k in o:
+            clearEmptyAttribute(o[k])
 def main():
     family_list = [
         ['贾家','正'],
@@ -468,7 +507,10 @@ def main():
         graph.output()
         ob['list'].append(graph.toDict())
         ob['person_map'] = {name : Person.find(name).toDict() for name in Person._name_dict}
-        ob['kinship_map'] = {k : clearDict(Person._kinship_dict[k]._asdict()) for k in Person._kinship_dict}
+        ob['kinship_map'] = {k : removeUselessAttr(Person._kinship_dict[k]._asdict()) for k in Person._kinship_dict}
+    logging.info('######\tClear Empty Attribute\t######')
+    clearEmptyAttribute(ob)
+    logging.info('######\tOutput To File\t######')
     with open('./graph.json', mode='w') as file:
         file.write(json.dumps(ob, indent=1, sort_keys=True, ensure_ascii=False, cls=DecimalEncoder))
 

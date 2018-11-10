@@ -1,167 +1,134 @@
 {
  "kinship_map": {
   "史候@史湘云之祖父": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "史候@贾母": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "史湘云之父@史湘云": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "史湘云之祖父@史湘云之父": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "史湘云之祖父@史鼎": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "史湘云之祖父@史鼐": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "李纨@贾兰": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "林如海@贾敏": {
-   "note": "",
    "sub_type": "正房",
    "type": "夫妻"
   },
   "根@史候": {
-   "note": "",
    "sub_type": "虚拟",
    "type": "亲子"
   },
   "根@王公": {
-   "note": "",
    "sub_type": "虚拟",
    "type": "亲子"
   },
   "根@薛公": {
-   "note": "",
    "sub_type": "虚拟",
    "type": "亲子"
   },
   "根@贾代儒之父": {
-   "note": "",
    "sub_type": "虚拟",
    "type": "亲子"
   },
   "根@贾源": {
-   "note": "",
    "sub_type": "虚拟",
    "type": "亲子"
   },
   "根@贾演": {
-   "note": "",
    "sub_type": "虚拟",
    "type": "亲子"
   },
   "王公@王夫人之父": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "王夫人@贾元春": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "王夫人@贾宝玉": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "王夫人@贾珠": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "王夫人之父@王夫人": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "王夫人之父@王子腾": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "王夫人之父@王熙凤之父": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "王夫人之父@薛姨妈": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "王熙凤@贾巧姐": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "王熙凤之父@王仁": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "王熙凤之父@王熙凤": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "薛公@薛宝钗之祖父": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "薛姨妈@薛宝钗": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "薛姨妈@薛蟠": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "薛宝琴之父@薛宝琴": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "薛宝琴之父@薛蝌": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "薛宝钗之父@薛姨妈": {
-   "note": "",
    "sub_type": "正房",
    "type": "夫妻"
   },
   "薛宝钗之祖父@薛宝琴之父": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "薛宝钗之祖父@薛宝钗之父": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
@@ -171,12 +138,10 @@
    "type": "夫妻"
   },
   "贾代儒@贾瑞之父": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "贾代儒之父@贾代儒": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
@@ -196,17 +161,14 @@
    "type": "夫妻"
   },
   "贾政@周姨娘": {
-   "note": "",
    "sub_type": "偏房",
    "type": "夫妻"
   },
   "贾政@王夫人": {
-   "note": "",
    "sub_type": "正房",
    "type": "夫妻"
   },
   "贾政@赵姨娘": {
-   "note": "",
    "sub_type": "偏房",
    "type": "夫妻"
   },
@@ -251,42 +213,34 @@
    "type": "亲子"
   },
   "贾珍@尤氏": {
-   "note": "",
    "sub_type": "续弦",
    "type": "夫妻"
   },
   "贾珍@贾蓉": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "贾珍@贾蔷": {
-   "note": "",
    "sub_type": "收养",
    "type": "亲子"
   },
   "贾珠@李纨": {
-   "note": "",
    "sub_type": "正房",
    "type": "夫妻"
   },
   "贾琏@尤二姐": {
-   "note": "",
    "sub_type": "偏房",
    "type": "夫妻"
   },
   "贾琏@王熙凤": {
-   "note": "",
    "sub_type": "正房",
    "type": "夫妻"
   },
   "贾瑞之父@贾瑞": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "贾蓉@秦可卿": {
-   "note": "",
    "sub_type": "正房",
    "type": "夫妻"
   },
@@ -301,7 +255,6 @@
    "type": "亲子"
   },
   "贾赦@贾迎春": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
@@ -311,12 +264,10 @@
    "type": "夫妻"
   },
   "赵姨娘@贾探春": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   },
   "赵姨娘@贾环": {
-   "note": "",
    "sub_type": "亲生",
    "type": "亲子"
   }
@@ -573,9 +524,7 @@
    "action": {
     "chap": 25,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 7,
-    "name_note": "",
     "note": "凤姐被马道婆施法变疯，丰儿哭的泪天泪地",
     "refer_chap": 7,
     "refer_note": "周瑞家的送宫花给凤姐，丰儿在凤姐房门后坐着"
@@ -583,16 +532,10 @@
    "allowance": {
     "type": "二等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -604,39 +547,21 @@
     "sort_position": 258.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王熙凤",
-   "name": "丰儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "丰儿"
   },
   "伴鹤": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 24,
-    "name_note": "",
-    "note": "",
     "refer_chap": 24,
     "refer_note": "贾芸来见宝玉，看到引泉，扫花，挑云，伴鹤在房檐上掏小雀"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -648,41 +573,24 @@
     "sort_position": 280.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "伴鹤",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "伴鹤"
   },
   "佳蕙": {
    "action": {
     "chap": 25,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 25,
-    "name_note": "",
     "note": "佳蕙向小红展示自己得到的赏钱",
-    "refer_chap": 25,
-    "refer_note": ""
+    "refer_chap": 25
    },
    "allowance": {
     "type": "二等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -694,35 +602,20 @@
     "sort_position": 258.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "佳蕙",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "佳蕙"
   },
   "入画": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 7,
-    "name_note": "",
-    "note": "",
     "refer_chap": 7,
     "refer_note": "惜春让入画收了周瑞家的送的宫花"
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -734,33 +627,17 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾惜春",
-   "name": "入画",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "入画"
   },
   "兴儿": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 53,
-    "name_note": "",
-    "note": "",
     "refer_chap": 53,
     "refer_note": "贾珍收礼，丫头传话里提到了兴儿"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -772,35 +649,20 @@
     "sort_position": 230.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾珍",
-   "name": "兴儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "兴儿"
   },
   "卍儿": {
    "action": {
     "chap": 19,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 19,
-    "name_note": "",
     "note": "茗烟跟卍儿干那警幻所训之事",
-    "refer_chap": 19,
-    "refer_note": ""
+    "refer_chap": 19
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -812,39 +674,21 @@
     "sort_position": 210.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "尤氏",
-   "name": "卍儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "卍儿"
   },
   "双寿": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 28,
-    "name_note": "",
-    "note": "",
     "refer_chap": 28,
     "refer_note": "宝玉去见冯紫英，带了双瑞、双寿"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -856,39 +700,21 @@
     "sort_position": 280.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "双寿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "双寿"
   },
   "双瑞": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 28,
-    "name_note": "",
-    "note": "",
     "refer_chap": 28,
     "refer_note": "宝玉去见冯紫英，带了双瑞、双寿"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -900,33 +726,18 @@
     "sort_position": 280.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "双瑞",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "双瑞"
   },
   "史候": {
-   "action": null,
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "贾母",
     "史湘云之祖父"
    ],
    "ext": {
     "age": 85,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -939,39 +750,25 @@
     "type": "主子"
    },
    "level": 1,
-   "master": null,
    "name": "史候",
-   "nick_list": [],
    "parent": "根",
-   "servant_list": [],
    "social_position": {
-    "nobility_note": "",
     "nobility_rank": "候",
     "nobility_title": "保龄候",
-    "official_note": "",
     "official_rank": 0,
     "official_title": "尚书令"
-   },
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   }
   },
   "史湘云": {
    "action": {
     "chap": 20,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 20,
-    "name_note": "",
     "note": "史湘云回应黛玉对其咬舌子口音的嘲笑",
     "refer_chap": 20,
     "refer_note": "宝玉正和宝钗顽笑，忽见人说：“史大姑娘来了。”"
    },
-   "allowance": null,
    "child_idx": "长女",
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -984,7 +781,6 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "史湘云",
    "nick_list": [
     {
@@ -1001,27 +797,17 @@
     "缕儿",
     "翠缕",
     "葵官"
-   ],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "史湘云之父": {
-   "action": null,
-   "allowance": null,
    "child_idx": "长子",
    "child_list": [
     "史湘云"
    ],
    "ext": {
     "age": 48,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -1034,20 +820,10 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "史湘云之父",
-   "nick_list": [],
-   "parent": "史湘云之祖父",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "史湘云之祖父"
   },
   "史湘云之祖父": {
-   "action": null,
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "史湘云之父",
     "史鼐",
@@ -1055,12 +831,8 @@
    ],
    "ext": {
     "age": 68,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -1073,36 +845,20 @@
     "type": "主子"
    },
    "level": 2,
-   "master": null,
    "name": "史湘云之祖父",
-   "nick_list": [],
    "parent": "史候",
-   "servant_list": [],
    "social_position": {
-    "nobility_note": "",
     "nobility_rank": "候",
     "nobility_title": "保龄候",
-    "official_note": "",
-    "official_rank": 0,
-    "official_title": ""
-   },
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+    "official_rank": 0
+   }
   },
   "史鼎": {
-   "action": null,
-   "allowance": null,
    "child_idx": "三子",
-   "child_list": [],
    "ext": {
     "age": 48,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1115,36 +871,20 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "史鼎",
-   "nick_list": [],
    "parent": "史湘云之祖父",
-   "servant_list": [],
    "social_position": {
-    "nobility_note": "",
     "nobility_rank": "候",
     "nobility_title": "忠靖侯",
-    "official_note": "",
-    "official_rank": 0,
-    "official_title": ""
-   },
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+    "official_rank": 0
+   }
   },
   "史鼐": {
-   "action": null,
-   "allowance": null,
    "child_idx": "次子",
-   "child_list": [],
    "ext": {
     "age": 48,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1157,47 +897,29 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "史鼐",
-   "nick_list": [],
    "parent": "史湘云之祖父",
-   "servant_list": [],
    "social_position": {
-    "nobility_note": "",
     "nobility_rank": "候",
     "nobility_title": "保龄候",
-    "official_note": "",
-    "official_rank": 0,
-    "official_title": ""
-   },
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+    "official_rank": 0
+   }
   },
   "司棋": {
    "action": {
     "chap": 7,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 7,
-    "name_note": "",
     "note": "周瑞家的送宫花给迎春，司棋正从屋内出来",
-    "refer_chap": 7,
-    "refer_note": ""
+    "refer_chap": 7
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1209,33 +931,17 @@
     "sort_position": 250.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾迎春",
-   "name": "司棋",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "司棋"
   },
   "同喜": {
    "action": {
     "chap": 29,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 29,
-    "name_note": "",
     "note": "贾府打平安醮，同喜、同贵陪同薛姨妈",
-    "refer_chap": 29,
-    "refer_note": ""
+    "refer_chap": 29
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1247,33 +953,17 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "薛姨妈",
-   "name": "同喜",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "同喜"
   },
   "同贵": {
    "action": {
     "chap": 29,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 29,
-    "name_note": "",
     "note": "贾府打平安醮，同喜、同贵陪同薛姨妈",
-    "refer_chap": 29,
-    "refer_note": ""
+    "refer_chap": 29
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1285,39 +975,24 @@
     "sort_position": 199.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "薛姨妈",
-   "name": "同贵",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "同贵"
   },
   "周姨娘": {
    "action": {
     "chap": 25,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 25,
-    "name_note": "",
     "note": "赵姨娘找马道婆害宝玉后，周姨娘来看望宝玉",
-    "refer_chap": 25,
-    "refer_note": ""
+    "refer_chap": 25
    },
    "allowance": {
     "type": "姨娘"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 30,
     "age_note": "瞎猜",
-    "family_name": "周",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "周"
    },
    "husband": "贾政",
    "info": {
@@ -1332,40 +1007,24 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "周姨娘",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": "侧室",
-   "wife_list": []
+   "wife_idx": "侧室"
   },
   "善姐": {
    "action": {
     "chap": 68,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 68,
-    "name_note": "",
     "note": "善姐不服从尤二姐使唤",
-    "refer_chap": 68,
-    "refer_note": ""
+    "refer_chap": 68
    },
    "allowance": {
     "type": "二等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1377,33 +1036,17 @@
     "sort_position": 230.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "尤二姐",
-   "name": "善姐",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "善姐"
   },
   "喜儿": {
    "action": {
     "chap": 64,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 64,
-    "name_note": "",
     "note": "喜儿和寿儿吃酒",
-    "refer_chap": 64,
-    "refer_note": ""
+    "refer_chap": 64
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1415,41 +1058,25 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾珍",
-   "name": "喜儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "喜儿"
   },
   "四儿": {
    "action": {
     "chap": 21,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 21,
-    "name_note": "",
     "note": "宝玉看到两个送茶的小丫头，其中一个是蕙香，但宝玉给改名四儿",
-    "refer_chap": 21,
-    "refer_note": ""
+    "refer_chap": 21
    },
    "allowance": {
     "type": "二等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
     "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "蕙香",
-    "old_name_note": ""
+    "old_name": "蕙香"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1461,41 +1088,24 @@
     "sort_position": 259.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "四儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "四儿"
   },
   "坠儿": {
    "action": {
     "chap": 26,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 26,
-    "name_note": "",
     "note": "坠儿带贾芸去见宝玉",
-    "refer_chap": 26,
-    "refer_note": ""
+    "refer_chap": 26
    },
    "allowance": {
     "type": "二等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1507,39 +1117,21 @@
     "sort_position": 260.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "坠儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "坠儿"
   },
   "墨雨": {
    "action": {
     "chap": 9,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 9,
-    "name_note": "",
     "note": "茗烟跟随宝玉入学，打了金荣，锄药、扫红、墨雨也一起打",
-    "refer_chap": 9,
-    "refer_note": ""
+    "refer_chap": 9
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1551,41 +1143,24 @@
     "sort_position": 299.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "墨雨",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "墨雨"
   },
   "媚人": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 5,
-    "name_note": "",
-    "note": "",
     "refer_chap": 5,
     "refer_note": "宝玉睡在秦可卿处，媚人留下照顾"
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1597,39 +1172,21 @@
     "sort_position": 330.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "媚人",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "媚人"
   },
   "宝珠": {
    "action": {
     "chap": 13,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 13,
-    "name_note": "",
     "note": "宝珠做秦可卿义女",
-    "refer_chap": 13,
-    "refer_note": ""
+    "refer_chap": 13
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1641,33 +1198,17 @@
     "sort_position": 260.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "秦可卿",
-   "name": "宝珠",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "宝珠"
   },
   "寿儿": {
    "action": {
     "chap": 64,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 64,
-    "name_note": "",
     "note": "喜儿和寿儿吃酒",
-    "refer_chap": 64,
-    "refer_note": ""
+    "refer_chap": 64
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1679,35 +1220,20 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾珍",
-   "name": "寿儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "寿儿"
   },
   "小吉祥": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 57,
-    "name_note": "",
-    "note": "",
     "refer_chap": 57,
     "refer_note": "雪雁说赵姨娘带小吉祥儿去送殡"
    },
    "allowance": {
     "type": "二等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1719,22 +1245,13 @@
     "sort_position": 201.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "赵姨娘",
-   "name": "小吉祥",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "小吉祥"
   },
   "小红": {
    "action": {
     "chap": 24,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 24,
     "name_note": "宝玉喊人倒水，小红进屋帮忙倒水",
     "note": "贾芸给凤姐送冰片后找宝玉，小红帮忙传信。",
@@ -1744,16 +1261,12 @@
    "allowance": {
     "type": "二等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 15,
     "age_note": "比较瞎猜",
     "family_name": "林",
-    "old_name": "林红玉",
-    "old_name_note": ""
+    "old_name": "林红玉"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1765,35 +1278,20 @@
     "sort_position": 230.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王熙凤",
-   "name": "小红",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "小红"
   },
   "小鹊": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 73,
-    "name_note": "",
-    "note": "",
     "refer_chap": 73,
     "refer_note": "小鹊来找宝玉传个信儿"
    },
    "allowance": {
     "type": "二等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1805,37 +1303,21 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "赵姨娘",
-   "name": "小鹊",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "小鹊"
   },
   "尤二姐": {
    "action": {
     "chap": 63,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 63,
-    "name_note": "",
     "note": "尤氏找家里姐妹来贾府",
-    "refer_chap": 63,
-    "refer_note": ""
+    "refer_chap": 63
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 23,
     "age_note": "尤二姐比贾蓉小，推导：https://zh.wikipedia.org/wiki/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E5%B9%B4%E8%B0%B1#cite_note-38",
-    "family_name": "尤",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "尤"
    },
    "husband": "贾琏",
    "info": {
@@ -1850,40 +1332,27 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "尤二姐",
-   "nick_list": [],
-   "parent": null,
    "servant_list": [
     "善姐"
    ],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": "侧室",
-   "wife_list": []
+   "wife_idx": "侧室"
   },
   "尤氏": {
    "action": {
     "chap": 5,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 5,
-    "name_note": "",
     "note": "尤氏在宁府治酒请大家赏梅花，才有了宝玉游幻境",
-    "refer_chap": 5,
-    "refer_note": ""
+    "refer_chap": 5
    },
    "allowance": {
     "type": "奶奶"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 40,
     "age_note": "第76回，尤氏40，推算：https://zh.wikipedia.org/wiki/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E5%B9%B4%E8%B0%B1#cite_note-38",
-    "family_name": "尤",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "尤"
    },
    "husband": "贾珍",
    "info": {
@@ -1898,33 +1367,26 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "尤氏",
-   "nick_list": [],
-   "parent": null,
    "servant_list": [
     "茄官",
     "卍儿",
     "炒豆",
     "银蝶"
    ],
-   "social_position": null,
    "title_list": [
     {
      "note": "",
      "title": "大奶奶"
     }
    ],
-   "wife_idx": "正房",
-   "wife_list": []
+   "wife_idx": "正房"
   },
   "平儿": {
    "action": {
     "chap": 7,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 68,
-    "name_note": "",
     "note": "周瑞家的送宫花，平儿替凤姐收着",
     "refer_chap": 6,
     "refer_note": "贾蓉找凤姐借玻璃炕屏，凤姐命平儿拿钥匙"
@@ -1932,16 +1394,10 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 17,
-    "age_note": "https://zh.wikipedia.org/wiki/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E5%B9%B4%E8%B0%B1#cite_note-84",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "https://zh.wikipedia.org/wiki/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E5%B9%B4%E8%B0%B1#cite_note-84"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1953,33 +1409,17 @@
     "sort_position": 333.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王熙凤",
-   "name": "平儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "平儿"
   },
   "庆儿": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 68,
-    "name_note": "",
-    "note": "",
     "refer_chap": 68,
     "refer_note": "凤姐差庆儿打听事"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -1991,39 +1431,21 @@
     "sort_position": 228.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王熙凤",
-   "name": "庆儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "庆儿"
   },
   "引泉": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 24,
-    "name_note": "",
-    "note": "",
     "refer_chap": 24,
     "refer_note": "贾芸来见宝玉，看到引泉，扫花，挑云，伴鹤在房檐上掏小雀"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2035,39 +1457,21 @@
     "sort_position": 280.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "引泉",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "引泉"
   },
   "张若锦": {
    "action": {
     "chap": 52,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 52,
-    "name_note": "",
     "note": "宝玉送殡，几个仆人跟随",
-    "refer_chap": 52,
-    "refer_note": ""
+    "refer_chap": 52
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 19,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2079,35 +1483,20 @@
     "sort_position": 199.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "张若锦",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "张若锦"
   },
   "彩云": {
    "action": {
     "chap": 23,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 23,
-    "name_note": "",
     "note": "宝玉见贾政，彩云等笑宝玉",
-    "refer_chap": 23,
-    "refer_note": ""
+    "refer_chap": 23
    },
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2119,35 +1508,20 @@
     "sort_position": 275.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王夫人",
-   "name": "彩云",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "彩云"
   },
   "彩屏": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 7,
-    "name_note": "",
-    "note": "",
     "refer_chap": 29,
     "refer_note": "荣府女眷打醮，彩屏也一起"
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2159,35 +1533,20 @@
     "sort_position": 199.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾惜春",
-   "name": "彩屏",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "彩屏"
   },
   "彩霞": {
    "action": {
     "chap": 23,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 23,
-    "name_note": "",
     "note": "宝玉见贾政，彩霞等笑宝玉",
-    "refer_chap": 23,
-    "refer_note": ""
+    "refer_chap": 23
    },
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2199,35 +1558,20 @@
     "sort_position": 274.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王夫人",
-   "name": "彩霞",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "彩霞"
   },
   "彩鸾": {
    "action": {
     "chap": 62,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 62,
-    "name_note": "",
     "note": "宝玉生日，彩鸾来拜寿",
-    "refer_chap": 62,
-    "refer_note": ""
+    "refer_chap": 62
    },
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2239,41 +1583,24 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王夫人",
-   "name": "彩鸾",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "彩鸾"
   },
   "待书": {
    "action": {
     "chap": 7,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 7,
-    "name_note": "",
     "note": "周瑞家的送宫花给迎春，司棋正从屋内出来",
-    "refer_chap": 7,
-    "refer_note": ""
+    "refer_chap": 7
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2285,39 +1612,21 @@
     "sort_position": 250.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾探春",
-   "name": "待书",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "待书"
   },
   "扫红": {
    "action": {
     "chap": 9,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 9,
-    "name_note": "",
     "note": "茗烟跟随宝玉入学，打了金荣，锄药、扫红、墨雨也一起打",
-    "refer_chap": 9,
-    "refer_note": ""
+    "refer_chap": 9
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2329,39 +1638,21 @@
     "sort_position": 299.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "扫红",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "扫红"
   },
   "扫花": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 24,
-    "name_note": "",
-    "note": "",
     "refer_chap": 24,
     "refer_note": "贾芸来见宝玉，看到引泉，扫花，挑云，伴鹤在房檐上掏小雀"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2373,39 +1664,21 @@
     "sort_position": 280.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "扫花",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "扫花"
   },
   "挑云": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 24,
-    "name_note": "",
-    "note": "",
     "refer_chap": 24,
     "refer_note": "贾芸来见宝玉，看到引泉，扫花，挑云，伴鹤在房檐上掏小雀"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2417,24 +1690,14 @@
     "sort_position": 280.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "挑云",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "挑云"
   },
   "文官": {
    "action": {
     "chap": 54,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 27,
-    "name_note": "",
     "note": "贾母做寿，文官带领十二官表演",
     "refer_chap": 27,
     "refer_note": "只是顺手提到了"
@@ -2442,10 +1705,6 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2457,33 +1716,17 @@
     "sort_position": 280.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾母",
-   "name": "文官",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "文官"
   },
   "文杏": {
    "action": {
     "chap": 29,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 29,
-    "name_note": "",
     "note": "贾府打平安醮，莺儿、文杏陪同宝钗",
-    "refer_chap": 29,
-    "refer_note": ""
+    "refer_chap": 29
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2495,41 +1738,24 @@
     "sort_position": 199.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "薛宝钗",
-   "name": "文杏",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "文杏"
   },
   "春燕": {
    "action": {
     "chap": 59,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 59,
-    "name_note": "",
     "note": "何婆的小女春燕问藕官烧什么纸",
-    "refer_chap": 59,
-    "refer_note": ""
+    "refer_chap": 59
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2541,41 +1767,24 @@
     "sort_position": 300.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "春燕",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "春燕"
   },
   "春纤": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 29,
-    "name_note": "",
-    "note": "",
     "refer_chap": 29,
     "refer_note": "荣府女眷打醮，春纤在列"
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2587,33 +1796,17 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "林黛玉",
-   "name": "春纤",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "春纤"
   },
   "昭儿": {
    "action": {
     "chap": 14,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 14,
-    "name_note": "",
     "note": "林如海死后，昭儿跟随贾琏去苏州，回来后被凤姐问话",
-    "refer_chap": 14,
-    "refer_note": ""
+    "refer_chap": 14
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2625,41 +1818,24 @@
     "sort_position": 229.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾琏",
-   "name": "昭儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "昭儿"
   },
   "晴雯": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 5,
-    "name_note": "",
-    "note": "",
     "refer_chap": 5,
     "refer_note": "宝玉睡在秦可卿处，晴雯留下照顾"
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2671,41 +1847,28 @@
     "sort_position": 329.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "晴雯",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "晴雯"
   },
   "李纨": {
    "action": {
     "chap": 3,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 4,
     "name_note": "黛玉到李纨房中时才详细介绍李纨姓名",
     "note": "黛玉进贾府，贾珠之妻李氏捧饭",
-    "refer_chap": 3,
-    "refer_note": ""
+    "refer_chap": 3
    },
    "allowance": {
     "type": "李纨"
    },
-   "child_idx": null,
    "child_list": [
     "贾兰"
    ],
    "ext": {
     "age": 27,
     "age_note": "李纨年龄比王熙凤大，推导：https://zh.wikipedia.org/wiki/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E5%B9%B4%E8%B0%B1#cite_note-38",
-    "family_name": "李",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "李"
    },
    "husband": "贾珠",
    "info": {
@@ -2720,7 +1883,6 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "李纨",
    "nick_list": [
     {
@@ -2728,37 +1890,26 @@
      "note": "第37回，结诗社时取别号"
     }
    ],
-   "parent": null,
    "servant_list": [
     "素云",
     "碧月"
    ],
-   "social_position": null,
    "title_list": [
     {
      "note": "",
      "title": "大奶奶"
     }
    ],
-   "wife_idx": "正房",
-   "wife_list": []
+   "wife_idx": "正房"
   },
   "来旺": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 15,
-    "name_note": "",
-    "note": "",
     "refer_chap": 15,
     "refer_note": "凤姐包揽诉讼，来往是负责跑腿的心腹"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2770,7 +1921,6 @@
     "sort_position": 230.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王熙凤",
    "name": "来旺",
    "nick_list": [
@@ -2778,36 +1928,22 @@
      "nick": "旺儿",
      "note": ""
     }
-   ],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "林如海": {
    "action": {
     "chap": 2,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "冷子兴演说荣国府提到",
     "refer_chap": 3,
     "refer_note": "贾雨村向林如海谋官"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 48,
     "age_note": "第2回时，林如海40岁，黛玉5岁。",
-    "family_name": "林",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "林"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2820,21 +1956,12 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "林如海",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
    "social_position": {
-    "nobility_note": "",
-    "nobility_rank": "",
-    "nobility_title": "",
     "official_note": "第2回，贾雨村听到的新闻，当时林如海同时还做了巡盐御史",
     "official_rank": 2,
     "official_title": "兰台寺大夫"
    },
-   "title_list": [],
-   "wife_idx": null,
    "wife_list": [
     "贾敏"
    ]
@@ -2843,24 +1970,18 @@
    "action": {
     "chap": 3,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
     "name_note": "陈述贾雨村做林府西宾",
     "note": "黛玉进入荣国府",
     "refer_chap": 2,
     "refer_note": "陈述贾雨村做林府西宾"
    },
-   "allowance": null,
    "child_idx": "长女",
-   "child_list": [],
    "ext": {
     "age": 13,
     "age_note": "http://blog.sina.com.cn/s/blog_6755590d0102va0e.html",
-    "family_name": "林",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "林"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2873,7 +1994,6 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "林黛玉",
    "nick_list": [
     {
@@ -2895,16 +2015,9 @@
     "雪雁",
     "春纤",
     "藕官"
-   ],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "根": {
-   "action": null,
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "贾演",
     "贾源",
@@ -2915,58 +2028,34 @@
    ],
    "ext": {
     "age": 100,
-    "age_note": "",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
-    "branch": "",
     "dead": 1,
     "deduction": 1,
-    "family": "",
     "gender": "男",
     "level": 0,
     "sort_age": 100.0,
     "sort_position": 999.0,
     "type": "主子"
    },
-   "level": null,
-   "master": null,
-   "name": "根",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "根"
   },
   "檀云": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 24,
-    "name_note": "",
-    "note": "",
     "refer_chap": 24,
     "refer_note": "宝玉要吃茶，但丫头都不在，提到了檀云"
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -2978,35 +2067,20 @@
     "sort_position": 319.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "檀云",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "檀云"
   },
   "炒豆": {
    "action": {
     "chap": 75,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 75,
-    "name_note": "",
     "note": "银蝶和炒豆随尤氏看望李纨",
-    "refer_chap": 75,
-    "refer_note": ""
+    "refer_chap": 75
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3018,24 +2092,14 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "尤氏",
-   "name": "炒豆",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "炒豆"
   },
   "玉钏": {
    "action": {
     "chap": 35,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 25,
-    "name_note": "",
     "note": "玉钏为宝玉尝荷叶汤",
     "refer_chap": 25,
     "refer_note": "贾环在王夫人面前抄金刚经，让玉钏剪蜡花"
@@ -3043,10 +2107,6 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3058,30 +2118,15 @@
     "sort_position": 278.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王夫人",
-   "name": "玉钏",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "玉钏"
   },
   "王仁": {
-   "action": null,
-   "allowance": null,
    "child_idx": "长子",
-   "child_list": [],
    "ext": {
     "age": 27,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3094,32 +2139,17 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "王仁",
-   "nick_list": [],
-   "parent": "王熙凤之父",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "王熙凤之父"
   },
   "王信": {
    "action": {
     "chap": 68,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 68,
-    "name_note": "",
     "note": "凤姐让王信在察院虚张声势",
-    "refer_chap": 68,
-    "refer_note": ""
+    "refer_chap": 68
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3131,32 +2161,17 @@
     "sort_position": 227.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王熙凤",
-   "name": "王信",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "王信"
   },
   "王公": {
-   "action": null,
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "王夫人之父"
    ],
    "ext": {
     "age": 85,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -3169,30 +2184,21 @@
     "type": "主子"
    },
    "level": 1,
-   "master": null,
    "name": "王公",
-   "nick_list": [],
    "parent": "根",
-   "servant_list": [],
    "social_position": {
     "nobility_note": "第4回，护官符侧批",
-    "nobility_rank": "",
     "nobility_title": "都太尉统制",
     "official_note": "第4回，护官符侧批",
     "official_rank": 0,
     "official_title": "县伯"
-   },
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   }
   },
   "王夫人": {
    "action": {
     "chap": 2,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "冷子兴演说贾府提到政老爹的夫人王氏",
     "refer_chap": 3,
     "refer_note": "黛玉进贾府时王夫人与王熙凤对话"
@@ -3209,9 +2215,7 @@
    "ext": {
     "age": 48,
     "age_note": "http://blog.sina.com.cn/s/blog_6755590d0102va0e.html",
-    "family_name": "王",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "王"
    },
    "husband": "贾政",
    "info": {
@@ -3226,9 +2230,7 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "王夫人",
-   "nick_list": [],
    "parent": "王夫人之父",
    "servant_list": [
     "金钏",
@@ -3239,15 +2241,9 @@
     "彩霞",
     "彩鸾"
    ],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": "正房",
-   "wife_list": []
+   "wife_idx": "正房"
   },
   "王夫人之父": {
-   "action": null,
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "王熙凤之父",
     "王子腾",
@@ -3256,12 +2252,8 @@
    ],
    "ext": {
     "age": 68,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3274,29 +2266,15 @@
     "type": "主子"
    },
    "level": 2,
-   "master": null,
    "name": "王夫人之父",
-   "nick_list": [],
-   "parent": "王公",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "王公"
   },
   "王子腾": {
-   "action": null,
-   "allowance": null,
    "child_idx": "次子",
-   "child_list": [],
    "ext": {
     "age": 49,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3309,30 +2287,18 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "王子腾",
-   "nick_list": [],
    "parent": "王夫人之父",
-   "servant_list": [],
    "social_position": {
-    "nobility_note": "",
-    "nobility_rank": "",
-    "nobility_title": "",
-    "official_note": "",
     "official_rank": 1,
     "official_title": "九省都检点"
-   },
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   }
   },
   "王熙凤": {
    "action": {
     "chap": 2,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 3,
-    "name_note": "",
     "note": "冷子兴演说荣国府提到贾琏娶了王氏内侄女",
     "refer_chap": 3,
     "refer_note": "黛玉进贾府，王熙凤来迎接"
@@ -3347,9 +2313,7 @@
    "ext": {
     "age": 26,
     "age_note": "王熙凤死的时候30岁，倒推：https://zh.wikipedia.org/wiki/%E7%BA%A2%E6%A5%BC%E6%A2%A6%E5%B9%B4%E8%B0%B1#cite_note-38",
-    "family_name": "王",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "王"
    },
    "husband": "贾琏",
    "info": {
@@ -3364,7 +2328,6 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "王熙凤",
    "nick_list": [
     {
@@ -3381,19 +2344,15 @@
     "庆儿",
     "王信"
    ],
-   "social_position": null,
    "title_list": [
     {
      "note": "",
      "title": "二奶奶"
     }
    ],
-   "wife_idx": "正房",
-   "wife_list": []
+   "wife_idx": "正房"
   },
   "王熙凤之父": {
-   "action": null,
-   "allowance": null,
    "child_idx": "长子",
    "child_list": [
     "王仁",
@@ -3401,12 +2360,8 @@
    ],
    "ext": {
     "age": 50,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3419,38 +2374,21 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "王熙凤之父",
-   "nick_list": [],
-   "parent": "王夫人之父",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "王夫人之父"
   },
   "王荣": {
    "action": {
     "chap": 52,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 52,
-    "name_note": "",
     "note": "宝玉送殡，几个仆人跟随",
-    "refer_chap": 52,
-    "refer_note": ""
+    "refer_chap": 52
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 19,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3462,41 +2400,24 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "王荣",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "王荣"
   },
   "玻璃": {
    "action": {
     "chap": 59,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 59,
-    "name_note": "",
     "note": "丫鬟为贾母打点物品，玻璃也在其内",
-    "refer_chap": 59,
-    "refer_note": ""
+    "refer_chap": 59
    },
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 18,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3508,41 +2429,24 @@
     "sort_position": 340.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾母",
-   "name": "玻璃",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "玻璃"
   },
   "珍珠": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 59,
-    "name_note": "",
-    "note": "",
     "refer_chap": 29,
     "refer_note": "荣府女眷外出打醮，提到了珍珠。但这个珍珠有疑点：https://baike.baidu.com/item/%E7%8F%8D%E7%8F%A0/6123468"
    },
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 18,
-    "age_note": "比较瞎猜，http://www.52hlpm.com/wy/tgq/tg077.htm",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜，http://www.52hlpm.com/wy/tgq/tg077.htm"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3554,24 +2458,14 @@
     "sort_position": 340.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾母",
-   "name": "珍珠",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "珍珠"
   },
   "琥珀": {
    "action": {
     "chap": 38,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 29,
-    "name_note": "",
     "note": "吃螃蟹，琥珀跟平儿闹",
     "refer_chap": 29,
     "refer_note": "荣府女眷外出打醮，提到了琥珀"
@@ -3579,16 +2473,10 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 19,
-    "age_note": "http://www.52hlpm.com/wy/tgq/tg077.htm",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "http://www.52hlpm.com/wy/tgq/tg077.htm"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3600,39 +2488,21 @@
     "sort_position": 350.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾母",
-   "name": "琥珀",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "琥珀"
   },
   "瑞珠": {
    "action": {
     "chap": 13,
     "die_chap": 13,
-    "die_note": "",
     "name_chap": 13,
-    "name_note": "",
     "note": "瑞珠在秦可卿死后触柱而亡",
-    "refer_chap": 13,
-    "refer_note": ""
+    "refer_chap": 13
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -3644,39 +2514,21 @@
     "sort_position": 250.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "秦可卿",
-   "name": "瑞珠",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "瑞珠"
   },
   "碧月": {
    "action": {
     "chap": 29,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 29,
-    "name_note": "",
     "note": "荣府女眷打醮，碧月在列",
-    "refer_chap": 29,
-    "refer_note": ""
+    "refer_chap": 29
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3688,41 +2540,24 @@
     "sort_position": 219.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "李纨",
-   "name": "碧月",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "碧月"
   },
   "碧痕": {
    "action": {
     "chap": 20,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 20,
-    "name_note": "",
     "note": "晴雯、绮霰、碧痕等无事耍戏",
-    "refer_chap": 20,
-    "refer_note": ""
+    "refer_chap": 20
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3734,41 +2569,24 @@
     "sort_position": 320.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "碧痕",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "碧痕"
   },
   "秋纹": {
    "action": {
     "chap": 19,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 19,
-    "name_note": "",
     "note": "秋纹跟宝玉解释晴雯躺床上的原因是被李嬷嬷气的",
-    "refer_chap": 19,
-    "refer_note": ""
+    "refer_chap": 19
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3780,37 +2598,22 @@
     "sort_position": 320.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "秋纹",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "秋纹"
   },
   "秦可卿": {
    "action": {
     "chap": 5,
     "die_chap": 13,
-    "die_note": "",
     "name_chap": 5,
     "name_note": "宝玉梦中惊醒喊“可卿救我”",
     "note": "宝玉在宁国府倦怠，由贾蓉之妻侵氏安排休息。",
-    "refer_chap": 5,
-    "refer_note": ""
+    "refer_chap": 5
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 23,
     "age_note": "纯猜测，年龄应该比其夫贾蓉小个一两岁",
-    "family_name": "秦",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "秦"
    },
    "husband": "贾蓉",
    "info": {
@@ -3825,41 +2628,25 @@
     "type": "主子"
    },
    "level": 5,
-   "master": null,
    "name": "秦可卿",
-   "nick_list": [],
-   "parent": null,
    "servant_list": [
     "宝珠",
     "瑞珠"
    ],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": "正房",
-   "wife_list": []
+   "wife_idx": "正房"
   },
   "素云": {
    "action": {
     "chap": 29,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 29,
-    "name_note": "",
     "note": "荣府女眷打醮，素云在列",
-    "refer_chap": 29,
-    "refer_note": ""
+    "refer_chap": 29
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3871,24 +2658,14 @@
     "sort_position": 220.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "李纨",
-   "name": "素云",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "素云"
   },
   "紫鹃": {
    "action": {
     "chap": 3,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 3,
-    "name_note": "",
     "note": "宝玉来看黛玉，紫鹃与宝玉对话",
     "refer_chap": 3,
     "refer_note": "贾母将二等丫头紫鹃给了黛玉"
@@ -3896,16 +2673,12 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
     "age_note": "比较瞎猜",
-    "family_name": "",
     "old_name": "鹦哥",
     "old_name_note": "https://www.zhihu.com/question/36151524"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3917,35 +2690,20 @@
     "sort_position": 230.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "林黛玉",
-   "name": "紫鹃",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "紫鹃"
   },
   "绣凤": {
    "action": {
     "chap": 23,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 23,
-    "name_note": "",
     "note": "宝玉见贾政，绣凤等笑宝玉",
-    "refer_chap": 23,
-    "refer_note": ""
+    "refer_chap": 23
    },
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -3957,41 +2715,24 @@
     "sort_position": 276.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王夫人",
-   "name": "绣凤",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "绣凤"
   },
   "绣桔": {
    "action": {
     "chap": 29,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 29,
-    "name_note": "",
     "note": "荣府女眷打醮，绣桔在列",
-    "refer_chap": 29,
-    "refer_note": ""
+    "refer_chap": 29
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4003,35 +2744,20 @@
     "sort_position": 215.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾迎春",
-   "name": "绣桔",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "绣桔"
   },
   "绣鸾": {
    "action": {
     "chap": 23,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 23,
-    "name_note": "",
     "note": "宝玉见贾政，绣鸾等笑宝玉",
-    "refer_chap": 23,
-    "refer_note": ""
+    "refer_chap": 23
    },
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4043,41 +2769,24 @@
     "sort_position": 277.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王夫人",
-   "name": "绣鸾",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "绣鸾"
   },
   "绮霰": {
    "action": {
     "chap": 20,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 20,
-    "name_note": "",
     "note": "晴雯、绮霰等无事耍戏",
-    "refer_chap": 20,
-    "refer_note": ""
+    "refer_chap": 20
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4089,35 +2798,20 @@
     "sort_position": 328.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "绮霰",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "绮霰"
   },
   "缕儿": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 32,
-    "name_note": "",
-    "note": "",
     "refer_chap": 32,
     "refer_note": "史湘云让袭人问缕儿"
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4129,41 +2823,24 @@
     "sort_position": 260.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "史湘云",
-   "name": "缕儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "缕儿"
   },
   "翠墨": {
    "action": {
     "chap": 29,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 29,
-    "name_note": "",
     "note": "荣府女眷打醮，翠墨在列",
-    "refer_chap": 29,
-    "refer_note": ""
+    "refer_chap": 29
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 15,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4175,35 +2852,20 @@
     "sort_position": 230.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾探春",
-   "name": "翠墨",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "翠墨"
   },
   "翠缕": {
    "action": {
     "chap": 31,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 31,
-    "name_note": "",
     "note": "史湘云跟翠缕讨论阴阳",
-    "refer_chap": 31,
-    "refer_note": ""
+    "refer_chap": 31
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4215,41 +2877,24 @@
     "sort_position": 260.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "史湘云",
-   "name": "翠缕",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "翠缕"
   },
   "翡翠": {
    "action": {
     "chap": 59,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 59,
-    "name_note": "",
     "note": "丫鬟为贾母打点物品，翡翠也在其内",
-    "refer_chap": 59,
-    "refer_note": ""
+    "refer_chap": 59
    },
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 18,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4261,41 +2906,24 @@
     "sort_position": 340.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾母",
-   "name": "翡翠",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "翡翠"
   },
   "艾官": {
    "action": {
     "chap": 58,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 58,
-    "name_note": "",
-    "note": "",
     "refer_chap": 58,
     "refer_note": "艾官归了探春"
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4307,41 +2935,24 @@
     "sort_position": 210.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾探春",
-   "name": "艾官",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "艾官"
   },
   "芳官": {
    "action": {
     "chap": 58,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 58,
-    "name_note": "",
     "note": "芳官归了宝玉，发生了洗头事件",
-    "refer_chap": 58,
-    "refer_note": ""
+    "refer_chap": 58
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4353,41 +2964,24 @@
     "sort_position": 201.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "芳官",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "芳官"
   },
   "茄官": {
    "action": {
     "chap": 58,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 58,
-    "name_note": "",
-    "note": "",
     "refer_chap": 58,
     "refer_note": "茄官归了尤氏"
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4399,39 +2993,21 @@
     "sort_position": 220.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "尤氏",
-   "name": "茄官",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "茄官"
   },
   "茗烟": {
    "action": {
     "chap": 9,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 9,
-    "name_note": "",
     "note": "茗烟跟随宝玉入学，打了金荣",
-    "refer_chap": 9,
-    "refer_note": ""
+    "refer_chap": 9
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4443,7 +3019,6 @@
     "sort_position": 300.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
    "name": "茗烟",
    "nick_list": [
@@ -4451,21 +3026,13 @@
      "nick": "焙茗",
      "note": ""
     }
-   ],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "茜雪": {
    "action": {
     "chap": 8,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 8,
-    "name_note": "",
     "note": "风露茶事件，茜雪是主要人物",
     "refer_chap": 8,
     "refer_note": "宝"
@@ -4473,16 +3040,10 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4494,41 +3055,24 @@
     "sort_position": 318.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "茜雪",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "茜雪"
   },
   "莲花儿": {
    "action": {
     "chap": 61,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 61,
-    "name_note": "",
     "note": "莲花儿找柳家的要炖鸡蛋",
-    "refer_chap": 61,
-    "refer_note": ""
+    "refer_chap": 61
    },
    "allowance": {
     "type": "二等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4540,33 +3084,17 @@
     "sort_position": 210.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾迎春",
-   "name": "莲花儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "莲花儿"
   },
   "莺儿": {
    "action": {
     "chap": 8,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 8,
-    "name_note": "",
     "note": "金玉姻缘的诗文首次通过莺儿之口读了出来",
-    "refer_chap": 8,
-    "refer_note": ""
+    "refer_chap": 8
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4578,41 +3106,24 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "薛宝钗",
-   "name": "莺儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "莺儿"
   },
   "葵官": {
    "action": {
     "chap": 58,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 0,
-    "name_note": "",
-    "note": "",
     "refer_chap": 58,
     "refer_note": "葵官归了湘云"
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4624,39 +3135,21 @@
     "sort_position": 220.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "史湘云",
-   "name": "葵官",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "葵官"
   },
   "蕊官": {
    "action": {
     "chap": 58,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 58,
-    "name_note": "",
-    "note": "",
     "refer_chap": 58,
     "refer_note": "蕊官归了宝钗"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4668,26 +3161,13 @@
     "sort_position": 220.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "薛宝钗",
-   "name": "蕊官",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "蕊官"
   },
   "薛公": {
-   "action": null,
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "薛宝钗之祖父"
    ],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -4700,35 +3180,22 @@
     "type": "主子"
    },
    "level": 1,
-   "master": null,
    "name": "薛公",
-   "nick_list": [],
    "parent": "根",
-   "servant_list": [],
    "social_position": {
-    "nobility_note": "",
-    "nobility_rank": "",
-    "nobility_title": "",
     "official_note": "第4回，护官符甲戌侧批",
     "official_rank": 0,
     "official_title": "紫微舍人"
-   },
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   }
   },
   "薛姨妈": {
    "action": {
     "chap": 4,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 0,
-    "name_note": "",
     "note": "薛蟠跟薛姨妈商量进京",
-    "refer_chap": 0,
-    "refer_note": ""
+    "refer_chap": 0
    },
-   "allowance": null,
    "child_idx": "次女",
    "child_list": [
     "薛蟠",
@@ -4737,9 +3204,7 @@
    "ext": {
     "age": 47,
     "age_note": "第46回，贾母对薛姨妈说“你这个姐姐”，更多推导见http://blog.sina.com.cn/s/blog_4913fd3d0102xkzu.html",
-    "family_name": "王",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "王"
    },
    "husband": "薛宝钗之父",
    "info": {
@@ -4754,35 +3219,24 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "薛姨妈",
-   "nick_list": [],
    "parent": "王夫人之父",
    "servant_list": [
     "同喜",
     "同贵"
    ],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": "正房",
-   "wife_list": []
+   "wife_idx": "正房"
   },
   "薛宝琴": {
    "action": {
     "chap": 49,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 49,
-    "name_note": "",
     "note": "薛宝琴入驻荣府",
     "refer_chap": 49,
     "refer_note": "宝钗猜薛蝌和他妹妹来了"
    },
-   "allowance": null,
    "child_idx": "长女",
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4795,28 +3249,18 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "薛宝琴",
-   "nick_list": [],
    "parent": "薛宝琴之父",
    "servant_list": [
     "豆官"
-   ],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "薛宝琴之父": {
-   "action": null,
-   "allowance": null,
    "child_idx": "长子",
    "child_list": [
     "薛蝌",
     "薛宝琴"
    ],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -4829,38 +3273,23 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "薛宝琴之父",
-   "nick_list": [],
-   "parent": "薛宝钗之祖父",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "薛宝钗之祖父"
   },
   "薛宝钗": {
    "action": {
     "chap": 4,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 4,
-    "name_note": "",
     "note": "宝钗入住贾府，与黛玉众姐妹相处",
     "refer_chap": 4,
     "refer_note": "葫芦案一章介绍薛家提到了薛蟠的妹妹宝钗"
    },
-   "allowance": null,
    "child_idx": "长女",
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "推导：https://baijiahao.baidu.com/s?id=1568506289620419&wfr=spider&for=pc",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "推导：https://baijiahao.baidu.com/s?id=1568506289620419&wfr=spider&for=pc"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4873,27 +3302,16 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "薛宝钗",
-   "nick_list": [],
    "parent": "薛姨妈",
    "servant_list": [
     "蕊官",
     "莺儿",
     "文杏"
-   ],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "薛宝钗之父": {
-   "action": null,
-   "allowance": null,
    "child_idx": "次子",
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -4906,28 +3324,17 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "薛宝钗之父",
-   "nick_list": [],
    "parent": "薛宝钗之祖父",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
    "wife_list": [
     "薛姨妈"
    ]
   },
   "薛宝钗之祖父": {
-   "action": null,
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "薛宝琴之父",
     "薛宝钗之父"
    ],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -4940,32 +3347,19 @@
     "type": "主子"
    },
    "level": 2,
-   "master": null,
    "name": "薛宝钗之祖父",
-   "nick_list": [],
-   "parent": "薛公",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "薛公"
   },
   "薛蝌": {
    "action": {
     "chap": 49,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 49,
-    "name_note": "",
     "note": "薛蝌入住荣府",
     "refer_chap": 49,
     "refer_note": "宝钗猜薛蝌来了"
    },
-   "allowance": null,
    "child_idx": "长子",
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -4978,14 +3372,8 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "薛蝌",
-   "nick_list": [],
    "parent": "薛宝琴之父",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
    "wife_list": [
     "邢岫烟"
    ]
@@ -4994,24 +3382,16 @@
    "action": {
     "chap": 4,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 4,
-    "name_note": "",
     "note": "薛蟠跟薛姨妈商量进京",
     "refer_chap": 4,
     "refer_note": "门子跟贾雨村讲薛蟠跟冯渊的案子"
    },
-   "allowance": null,
    "child_idx": "长子",
-   "child_list": [],
    "ext": {
     "age": 18,
-    "age_note": "比较瞎猜，比宝钗大",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜，比宝钗大"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5024,23 +3404,14 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "薛蟠",
-   "nick_list": [],
-   "parent": "薛姨妈",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "薛姨妈"
   },
   "藕官": {
    "action": {
     "chap": 58,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 58,
-    "name_note": "",
     "note": "藕官烧纸事件",
     "refer_chap": 58,
     "refer_note": "藕官归了黛玉"
@@ -5048,16 +3419,10 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5069,41 +3434,24 @@
     "sort_position": 190.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "林黛玉",
-   "name": "藕官",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "藕官"
   },
   "蝉姐": {
    "action": {
     "chap": 60,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 60,
-    "name_note": "",
     "note": "翠墨命蝉姐买糕",
-    "refer_chap": 60,
-    "refer_note": ""
+    "refer_chap": 60
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 19,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5115,33 +3463,20 @@
     "sort_position": 220.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾探春",
-   "name": "蝉姐",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "蝉姐"
   },
   "袭人": {
    "action": {
     "chap": 3,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 3,
-    "name_note": "",
     "note": "黛玉进入荣国府，袭人劝慰黛玉",
-    "refer_chap": 3,
-    "refer_note": ""
+    "refer_chap": 3
    },
    "allowance": {
     "type": "袭人"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
     "age_note": "https://www.douban.com/group/topic/28547104/",
@@ -5149,7 +3484,6 @@
     "old_name": "花珍珠",
     "old_name_note": "第23回，贾政问王夫人袭人是谁，宝玉解释道"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5161,44 +3495,27 @@
     "sort_position": 333.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
    "name": "袭人",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
    "title_list": [
     {
      "note": "",
      "title": "花大姑娘"
     }
-   ],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "豆官": {
    "action": {
     "chap": 58,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 58,
-    "name_note": "",
-    "note": "",
     "refer_chap": 58,
     "refer_note": "小花面豆官送了宝琴"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5210,35 +3527,21 @@
     "sort_position": 220.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "薛宝琴",
-   "name": "豆官",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "豆官"
   },
   "贾代儒": {
    "action": {
     "chap": 9,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 8,
-    "name_note": "",
     "note": "宝玉秦钟入私塾，代儒留了作业",
     "refer_chap": 8,
     "refer_note": "提到贾家私塾的老师是代儒"
    },
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "贾瑞之父"
    ],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "旁",
     "dead": 0,
@@ -5251,25 +3554,13 @@
     "type": "主子"
    },
    "level": 2,
-   "master": null,
    "name": "贾代儒",
-   "nick_list": [],
-   "parent": "贾代儒之父",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "贾代儒之父"
   },
   "贾代儒之父": {
-   "action": null,
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "贾代儒"
    ],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "旁",
     "dead": 1,
@@ -5282,29 +3573,18 @@
     "type": "主子"
    },
    "level": 1,
-   "master": null,
    "name": "贾代儒之父",
-   "nick_list": [],
-   "parent": "根",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "根"
   },
   "贾代化": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "0",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到"
    },
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "贾敷",
     "贾敬"
@@ -5312,11 +3592,8 @@
    "ext": {
     "age": 70,
     "age_note": "纯拍脑袋瞎猜",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -5329,11 +3606,8 @@
     "type": "主子"
    },
    "level": 2,
-   "master": null,
    "name": "贾代化",
-   "nick_list": [],
    "parent": "贾演",
-   "servant_list": [],
    "social_position": {
     "nobility_note": "降级袭爵。第13回，贾蓉的履历给戴权看，看到代化的官爵。",
     "nobility_rank": "候",
@@ -5341,33 +3615,22 @@
     "official_note": "第13回，贾蓉的履历给戴权看，看到代化的官爵。",
     "official_rank": 0,
     "official_title": "京营节度使"
-   },
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   }
   },
   "贾代善": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "0",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 68,
     "age_note": "纯拍脑袋瞎猜",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -5380,21 +3643,14 @@
     "type": "主子"
    },
    "level": 2,
-   "master": null,
    "name": "贾代善",
-   "nick_list": [],
    "parent": "贾源",
-   "servant_list": [],
    "social_position": {
     "nobility_note": "第29回，张道士说宝玉跟荣国公是一个模子里刻出来的，而贾母又说，除了宝玉，没一个人像他爷爷。",
     "nobility_rank": "公",
     "nobility_title": "荣国公",
-    "official_note": "",
-    "official_rank": 0,
-    "official_title": ""
+    "official_rank": 0
    },
-   "title_list": [],
-   "wife_idx": null,
    "wife_list": [
     "贾母"
    ]
@@ -5403,24 +3659,17 @@
    "action": {
     "chap": 18,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 0,
-    "name_note": "",
     "note": "元春归省荣国府",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到贾珠是王夫人第二胎"
    },
-   "allowance": null,
    "child_idx": "长女",
-   "child_list": [],
    "ext": {
     "age": 25,
     "age_note": "元春年龄比较乱，http://ibekolu.blogchina.com/1586561.html",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5433,45 +3682,29 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "贾元春",
-   "nick_list": [],
    "parent": "王夫人",
-   "servant_list": [],
    "social_position": {
-    "nobility_note": "",
-    "nobility_rank": "",
     "nobility_title": "贤德妃",
-    "official_note": "",
     "official_rank": 0,
     "official_title": "凤藻宫尚书"
-   },
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   }
   },
   "贾兰": {
    "action": {
     "chap": 9,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 4,
-    "name_note": "",
     "note": "家塾出乱子，贾兰贾菌也被波及。",
     "refer_chap": 4,
     "refer_note": "介绍李纨时，说贾珠有一子，取名贾兰。"
    },
-   "allowance": null,
    "child_idx": "长子",
-   "child_list": [],
    "ext": {
     "age": 11,
     "age_note": "第78回。https://tieba.baidu.com/p/681397160?red_tag=3245362885",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5484,7 +3717,6 @@
     "type": "主子"
    },
    "level": 5,
-   "master": null,
    "name": "贾兰",
    "nick_list": [
     {
@@ -5492,35 +3724,24 @@
      "note": ""
     }
    ],
-   "parent": "李纨",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "李纨"
   },
   "贾宝玉": {
    "action": {
     "chap": 3,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
     "name_note": "冷子兴演说荣国府时提到",
     "note": "黛玉进入荣国府初见宝玉",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到"
    },
-   "allowance": null,
    "child_idx": "次子",
-   "child_list": [],
    "ext": {
     "age": 14,
     "age_note": "http://blog.sina.com.cn/s/blog_6755590d0102va0e.html",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5533,7 +3754,6 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "贾宝玉",
    "nick_list": [
     {
@@ -5580,38 +3800,28 @@
     "赵亦华",
     "钱启"
    ],
-   "social_position": null,
    "title_list": [
     {
      "note": "",
      "title": "宝二爷"
     }
-   ],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "贾巧姐": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "巧姐一直没有主动活动，都是描述别人时带着她",
     "refer_chap": 6,
     "refer_note": "刘姥姥一进荣国府，来到贾琏的女儿大姐的睡觉之所。"
    },
-   "allowance": null,
    "child_idx": "长女",
-   "child_list": [],
    "ext": {
     "age": 2,
     "age_note": "大姐和巧姐归总为巧姐，年龄混乱。",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5624,38 +3834,24 @@
     "type": "主子"
    },
    "level": 5,
-   "master": null,
    "name": "贾巧姐",
-   "nick_list": [],
-   "parent": "王熙凤",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "王熙凤"
   },
   "贾惜春": {
    "action": {
     "chap": 10,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "璜大奶奶和金氏见了尤氏，正好贾珍也进屋",
     "refer_chap": 2,
     "refer_note": "冷子兴说道四小姐惜春是珍爷胞妹"
    },
-   "allowance": null,
    "child_idx": "长女",
-   "child_list": [],
    "ext": {
     "age": 12,
     "age_note": "https://tieba.baidu.com/p/2542784236?red_tag=2408789060",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5668,46 +3864,34 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "贾惜春",
-   "nick_list": [],
    "parent": "贾敬",
    "servant_list": [
     "入画",
     "彩屏"
    ],
-   "social_position": null,
    "title_list": [
     {
      "note": "冷子兴演说荣国府提到四小姐名探春",
      "title": "四小姐"
     }
-   ],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "贾探春": {
    "action": {
     "chap": 18,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 0,
-    "name_note": "",
     "note": "元春归省荣国府",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到贾珠是王夫人第二胎"
    },
-   "allowance": null,
    "child_idx": "次女",
-   "child_list": [],
    "ext": {
     "age": 13,
     "age_note": "跟黛玉、湘云差不多，难分清楚。讨论也很多。",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5720,7 +3904,6 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "贾探春",
    "nick_list": [
     {
@@ -5739,38 +3922,28 @@
     "蝉姐",
     "艾官"
    ],
-   "social_position": null,
    "title_list": [
     {
      "note": "冷子兴推演荣国府说三小姐名探春",
      "title": "三小姐"
     }
-   ],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "贾政": {
    "action": {
     "chap": 9,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "宝玉进学堂前，贾政训话",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到代善次子是贾政"
    },
-   "allowance": null,
    "child_idx": "次子",
-   "child_list": [],
    "ext": {
     "age": 48,
     "age_note": "纯粹拍脑袋瞎猜。第33回，贾政打宝玉，王夫人说如今已将五十岁的人。",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5783,21 +3956,15 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "贾政",
-   "nick_list": [],
    "parent": "贾母",
-   "servant_list": [],
    "social_position": {
     "nobility_note": "父亲代善是国公，贾政降级袭爵",
     "nobility_rank": "候",
-    "nobility_title": "",
     "official_note": "第3回，林如海向贾雨村介绍贾政时提到",
     "official_rank": 5,
     "official_title": "工部员外郎"
    },
-   "title_list": [],
-   "wife_idx": null,
    "wife_list": [
     "王夫人",
     "周姨娘",
@@ -5808,14 +3975,10 @@
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
-    "note": "",
     "refer_chap": 2,
     "refer_note": "冷子兴说道贾敏"
    },
-   "allowance": null,
    "child_idx": "长女",
    "child_list": [
     "林黛玉"
@@ -5823,9 +3986,7 @@
    "ext": {
     "age": 47,
     "age_note": "年龄比贾政小。第2回，林如海40岁时，黛玉5岁。至大观园时，黛玉12、13岁。",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
    "husband": "林如海",
    "info": {
@@ -5840,15 +4001,9 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "贾敏",
-   "nick_list": [],
    "parent": "贾母",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": "正房",
-   "wife_list": []
+   "wife_idx": "正房"
   },
   "贾敬": {
    "action": {
@@ -5856,12 +4011,10 @@
     "die_chap": 63,
     "die_note": "忽见东府中几个人慌慌张张跑来说：老爷宾天了。",
     "name_chap": 2,
-    "name_note": "",
     "note": "贾敬生日，贾蓉跟贾敬有些交流",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到贾代化次子贾敬袭了官，但一味好道"
    },
-   "allowance": null,
    "child_idx": "次子",
    "child_list": [
     "贾珍",
@@ -5870,11 +4023,8 @@
    "ext": {
     "age": 54,
     "age_note": "纯粹拍脑袋瞎猜",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -5887,50 +4037,34 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "贾敬",
-   "nick_list": [],
    "parent": "贾代化",
-   "servant_list": [],
    "social_position": {
-    "nobility_note": "",
     "nobility_rank": "伯",
-    "nobility_title": "",
     "official_note": "第63回，死亡时追赐",
-    "official_rank": 5,
-    "official_title": ""
+    "official_rank": 5
    },
    "title_list": [
     {
      "note": "第11回，贾敬生日，各人口中都称他太爷",
      "title": "太爷"
     }
-   ],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "贾敷": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
-    "note": "",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到贾代化长子贾敷七八岁就死了"
    },
-   "allowance": null,
    "child_idx": "长子",
-   "child_list": [],
    "ext": {
     "age": 55,
     "age_note": "纯粹拍脑袋瞎猜",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -5943,23 +4077,14 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "贾敷",
-   "nick_list": [],
-   "parent": "贾代化",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "贾代化"
   },
   "贾母": {
    "action": {
     "chap": 3,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 0,
-    "name_note": "",
     "note": "黛玉进荣国府见贾母",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到贾代善娶了史侯家的小姐为妻"
@@ -5967,7 +4092,6 @@
    "allowance": {
     "type": "太太"
    },
-   "child_idx": null,
    "child_list": [
     "贾赦",
     "贾政",
@@ -5976,9 +4100,7 @@
    "ext": {
     "age": 68,
     "age_note": "第39回，刘姥姥说自己75岁，贾母说比自己大好几岁",
-    "family_name": "史",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "史"
    },
    "husband": "贾代善",
    "info": {
@@ -5993,9 +4115,7 @@
     "type": "主子"
    },
    "level": 2,
-   "master": null,
    "name": "贾母",
-   "nick_list": [],
    "parent": "史候",
    "servant_list": [
     "鸳鸯",
@@ -6007,7 +4127,6 @@
     "鹦鹉",
     "文官"
    ],
-   "social_position": null,
    "title_list": [
     {
      "note": "",
@@ -6022,33 +4141,25 @@
      "title": "老祖宗"
     }
    ],
-   "wife_idx": "正房",
-   "wife_list": []
+   "wife_idx": "正房"
   },
   "贾源": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "0",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到"
    },
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "贾代善"
    ],
    "ext": {
     "age": 85,
     "age_note": "纯拍脑袋瞎猜",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -6061,47 +4172,31 @@
     "type": "主子"
    },
    "level": 1,
-   "master": null,
    "name": "贾源",
-   "nick_list": [],
    "parent": "根",
-   "servant_list": [],
    "social_position": {
-    "nobility_note": "",
     "nobility_rank": "公",
     "nobility_title": "荣国公",
-    "official_note": "",
-    "official_rank": 0,
-    "official_title": ""
-   },
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+    "official_rank": 0
+   }
   },
   "贾演": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "0",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到"
    },
-   "allowance": null,
-   "child_idx": null,
    "child_list": [
     "贾代化"
    ],
    "ext": {
     "age": 85,
     "age_note": "纯拍脑袋瞎猜",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -6114,45 +4209,29 @@
     "type": "主子"
    },
    "level": 1,
-   "master": null,
    "name": "贾演",
-   "nick_list": [],
    "parent": "根",
-   "servant_list": [],
    "social_position": {
-    "nobility_note": "",
     "nobility_rank": "公",
     "nobility_title": "宁国公",
-    "official_note": "",
-    "official_rank": 0,
-    "official_title": ""
-   },
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+    "official_rank": 0
+   }
   },
   "贾环": {
    "action": {
     "chap": 20,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 18,
-    "name_note": "",
     "note": "贾环赌钱耍赖",
     "refer_chap": 18,
     "refer_note": "元妃省亲，贾环染病未痊"
    },
-   "allowance": null,
    "child_idx": "三子",
-   "child_list": [],
    "ext": {
     "age": 13,
     "age_note": "第78回。https://tieba.baidu.com/p/681397160?red_tag=3245362885",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6165,30 +4244,21 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "贾环",
-   "nick_list": [],
    "parent": "赵姨娘",
    "servant_list": [
     "钱槐"
-   ],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "贾珍": {
    "action": {
     "chap": 10,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "璜大奶奶和金氏见了尤氏，正好贾珍也进屋。",
     "refer_chap": 2,
     "refer_note": "冷子兴说道贾敬早年留下一子贾珍"
    },
-   "allowance": null,
    "child_idx": "长子",
    "child_list": [
     "贾蓉",
@@ -6197,11 +4267,8 @@
    "ext": {
     "age": 39,
     "age_note": "第2回，贾雨村说黛玉5岁，冷子兴说贾蓉16岁。那推算下，等黛玉长到14岁时，贾蓉贾蓉25岁，那贾珍可能40了。第76回，其妻尤氏说本四十岁的人了。",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6214,9 +4281,7 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "贾珍",
-   "nick_list": [],
    "parent": "贾敬",
    "servant_list": [
     "兴儿",
@@ -6227,9 +4292,7 @@
     "nobility_note": "降级袭爵。第13回，贾蓉的履历给戴权看，看到贾珍的官爵。",
     "nobility_rank": "子",
     "nobility_title": "三品爵威烈将军",
-    "official_note": "",
-    "official_rank": 0,
-    "official_title": ""
+    "official_rank": 0
    },
    "title_list": [
     {
@@ -6241,7 +4304,6 @@
      "title": "族长"
     }
    ],
-   "wife_idx": null,
    "wife_list": [
     "尤氏"
    ]
@@ -6250,24 +4312,16 @@
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 0,
-    "name_note": "",
-    "note": "",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到贾珠是王夫人头胎"
    },
-   "allowance": null,
    "child_idx": "长子",
-   "child_list": [],
    "ext": {
     "age": 28,
     "age_note": "第2回，冷子兴说贾珠不到20生贾兰",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 1,
@@ -6280,14 +4334,8 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "贾珠",
-   "nick_list": [],
    "parent": "王夫人",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
    "wife_list": [
     "李纨"
    ]
@@ -6296,24 +4344,17 @@
    "action": {
     "chap": 4,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "薛蟠进荣国府，贾琏引着拜见贾赦",
     "refer_chap": 2,
     "refer_note": "冷子兴说贾琏是贾政长子"
    },
-   "allowance": null,
    "child_idx": "长子",
-   "child_list": [],
    "ext": {
     "age": 29,
     "age_note": "第2回，冷子兴推演时黛玉5岁，贾琏已经二十来往.至大观园黛玉13岁时，贾琏至少也29岁了。",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6326,9 +4367,7 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "贾琏",
-   "nick_list": [],
    "parent": "贾赦",
    "servant_list": [
     "隆儿",
@@ -6337,7 +4376,6 @@
    "social_position": {
     "nobility_note": "降级袭爵",
     "nobility_rank": "伯",
-    "nobility_title": "",
     "official_note": "第2回，冷子兴演说将贾琏捐了个官",
     "official_rank": 5,
     "official_title": "同知"
@@ -6348,7 +4386,6 @@
      "title": "琏二爷"
     }
    ],
-   "wife_idx": null,
    "wife_list": [
     "王熙凤",
     "尤二姐"
@@ -6358,24 +4395,16 @@
    "action": {
     "chap": 13,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 13,
-    "name_note": "",
     "note": "秦可卿丧事贾琮也来了",
-    "refer_chap": 13,
-    "refer_note": ""
+    "refer_chap": 13
    },
-   "allowance": null,
    "child_idx": "次子",
-   "child_list": [],
    "ext": {
     "age": 13,
     "age_note": "年龄可能跟贾环差不多。http://www.guoxue123.com/hongxue/0001/hlwy/074.htm",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6388,15 +4417,8 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "贾琮",
-   "nick_list": [],
-   "parent": "贾赦",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "贾赦"
   },
   "贾瑞": {
    "action": {
@@ -6404,16 +4426,10 @@
     "die_chap": 12,
     "die_note": "迷恋风月宝鉴精尽人亡",
     "name_chap": 9,
-    "name_note": "",
     "note": "代儒暂离私塾后，贾瑞代为管理",
-    "refer_chap": 9,
-    "refer_note": ""
+    "refer_chap": 9
    },
-   "allowance": null,
    "child_idx": "长子",
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "旁",
     "dead": 1,
@@ -6426,25 +4442,14 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "贾瑞",
-   "nick_list": [],
-   "parent": "贾瑞之父",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "贾瑞之父"
   },
   "贾瑞之父": {
-   "action": null,
-   "allowance": null,
    "child_idx": "长子",
    "child_list": [
     "贾瑞"
    ],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "旁",
     "dead": 1,
@@ -6457,38 +4462,24 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "贾瑞之父",
-   "nick_list": [],
-   "parent": "贾代儒",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "贾代儒"
   },
   "贾蓉": {
    "action": {
     "chap": 6,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "姥姥一进荣国府时，贾蓉找凤姐要玻璃炕屏。",
     "refer_chap": 2,
     "refer_note": "冷子兴说贾琏是贾政长子"
    },
-   "allowance": null,
    "child_idx": "长子",
-   "child_list": [],
    "ext": {
     "age": 25,
     "age_note": "第2回，冷子兴推演时黛玉5岁，贾蓉16岁。至大观园黛玉13岁时，贾蓉24岁左右。",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6501,21 +4492,15 @@
     "type": "主子"
    },
    "level": 5,
-   "master": null,
    "name": "贾蓉",
-   "nick_list": [],
    "parent": "贾珍",
-   "servant_list": [],
    "social_position": {
     "nobility_note": "降级袭爵",
     "nobility_rank": "男",
-    "nobility_title": "",
     "official_note": "第13回，贾珍给贾蓉捐了个官，好让秦可卿的葬礼风光些。",
     "official_rank": 5,
     "official_title": "龙禁尉"
    },
-   "title_list": [],
-   "wife_idx": null,
    "wife_list": [
     "秦可卿"
    ]
@@ -6524,24 +4509,16 @@
    "action": {
     "chap": 9,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 9,
-    "name_note": "",
     "note": "家塾里贾蔷挑唆茗烟跟金荣斗气",
-    "refer_chap": 9,
-    "refer_note": ""
+    "refer_chap": 9
    },
-   "allowance": null,
    "child_idx": "非亲生",
-   "child_list": [],
    "ext": {
     "age": 19,
     "age_note": "第9回，贾蔷16岁，大概比宝玉大个5、6岁",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6554,28 +4531,18 @@
     "type": "主子"
    },
    "level": 5,
-   "master": null,
    "name": "贾蔷",
-   "nick_list": [],
-   "parent": "贾珍",
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "parent": "贾珍"
   },
   "贾赦": {
    "action": {
     "chap": 11,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 2,
-    "name_note": "",
     "note": "贾敬生日，贾蓉跟贾敬有些交流",
     "refer_chap": 2,
     "refer_note": "冷子兴演说荣国府时提到贾代化次子贾敬袭了官，但一味好道"
    },
-   "allowance": null,
    "child_idx": "长子",
    "child_list": [
     "贾琏",
@@ -6585,11 +4552,8 @@
    "ext": {
     "age": 49,
     "age_note": "纯粹拍脑袋瞎猜。第11回贾珍称邢夫人、王夫人为婶子，说明贾赦贾政都比贾敬小。",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6602,21 +4566,13 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "贾赦",
-   "nick_list": [],
    "parent": "贾母",
-   "servant_list": [],
    "social_position": {
     "nobility_note": "第2回，冷子兴说贾赦袭了贾代善官职",
-    "nobility_rank": "",
     "nobility_title": "一等将军",
-    "official_note": "",
-    "official_rank": 0,
-    "official_title": ""
+    "official_rank": 0
    },
-   "title_list": [],
-   "wife_idx": null,
    "wife_list": [
     "邢夫人"
    ]
@@ -6625,24 +4581,17 @@
    "action": {
     "chap": 2,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 3,
-    "name_note": "",
     "note": "冷子兴演说荣国府提到二小姐乃赦老爹所出，名迎春",
     "refer_chap": 3,
     "refer_note": "黛玉进贾府，迎春姊妹三个迎接"
    },
-   "allowance": null,
    "child_idx": "长女",
-   "child_list": [],
    "ext": {
     "age": 15,
     "age_note": "第73回，迎春称呼宝姐姐林妹妹，大致推算。",
-    "family_name": "贾",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "贾"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6655,7 +4604,6 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "贾迎春",
    "nick_list": [
     {
@@ -6669,38 +4617,25 @@
     "绣桔",
     "莲花儿"
    ],
-   "social_position": null,
    "title_list": [
     {
      "note": "冷子兴演说荣国府说二小姐名迎春",
      "title": "二小姐"
     }
-   ],
-   "wife_idx": null,
-   "wife_list": []
+   ]
   },
   "赵亦华": {
    "action": {
     "chap": 52,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 52,
-    "name_note": "",
     "note": "宝玉送殡，几个仆人跟随",
-    "refer_chap": 52,
-    "refer_note": ""
+    "refer_chap": 52
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 19,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6712,32 +4647,20 @@
     "sort_position": 198.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "赵亦华",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "赵亦华"
   },
   "赵姨娘": {
    "action": {
     "chap": 20,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 20,
-    "name_note": "",
     "note": "王熙凤正言弹妒意这回，赵姨娘骂贾环",
-    "refer_chap": 20,
-    "refer_note": ""
+    "refer_chap": 20
    },
    "allowance": {
     "type": "姨娘"
    },
-   "child_idx": null,
    "child_list": [
     "贾探春",
     "贾环"
@@ -6745,9 +4668,7 @@
    "ext": {
     "age": 30,
     "age_note": "https://baike.baidu.com/item/%E8%B5%B5%E5%A7%A8%E5%A8%98",
-    "family_name": "赵",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "赵"
    },
    "husband": "贾政",
    "info": {
@@ -6762,41 +4683,28 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "赵姨娘",
-   "nick_list": [],
-   "parent": null,
    "servant_list": [
     "小吉祥",
     "小鹊"
    ],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": "侧室",
-   "wife_list": []
+   "wife_idx": "侧室"
   },
   "邢夫人": {
    "action": {
     "chap": 3,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 3,
-    "name_note": "",
     "note": "黛玉进贾府，邢夫人领着黛玉",
-    "refer_chap": 3,
-    "refer_note": ""
+    "refer_chap": 3
    },
    "allowance": {
     "type": "太太"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 33,
     "age_note": "比较猜测，http://bbs.tianya.cn/post-106-544458-1.shtml",
-    "family_name": "邢",
-    "old_name": "",
-    "old_name_note": ""
+    "family_name": "邢"
    },
    "husband": "贾赦",
    "info": {
@@ -6811,36 +4719,24 @@
     "type": "主子"
    },
    "level": 3,
-   "master": null,
    "name": "邢夫人",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
    "title_list": [
     {
      "note": "",
      "title": "大太太"
     }
    ],
-   "wife_idx": "正房",
-   "wife_list": []
+   "wife_idx": "正房"
   },
   "邢岫烟": {
    "action": {
     "chap": 49,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 49,
-    "name_note": "",
     "note": "邢岫烟入住贾府后穿旧衣服",
     "refer_chap": 49,
     "refer_note": "邢岫烟随父母投奔邢夫人"
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
    "husband": "薛蝌",
    "info": {
     "branch": "正",
@@ -6854,23 +4750,14 @@
     "type": "主子"
    },
    "level": 4,
-   "master": null,
    "name": "邢岫烟",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": "正房",
-   "wife_list": []
+   "wife_idx": "正房"
   },
   "金钏": {
    "action": {
     "chap": 7,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 7,
-    "name_note": "",
     "note": "周瑞家的送宫花过程中跟金钏讨论香菱",
     "refer_chap": 7,
     "refer_note": "周瑞家的送宫花，路上看见了金钏和香菱在玩"
@@ -6878,10 +4765,6 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6893,39 +4776,21 @@
     "sort_position": 280.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "王夫人",
-   "name": "金钏",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "金钏"
   },
   "钱启": {
    "action": {
     "chap": 52,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 52,
-    "name_note": "",
     "note": "宝玉送殡，几个仆人跟随",
-    "refer_chap": 52,
-    "refer_note": ""
+    "refer_chap": 52
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 19,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6937,39 +4802,21 @@
     "sort_position": 197.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "钱启",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "钱启"
   },
   "钱槐": {
    "action": {
     "chap": 60,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 60,
-    "name_note": "",
     "note": "钱槐对五儿有意",
-    "refer_chap": 60,
-    "refer_note": ""
+    "refer_chap": 60
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -6981,35 +4828,20 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾环",
-   "name": "钱槐",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "钱槐"
   },
   "银蝶": {
    "action": {
     "chap": 75,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 75,
-    "name_note": "",
     "note": "银蝶和炒豆随尤氏看望李纨",
-    "refer_chap": 75,
-    "refer_note": ""
+    "refer_chap": 75
    },
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -7021,39 +4853,21 @@
     "sort_position": 200.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "尤氏",
-   "name": "银蝶",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "银蝶"
   },
   "锄药": {
    "action": {
     "chap": 9,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 9,
-    "name_note": "",
     "note": "茗烟跟随宝玉入学，打了金荣，锄药、扫红、墨雨也一起打",
-    "refer_chap": 9,
-    "refer_note": ""
+    "refer_chap": 9
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 14,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -7065,33 +4879,17 @@
     "sort_position": 299.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "锄药",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "锄药"
   },
   "隆儿": {
    "action": {
     "chap": 65,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 65,
-    "name_note": "",
     "note": "贾琏找尤二姐，心腹小童隆儿拴马",
-    "refer_chap": 65,
-    "refer_note": ""
+    "refer_chap": 65
    },
-   "allowance": null,
-   "child_idx": null,
-   "child_list": [],
-   "ext": null,
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -7103,24 +4901,14 @@
     "sort_position": 230.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾琏",
-   "name": "隆儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "隆儿"
   },
   "雪雁": {
    "action": {
     "chap": 8,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 3,
-    "name_note": "",
     "note": "雪雁奉紫娟之命给黛玉送手炉",
     "refer_chap": 3,
     "refer_note": "黛玉从家中带来的丫头"
@@ -7128,16 +4916,10 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -7149,41 +4931,24 @@
     "sort_position": 220.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "林黛玉",
-   "name": "雪雁",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "雪雁"
   },
   "靛儿": {
    "action": {
     "chap": 30,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 30,
-    "name_note": "",
     "note": "靛儿找扇子，被宝钗借扇机带双敲",
-    "refer_chap": 30,
-    "refer_note": ""
+    "refer_chap": 30
    },
    "allowance": {
     "type": "二等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 15,
-    "age_note": "瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -7195,24 +4960,14 @@
     "sort_position": 340.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾母",
-   "name": "靛儿",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "靛儿"
   },
   "鸳鸯": {
    "action": {
     "chap": 24,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 20,
-    "name_note": "",
     "note": "宝玉要吃鸳鸯嘴上的胭脂",
     "refer_chap": 20,
     "refer_note": "丫鬟们在一起耍戏，提到了鸳鸯"
@@ -7220,16 +4975,12 @@
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 19,
     "age_note": "http://www.52hlpm.com/wy/tgq/tg077.htm",
     "family_name": "金",
-    "old_name": "第46回，凤姐向邢夫人介绍鸳鸯家庭情况说鸳鸯的爹叫金彩",
-    "old_name_note": ""
+    "old_name": "第46回，凤姐向邢夫人介绍鸳鸯家庭情况说鸳鸯的爹叫金彩"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -7241,41 +4992,24 @@
     "sort_position": 400.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾母",
-   "name": "鸳鸯",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "鸳鸯"
   },
   "鹦鹉": {
    "action": {
     "chap": 0,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 59,
-    "name_note": "",
-    "note": "",
     "refer_chap": 59,
     "refer_note": "荣府女眷外出打醮，提到了鹦鹉。"
    },
    "allowance": {
     "type": "大主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 18,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -7287,24 +5021,14 @@
     "sort_position": 340.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾母",
-   "name": "鹦鹉",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "鹦鹉"
   },
   "麝月": {
    "action": {
     "chap": 20,
     "die_chap": 0,
-    "die_note": "",
     "name_chap": 9,
-    "name_note": "",
     "note": "所有丫头都在玩，独麝月看家，宝玉赞叹",
     "refer_chap": 9,
     "refer_note": "宝玉早晨上学前嘱咐晴雯麝月几句"
@@ -7312,16 +5036,10 @@
    "allowance": {
     "type": "小主子一等丫鬟"
    },
-   "child_idx": null,
-   "child_list": [],
    "ext": {
     "age": 16,
-    "age_note": "比较瞎猜",
-    "family_name": "",
-    "old_name": "",
-    "old_name_note": ""
+    "age_note": "比较瞎猜"
    },
-   "husband": null,
    "info": {
     "branch": "正",
     "dead": 0,
@@ -7333,16 +5051,8 @@
     "sort_position": 325.0,
     "type": "仆人"
    },
-   "level": null,
    "master": "贾宝玉",
-   "name": "麝月",
-   "nick_list": [],
-   "parent": null,
-   "servant_list": [],
-   "social_position": null,
-   "title_list": [],
-   "wife_idx": null,
-   "wife_list": []
+   "name": "麝月"
   }
  }
 }

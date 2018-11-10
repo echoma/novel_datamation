@@ -21,6 +21,7 @@ function onload() {
         url:'graph.json', 
         cache:false, 
         dataType:'json',
+        mimeType:'application/json',
         async: true,
         success:function(data){
             dom_graph = $('#graph');
@@ -104,15 +105,16 @@ function fillMasterScript(dom_psn, psn) { // 填写某个人的上下标
     // 尊称名号
     default_scr_len = 5;
     max_scr_len = avai_list.length>0? 6-avai_list[0].length : default_scr_len;
-    for (let t of psn.title_list) {
-        let txt = t.title;
-        if (txt.length>0 && txt.length<=max_scr_len)
-            avai_list.push(txt);
+    if (!empty(psn.title_list)) {
+        for (let t of psn.title_list) {
+            let txt = t.title;
+            if (txt.length>0 && txt.length<=max_scr_len)
+                avai_list.push(txt);
+        }
     }
     // 爵位官位名号
-    if (psn.social_position) {
-        let nobility = psn.social_position.nobility_title;
-        let official = psn.social_position.official_title;
+    if (!empty(psn.social_position)) {
+        let [nobility = "", official = ""] = [psn.social_position.nobility_title, psn.social_position.official_title];
         if (nobility.length>0 && nobility.length<=max_scr_len) {
             avai_list.push(nobility);
         } else if (official.length>0 && official.length<=max_scr_len) {
@@ -121,10 +123,12 @@ function fillMasterScript(dom_psn, psn) { // 填写某个人的上下标
     }
     // 诨名
     max_scr_len = avai_list.length>0? 6-avai_list[0].length : default_scr_len;
-    for (let n of psn.nick_list) {
-        let txt = n.nick;
-        if (txt.length>0 && txt.length<=max_scr_len)
-            avai_list.push(txt);
+    if (!empty(psn.nick_list)) {
+        for (let n of psn.nick_list) {
+            let txt = n.nick;
+            if (txt.length>0 && txt.length<=max_scr_len)
+                avai_list.push(txt);
+        }
     }
     // 所有可用名号里前两位就是上标下标
     if (avai_list.length>0) {
@@ -147,16 +151,22 @@ function fillMasterScript(dom_psn, psn) { // 填写某个人的上下标
 }
 function calChildrenOrder(psn) { // 为这个人计算其长子次子长女次女这些信息
     psn.all_child_list = [];
-    for (let name of psn.child_list)
-        psn.all_child_list.push(name);
-    for (let wife_name of psn.wife_list) {
-        let wife = psn_map[wife_name];
-        for (let name of wife.child_list)
+    if (!empty(psn.child_list)) {
+        for (let name of psn.child_list)
             psn.all_child_list.push(name);
+    }
+    if (!empty(psn.wife_list)) {
+        for (let wife_name of psn.wife_list) {
+            let wife = psn_map[wife_name];
+            if (!empty(wife.child_list)) {
+                for (let name of wife.child_list)
+                    psn.all_child_list.push(name);
+            }
+        }
     }
 }
 function fillMasterServant(dom_psn, psn) { // 填充这个主子名下的丫鬟小厮仆人
-    if (psn.servant_list.length==0) {
+    if (empty(psn.servant_list)) {
         dom_psn.find('.servant-list').remove();
     } else {
         const line_cnt = 6;
@@ -214,7 +224,7 @@ function adjustPositionForOneMaster(family, name) { // 检查该人物跟其孩�
     if (left < child_left_min) {
         // 如果当前元素在首个孩子元素左侧，则自己前面要补充空白
         let dont_need = 0; // 但有种特殊情况是不需要调整位置的（比如：林如海和贾敏夫妇）
-        if (psn.child_list.length==0 // 没有直接连线孩子
+        if (empty(psn.child_list) // 没有直接连线孩子
             && family_child_list.length==1 // 总共只有一个孩子
             && left>first_child.dom_psn_space.position().left //当前元素处于首个孩子元素左侧的空白的上方
         ) {
@@ -259,7 +269,7 @@ function adjustPositionForOneMaster(family, name) { // 检查该人物跟其孩�
 function drawLevelLines(family, master_name_list) { // 为代际之间的关联关系画线
     for (let name of master_name_list) {
         let psn = psn_map[name];
-        if (psn.child_list.length==0)
+        if (empty(psn.child_list))
             continue;
         if (psn.info.family+'@'+psn.info.branch!=family.name)
             continue;
@@ -319,7 +329,7 @@ function drawHLine(start, end) { // 画一根横线
 function drawCoupleBoxes(family, master_name_list) { // 画夫妻框
     for (let name of master_name_list) {
         let psn = psn_map[name];
-        if (psn.info.gender!='男' || psn.wife_list.length==0)
+        if (psn.info.gender!='男' || empty(psn.wife_list))
             continue;
         let dom_psn = psn.dom_psn;
         let psn_pos = dom_psn.position();
