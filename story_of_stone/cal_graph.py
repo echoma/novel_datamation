@@ -173,7 +173,7 @@ class Graph:
                     Person.find(row[1]).addServant(servant)
     def output(self):
         for lvl in self.level_list:
-            print('level '+str(lvl.level_number)+': '+ ' '.join(lvl.person_list))
+            logging.info('level %d: %s', lvl.level_number, ' '.join(lvl.person_list))
     def toDict(self):
         o = {}
         o['family'] = self.family
@@ -449,6 +449,7 @@ class Person:
 def main():
     family_list = [
         ['贾家','正'],
+        ['贾家','旁'],
         ['史家','正'],
         ['王家','正'],
         ['薛家','正'],

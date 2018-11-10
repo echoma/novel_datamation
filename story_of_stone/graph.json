@@ -47,10 +47,15 @@
   },
   "根@王公": {
    "note": "",
-   "sub_type": "亲生",
+   "sub_type": "虚拟",
    "type": "亲子"
   },
   "根@薛公": {
+   "note": "",
+   "sub_type": "虚拟",
+   "type": "亲子"
+  },
+  "根@贾代儒之父": {
    "note": "",
    "sub_type": "虚拟",
    "type": "亲子"
@@ -160,6 +165,21 @@
    "sub_type": "亲生",
    "type": "亲子"
   },
+  "薛蝌@邢岫烟": {
+   "note": "第57回，贾母做媒",
+   "sub_type": "正房",
+   "type": "夫妻"
+  },
+  "贾代儒@贾瑞之父": {
+   "note": "",
+   "sub_type": "亲生",
+   "type": "亲子"
+  },
+  "贾代儒之父@贾代儒": {
+   "note": "",
+   "sub_type": "亲生",
+   "type": "亲子"
+  },
   "贾代化@贾敬": {
    "note": "第2回，冷子兴演说",
    "sub_type": "亲生",
@@ -259,6 +279,11 @@
    "note": "",
    "sub_type": "正房",
    "type": "夫妻"
+  },
+  "贾瑞之父@贾瑞": {
+   "note": "",
+   "sub_type": "亲生",
+   "type": "亲子"
   },
   "贾蓉@秦可卿": {
    "note": "",
@@ -366,6 +391,46 @@
       "贾巧姐",
       "贾兰"
      ]
+    }
+   ]
+  },
+  {
+   "branch": "旁",
+   "family": "贾家",
+   "level_list": [
+    {
+     "level_number": 0,
+     "person_list": [
+      "根"
+     ]
+    },
+    {
+     "level_number": 1,
+     "person_list": [
+      "贾代儒之父"
+     ]
+    },
+    {
+     "level_number": 2,
+     "person_list": [
+      "贾代儒"
+     ]
+    },
+    {
+     "level_number": 3,
+     "person_list": [
+      "贾瑞之父"
+     ]
+    },
+    {
+     "level_number": 4,
+     "person_list": [
+      "贾瑞"
+     ]
+    },
+    {
+     "level_number": 5,
+     "person_list": []
     }
    ]
   },
@@ -490,6 +555,7 @@
      "level_number": 4,
      "person_list": [
       "薛蝌",
+      "邢岫烟",
       "薛宝琴",
       "薛蟠",
       "薛宝钗"
@@ -2842,6 +2908,7 @@
    "child_list": [
     "贾演",
     "贾源",
+    "贾代儒之父",
     "史候",
     "王公",
     "薛公"
@@ -4919,7 +4986,9 @@
    "social_position": null,
    "title_list": [],
    "wife_idx": null,
-   "wife_list": []
+   "wife_list": [
+    "邢岫烟"
+   ]
   },
   "薛蟠": {
    "action": {
@@ -5146,6 +5215,77 @@
    "name": "豆官",
    "nick_list": [],
    "parent": null,
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "贾代儒": {
+   "action": {
+    "chap": 9,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 8,
+    "name_note": "",
+    "note": "宝玉秦钟入私塾，代儒留了作业",
+    "refer_chap": 8,
+    "refer_note": "提到贾家私塾的老师是代儒"
+   },
+   "allowance": null,
+   "child_idx": null,
+   "child_list": [
+    "贾瑞之父"
+   ],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "旁",
+    "dead": 0,
+    "deduction": 0,
+    "family": "贾家",
+    "gender": "男",
+    "level": 2,
+    "sort_age": 68.0,
+    "sort_position": 299.0,
+    "type": "主子"
+   },
+   "level": 2,
+   "master": null,
+   "name": "贾代儒",
+   "nick_list": [],
+   "parent": "贾代儒之父",
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "贾代儒之父": {
+   "action": null,
+   "allowance": null,
+   "child_idx": null,
+   "child_list": [
+    "贾代儒"
+   ],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "旁",
+    "dead": 1,
+    "deduction": 1,
+    "family": "贾家",
+    "gender": "男",
+    "level": 1,
+    "sort_age": 85.0,
+    "sort_position": 300.0,
+    "type": "主子"
+   },
+   "level": 1,
+   "master": null,
+   "name": "贾代儒之父",
+   "nick_list": [],
+   "parent": "根",
    "servant_list": [],
    "social_position": null,
    "title_list": [],
@@ -6258,6 +6398,75 @@
    "wife_idx": null,
    "wife_list": []
   },
+  "贾瑞": {
+   "action": {
+    "chap": 9,
+    "die_chap": 12,
+    "die_note": "迷恋风月宝鉴精尽人亡",
+    "name_chap": 9,
+    "name_note": "",
+    "note": "代儒暂离私塾后，贾瑞代为管理",
+    "refer_chap": 9,
+    "refer_note": ""
+   },
+   "allowance": null,
+   "child_idx": "长子",
+   "child_list": [],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "旁",
+    "dead": 1,
+    "deduction": 0,
+    "family": "贾家",
+    "gender": "男",
+    "level": 4,
+    "sort_age": 28.0,
+    "sort_position": 297.0,
+    "type": "主子"
+   },
+   "level": 4,
+   "master": null,
+   "name": "贾瑞",
+   "nick_list": [],
+   "parent": "贾瑞之父",
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
+  "贾瑞之父": {
+   "action": null,
+   "allowance": null,
+   "child_idx": "长子",
+   "child_list": [
+    "贾瑞"
+   ],
+   "ext": null,
+   "husband": null,
+   "info": {
+    "branch": "旁",
+    "dead": 1,
+    "deduction": 1,
+    "family": "贾家",
+    "gender": "男",
+    "level": 3,
+    "sort_age": 48.0,
+    "sort_position": 298.0,
+    "type": "主子"
+   },
+   "level": 3,
+   "master": null,
+   "name": "贾瑞之父",
+   "nick_list": [],
+   "parent": "贾代儒",
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
+   "wife_idx": null,
+   "wife_list": []
+  },
   "贾蓉": {
    "action": {
     "chap": 6,
@@ -6614,6 +6823,44 @@
      "title": "大太太"
     }
    ],
+   "wife_idx": "正房",
+   "wife_list": []
+  },
+  "邢岫烟": {
+   "action": {
+    "chap": 49,
+    "die_chap": 0,
+    "die_note": "",
+    "name_chap": 49,
+    "name_note": "",
+    "note": "邢岫烟入住贾府后穿旧衣服",
+    "refer_chap": 49,
+    "refer_note": "邢岫烟随父母投奔邢夫人"
+   },
+   "allowance": null,
+   "child_idx": null,
+   "child_list": [],
+   "ext": null,
+   "husband": "薛蝌",
+   "info": {
+    "branch": "正",
+    "dead": 0,
+    "deduction": 0,
+    "family": "薛家",
+    "gender": "女",
+    "level": 4,
+    "sort_age": 15.0,
+    "sort_position": 555.0,
+    "type": "主子"
+   },
+   "level": 4,
+   "master": null,
+   "name": "邢岫烟",
+   "nick_list": [],
+   "parent": null,
+   "servant_list": [],
+   "social_position": null,
+   "title_list": [],
    "wife_idx": "正房",
    "wife_list": []
   },
