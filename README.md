@@ -4,7 +4,7 @@
 
 ## 红楼梦
 
-[人物关系图](https://echoma.github.io/novel_datamation/story_of_stone/graph.html)
+[人物关系图](http://echotoss.com/reading/story_of_stone/graph.html)
 
 路线:
 * 绘制贾家主要人物关系（已完成）
